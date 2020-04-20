@@ -112,6 +112,7 @@
 
       @include for-tablet-down {
         line-height: 1;
+        margin-bottom: space(40);
       }
     }
 
@@ -121,6 +122,10 @@
       display: flex;
       align-items: center;
       margin: space(24) 0;
+
+      &:first-of-type {
+        margin-top: 0;
+      }
 
       svg {
         width: 60px;
