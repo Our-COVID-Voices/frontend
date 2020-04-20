@@ -9,7 +9,7 @@ import "./Home.scss";
 
 import Button from "../../components/Button";
 
-import Pencil from "../../assets/icons/pencil.svg";
+import Pencil from "../../assets/icons/pencil-solid.svg";
 import Community from "../../assets/icons/community.svg";
 import Security from "../../assets/icons/security.svg";
 import Ayup from "../../assets/logo/ayup-white.svg";
@@ -70,22 +70,28 @@ const Home: FunctionComponent<RouteComponentProps> = ({ history }) => (
       </div>
     </div>
     <div className="flex-container flex-container--center flex-container--align-center home--share">
-      <div className="flex-col--mobile--12 flex-col--tablet--12 flex-col--6">
+      <div className="flex-col--12">
         <h4 className="home--share--title">{cms("home.share.title")}</h4>
-        <div className="flex-col--tablet--10 flex-col--mobile-small--12 home--share--description--container">
+      </div>
+      <div className="flex-col--mobile--12 flex-col--tablet--12 flex-col--6">
+        <div className="flex-col--tablet--10 flex-col--mobile--12 flex-col--mobile-small--12 home--share--description--container">
           <div className="home--share--description">
-            <ReactSVG src={Pencil} />
-            <h5> {cms("home.share.experiences")}</h5>
+            <ReactSVG src={Pencil} wrapper="span" />
+            <h5 style={{ display: "inline" }}>
+              {cms("home.share.experiences")}
+            </h5>
           </div>
 
           <div className="home--share--description">
-            <ReactSVG src={Community} />
-            <h5>{cms("home.share.community")}</h5>
+            <ReactSVG src={Community} wrapper="span" />
+            <h5 style={{ display: "inline" }}>{cms("home.share.community")}</h5>
           </div>
 
           <div className="home--share--description">
-            <ReactSVG src={Security} />
-            <h5>{cms("home.share.contributions")}</h5>
+            <ReactSVG src={Security} wrapper="span" />
+            <h5 style={{ display: "inline" }}>
+              {cms("home.share.contributions")}
+            </h5>
           </div>
         </div>
       </div>
@@ -97,7 +103,7 @@ const Home: FunctionComponent<RouteComponentProps> = ({ history }) => (
               pathname: "/register",
             })
           }
-          twoCol={true}
+          navy={true}
         />
         <p className="home--share--content">{cms("home.share.content")}</p>
       </div>

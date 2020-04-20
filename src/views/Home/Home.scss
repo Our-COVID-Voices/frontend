@@ -78,10 +78,6 @@
     &--title {
       @include heading-m;
       color: $navy;
-
-      @include for-phone-only {
-        line-height: 1;
-      }
     }
 
     &--content {
@@ -109,46 +105,35 @@
     }
 
     &--title {
-      @include heading-l;
-      color: $purple;
+      @include heading-m;
+      color: $navy;
+      text-align: center;
+      margin-bottom: space(56);
 
       @include for-tablet-down {
         line-height: 1;
-        text-align: center;
       }
     }
 
     &--description {
       @include body-l;
-      color: $grey;
-      margin: space(56) 0;
+      color: $navy;
+      display: flex;
+      align-items: center;
+      margin: space(24) 0;
 
-      @include for-phone-only {
-        margin: space(40) 0;
+      svg {
+        width: 60px;
       }
-
       h5 {
-        display: inline;
-        font-weight: normal;
-      }
-
-      div {
-        svg {
-          width: 52px;
-          color: grey;
-          margin-right: space(24);
-          float: left;
-        }
-      }
-
-      &--container {
-        margin: 0 auto;
+        margin-left: space(20);
       }
     }
 
     &--content {
-      @include body-s-alt;
-      color: $grey;
+      @include body-m;
+      font-weight: 400;
+      color: $navy;
       margin-top: space(40);
 
       @include for-phone-only {
