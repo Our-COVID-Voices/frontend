@@ -47,10 +47,10 @@ const Home: FunctionComponent<RouteComponentProps> = ({ history }) => (
         <p className="home--welcome--about">{cms("global.about")}</p>
       </div>
     </div>
-    <div className="flex-container flex-container--no-padding flex-container--full-width  home--experiences--container">
+    <div className="flex-container flex-container--no-padding flex-container--center home--experiences">
       <div className="flex-col--12 home--experiences">
         <div className="flex-container flex-container--center flex-container--justify">
-          <div className="flex-col--7 flex-col--tablet-large--12">
+          <div className="flex-col--6 flex-col--tablet-large--12">
             <h3 className="home--experiences--title">
               {cms("home.experiences.title")}
             </h3>

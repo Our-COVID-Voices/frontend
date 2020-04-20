@@ -66,24 +66,18 @@
   }
 
   &--experiences {
-    position: relative;
     padding: pxtorem(169px) 0;
     background-color: $light-green;
     text-align: center;
-    margin-top: space(120);
 
     @include for-phone-only {
       margin-top: space(72);
       padding: space(48) 0 space(64);
     }
 
-    &--container {
-      position: relative;
-    }
-
     &--title {
-      @include heading-l;
-      color: $green;
+      @include heading-m;
+      color: $navy;
 
       @include for-phone-only {
         line-height: 1;
@@ -91,8 +85,8 @@
     }
 
     &--content {
-      @include body-l;
-      color: $grey;
+      @include about-accordian-text;
+      color: $navy;
       margin-top: space(32);
       margin-bottom: space(80);
 
