@@ -156,21 +156,29 @@
     }
 
     &--title {
-      @include heading-m;
-      color: $purple;
+      @include heading-s;
+      color: $navy;
       margin-bottom: space(40);
     }
 
     &--content {
       @include body-l;
-      color: $grey;
+      color: $navy;
       margin-bottom: space(80);
 
       @include for-phone-only {
-        margin-bottom: space(16);
+        margin-bottom: space(32);
       }
     }
 
+    &--button {
+      color: $navy;
+      margin-bottom: space(80);
+
+      @include for-phone-only {
+        margin-bottom: space(32);
+      }
+    }
     &--contact {
       @include heading-xs;
       color: $purple;

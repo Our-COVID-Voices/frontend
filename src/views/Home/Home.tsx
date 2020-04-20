@@ -17,6 +17,7 @@ import NationalVoices from "../../assets/logo/national-voices.svg";
 import PPL from "../../assets/logo/ppl.jpg";
 import Footer from "../../components/Footer";
 import Layout from "../../components/Layout";
+import DonateButton from "../../components/DonateButton/DonateButton";
 
 const Home: FunctionComponent<RouteComponentProps> = ({ history }) => (
   <Layout>
@@ -44,7 +45,7 @@ const Home: FunctionComponent<RouteComponentProps> = ({ history }) => (
             className="home--welcome--logos"
           />
         </div>
-        <p className="home--welcome--about">{cms("global.about")}</p>
+        <p className="home--welcome--about">{cms("home.content")}</p>
       </div>
     </div>
     <div className="flex-container flex-container--no-padding flex-container--center home--experiences">
@@ -113,6 +114,9 @@ const Home: FunctionComponent<RouteComponentProps> = ({ history }) => (
         <div className="flex-col--8 flex-col--tablet-large--12">
           <h5 className="home--footer--title">{cms("home.footer.title")}</h5>
           <p className="home--footer--content">{cms("home.footer.content")}</p>
+        </div>
+        <div className="flex-col--12 home--footer--button">
+          <Button purple={true} text="Donate" />
         </div>
         <div className="flex-col--8 flex-col--tablet-large--12">
           <h6 className="home--footer--contact">
