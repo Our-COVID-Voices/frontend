@@ -12,6 +12,9 @@ import Button from "../../components/Button";
 import Pencil from "../../assets/icons/pencil.svg";
 import Community from "../../assets/icons/community.svg";
 import Security from "../../assets/icons/security.svg";
+import Ayup from "../../assets/logo/ayup-white.svg";
+import NationalVoices from "../../assets/logo/national-voices.svg";
+import PPL from "../../assets/logo/ppl.jpg";
 import Footer from "../../components/Footer";
 import Layout from "../../components/Layout";
 
@@ -23,7 +26,24 @@ const Home: FunctionComponent<RouteComponentProps> = ({ history }) => (
     <div className="flex-container flex-container--no-padding flex-container--center home--welcome">
       <div className="flex-col--8 flex-col--tablet-large--12">
         <h1 className="home--welcome--title">{cms("home.title")}</h1>
-        <h2 className="home--welcome--subtitle">{cms("global.tagline")}</h2>
+        <h2 className="home--welcome--subtitle">{cms("home.subtitle")}</h2>
+        <div className="home--welcome--logo-container">
+          <ReactSVG
+            src={NationalVoices}
+            wrapper="span"
+            className="home--welcome--logos"
+          />
+          <img
+            src={PPL}
+            alt="logo for PPL"
+            className="home--welcome--logos home--welcome--ppl"
+          />
+          <ReactSVG
+            src={Ayup}
+            wrapper="span"
+            className="home--welcome--logos"
+          />
+        </div>
         <p className="home--welcome--about">{cms("global.about")}</p>
       </div>
     </div>
@@ -41,7 +61,7 @@ const Home: FunctionComponent<RouteComponentProps> = ({ history }) => (
               text="Browse experiences"
               onClick={() =>
                 history.push({
-                  pathname: "/browse"
+                  pathname: "/browse",
                 })
               }
             />
@@ -74,7 +94,7 @@ const Home: FunctionComponent<RouteComponentProps> = ({ history }) => (
           text="Sign up and share"
           onClick={() =>
             history.push({
-              pathname: "/register"
+              pathname: "/register",
             })
           }
           twoCol={true}

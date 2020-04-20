@@ -5,7 +5,9 @@
 
 .home {
   &--welcome {
-    padding: space(40) space(24) !important;
+    background-color: $purple;
+    margin-top: space(20) !important;
+    padding: space(120) !important;
     position: relative;
     overflow: hidden;
 
@@ -17,31 +19,56 @@
       padding: space(40) !important;
     }
 
-    @include for-tablet-large-up {
-      &:after {
-        @include faded-background;
-      }
-    }
-
     &--title {
-      @include heading-xl;
-      color: $grey;
+      @include heading-l;
+      color: $white;
     }
 
     &--subtitle {
-      @include subtitle;
-      color: $turqoise;
+      @include body-s;
+      color: $white;
+    }
+
+    &--logo-container {
+      display: flex;
+      align-items: center;
+      margin-top: space(10);
+      margin-bottom: space(64);
+      flex-wrap: wrap;
+
+      @include for-tablet-down {
+        svg {
+          width: 90px;
+        }
+      }
+    }
+
+    &--ppl {
+      width: pxtorem(68px);
+
+      @include for-tablet-down {
+        width: pxtorem(50px);
+      }
+    }
+
+    &--logos {
+      margin-right: space(20);
+
+      @include for-tablet-down {
+        margin-right: space(10);
+      }
     }
 
     &--about {
-      @include about;
+      @include body-l;
+      color: $white;
     }
   }
 
   &--experiences {
     position: relative;
     padding: pxtorem(169px) 0;
-    background-color: $light-turqoise;
+    background-color: $light-green;
     text-align: center;
     margin-top: space(120);
 
@@ -52,45 +79,11 @@
 
     &--container {
       position: relative;
-
-      &:before {
-        position: absolute;
-        content: "";
-        left: 0;
-        width: 100%;
-        height: 150px;
-        background-image: url("../../assets/lines/Line2-green.svg");
-        background-repeat: no-repeat;
-        background-position: 80% 120px;
-        background-size: 110%;
-        z-index: 10;
-
-        @include for-phone-only {
-          background-image: url("../../assets/lines/Line2-green-mobile.svg");
-          background-position: 80% 67px;
-        }
-      }
-
-      &:after {
-        position: absolute;
-        left: 0;
-        content: "";
-        width: 100%;
-        height: 45px;
-        background-image: url("../../assets/lines/Line2-green.svg");
-        background-repeat: no-repeat;
-        background-size: 110%;
-        bottom: -24px;
-
-        @include for-phone-only {
-          background-image: url("../../assets/lines/Line2-green-mobile.svg");
-        }
-      }
     }
 
     &--title {
       @include heading-l;
-      color: $turqoise;
+      color: $green;
 
       @include for-phone-only {
         line-height: 1;
@@ -123,7 +116,7 @@
 
     &--title {
       @include heading-l;
-      color: $ribienna;
+      color: $purple;
 
       @include for-tablet-down {
         line-height: 1;
@@ -185,7 +178,7 @@
 
     &--title {
       @include heading-m;
-      color: $ribienna;
+      color: $purple;
       margin-bottom: space(40);
     }
 
@@ -201,11 +194,11 @@
 
     &--contact {
       @include heading-xs;
-      color: $ribienna;
+      color: $purple;
 
       a {
         @include body-l;
-        color: $ribienna;
+        color: $purple;
         display: block;
       }
     }
