@@ -1,0 +1,29 @@
+@import "../../styles/colors.scss";
+@import "../../styles/fonts.scss";
+@import "../../styles/mixins.scss";
+@import "../../styles/breakpoints.scss";
+
+$shadow: inset 2px 2px 8px rgba(0, 0, 0, 0.5);
+
+.donate-button {
+  @include button-text;
+  background-color: $purple;
+  color: $white;
+  border-radius: 36px;
+  height: pxtorem(55px);
+  padding: 0 space(20);
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:focus,
+  &:active {
+    box-shadow: $shadow;
+    outline: 0;
+  }
+
+  &--logged-in {
+    background-color: $navy;
+  }
+}
