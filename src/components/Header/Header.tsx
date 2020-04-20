@@ -3,68 +3,46 @@ import ReactSVG from "react-svg";
 import { NavLink } from "react-router-dom";
 
 import Cookies from "../Cookies";
+import DonateButton from "../DonateButton/DonateButton";
 import Logo from "../../assets/logo/logo_colour.svg";
-import HVN from "../../assets/logo/hvn-square.png";
-import Question from "../../assets/icons/question-circle.svg";
-import Pencil from "../../assets/icons/pencil.svg";
-import Community from "../../assets/icons/community.svg";
-
-import Account from "../../assets/icons/account-light.svg";
 
 import "./Header.scss";
+import UserHeader from "./UserHeader";
 
-const Header: FunctionComponent = () => (
+interface IProps {
+  loggedIn: boolean;
+}
+
+const Header: FunctionComponent<IProps> = ({ loggedIn }) => (
   <header>
     <Cookies />
+    <UserHeader />
     <div className="flex-container flex-container--no-padding flex-container--center header">
-      <div className="flex-col--12 header--logo-container">
-        <NavLink
-          to="/"
-          className="header--link"
-          activeClassName="header--link--active"
-        >
-          <img
-            src={HVN}
-            className="header--logo--square"
-            alt="Hearing Voices Network logo"
-          />
-          <ReactSVG src={Logo} className="header--logo" wrapper="span" />
-        </NavLink>
-      </div>
+      <NavLink
+        to="/"
+        className="header--link"
+        activeClassName="header--link--active"
+      >
+        <ReactSVG src={Logo} className="header--logo" wrapper="span" />
+      </NavLink>
 
-      <div className="flex-container flex-container--no-padding header--links header--links--main">
-        <NavLink
-          className="header--link"
-          to="/about"
-          activeClassName="header--link--active"
-        >
-          About this project
-          <ReactSVG src={Question} wrapper="span" className="header--icon" />
-        </NavLink>
+      <div className="flex-container flex-container--no-padding flex-container--align-center header--links">
         <NavLink
           className="header--link"
           to="/browse"
           activeClassName="header--link--active"
         >
-          Browse
-          <ReactSVG src={Community} wrapper="span" className="header--icon" />
+          Browse Experiences
         </NavLink>
         <NavLink
           className="header--link"
-          to="/contribute"
+          to="/contact"
           activeClassName="header--link--active"
         >
-          Contribute
-          <ReactSVG src={Pencil} wrapper="span" className="header--icon" />
+          Contact
         </NavLink>
-        <NavLink
-          className="header--link"
-          to="/login"
-          activeClassName="header--link--active"
-        >
-          Login
-          <ReactSVG src={Account} wrapper="span" className="header--icon" />
-        </NavLink>
+
+        <DonateButton text="Donate" loggedIn={loggedIn} />
       </div>
     </div>
   </header>
