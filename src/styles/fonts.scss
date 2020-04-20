@@ -1,53 +1,53 @@
 @import "./mixins.scss";
 @import "./breakpoints.scss";
 
-@font-face {
-  font-family: "Kayak Sans";
-  src: url("../assets/fonts/kayak_sans_regular.woff2") format("woff2"),
-    url("../assets/fonts/kayak_sans_regular.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Kayak Sans Bold";
-  src: url("../assets/fonts/kayak_sans_bold.woff2") format("woff2"),
-    url("../assets/fonts/kayak_sans_bold.woff") format("woff");
-}
-
-$kayak-sans: "Kayak Sans", sans-serif;
-$kayak-sans-bold: "Kayak Sans Bold", sans-serif;
-$skippy-sharp: skippy-sharp, sans-serif;
+$manrope: "Manrope", sans-serif;
+$itc: itc-avant-garde-gothic-pro, sans-serif;
 
 // Headings
 
 @mixin heading-xl {
-  font-family: $skippy-sharp;
-  font-weight: 400;
-  font-size: pxtorem(88px);
-  line-height: 1.1;
+  font-family: $itc;
+  font-weight: 500;
+  font-style: normal;
+  font-size: pxtorem(60px);
+  line-height: 1.23;
 
   @include for-tablet-down {
-    font-size: pxtorem(56px);
-    line-height: 1.35;
+    font-size: pxtorem(52px);
   }
 }
 
 @mixin heading-l {
-  font-family: $skippy-sharp;
-  font-weight: 400;
-  font-size: pxtorem(64px);
-  line-height: 1.32;
+  font-family: $itc;
+  font-weight: 500;
+  font-style: normal;
+  font-size: pxtorem(48px);
+  line-height: 1.22;
 
   @include for-tablet-down {
     font-size: pxtorem(40px);
-    line-height: 1.35;
+  }
+}
+
+@mixin heading-l-alt {
+  font-family: $itc;
+  font-weight: 300;
+  font-style: normal;
+  font-size: pxtorem(48px);
+  line-height: 1.18;
+
+  @include for-tablet-down {
+    font-size: pxtorem(40px);
   }
 }
 
 @mixin heading-m {
-  font-family: $skippy-sharp;
-  font-weight: 400;
-  font-size: pxtorem(56px);
-  line-height: 1.32;
+  font-family: $itc;
+  font-weight: 500;
+  font-style: normal;
+  font-size: pxtorem(40px);
+  line-height: 1.22;
 
   @include for-tablet-down {
     font-size: pxtorem(32px);
@@ -55,86 +55,88 @@ $skippy-sharp: skippy-sharp, sans-serif;
 }
 
 @mixin heading-s {
-  font-family: $skippy-sharp;
-  font-weight: 400;
-  font-size: pxtorem(48px);
-  line-height: 1.3;
+  font-family: $itc;
+  font-weight: 500;
+  font-style: normal;
+  font-size: pxtorem(36px);
+  line-height: 1.22;
 
   @include for-tablet-down {
-    font-size: pxtorem(32px);
+    font-size: pxtorem(28px);
   }
 }
 
 @mixin heading-xs {
-  font-family: $skippy-sharp;
-  font-weight: 400;
-  font-size: pxtorem(36px);
-  line-height: 1.3;
+  font-family: $manrope;
+  font-weight: 200;
+  font-size: pxtorem(32px);
+  line-height: 1.5;
 
   @include for-tablet-down {
-    font-size: pxtorem(24px);
+    font-size: pxtorem(28px);
+  }
+}
+
+@mixin heading-xs-alt {
+  font-family: $manrope;
+  font-weight: 500;
+  font-size: pxtorem(32px);
+  line-height: 1.12;
+
+  @include for-tablet-down {
+    font-size: pxtorem(28px);
+    line-height: 1.28;
   }
 }
 
 // Body
 
 @mixin body-l {
-  font-family: $kayak-sans;
+  font-family: $manrope;
+  font-weight: 500;
   font-size: pxtorem(32px);
-  line-height: 1.25;
+  line-height: 1.34;
 
   @include for-tablet-down {
-    font-size: pxtorem(20px);
+    font-size: pxtorem(24px);
     line-height: 1.16;
   }
 }
 
 @mixin body-m {
-  font-family: $kayak-sans;
-  font-size: pxtorem(32px);
-  line-height: 1.25;
+  font-family: $manrope;
+  font-weight: 600;
+  font-size: pxtorem(28px);
+  line-height: 1.28;
 
   @include for-tablet-down {
-    font-size: pxtorem(16px);
-    line-height: 1.12;
-  }
-}
-
-@mixin body-m-alt {
-  font-family: $kayak-sans;
-  font-size: pxtorem(24px);
-  line-height: 1.3;
-
-  @include for-tablet-down {
-    font-size: pxtorem(16px);
-    line-height: 1.12;
+    font-size: pxtorem(24px);
+    line-height: 1.3;
   }
 }
 
 @mixin body-s {
-  font-family: $kayak-sans-bold;
-  font-size: pxtorem(24px);
-  line-height: 1.16;
-
-  @include for-tablet-down {
-    font-size: pxtorem(16px);
-    line-height: 1.25;
-  }
-}
-
-@mixin body-s-alt {
-  font-family: $kayak-sans;
+  font-family: $manrope;
+  font-weight: 400;
   font-size: pxtorem(24px);
   line-height: 1.3;
 
   @include for-tablet-down {
-    font-size: pxtorem(16px);
-    line-height: 1.25;
+    font-size: pxtorem(20px);
+    line-height: 1.4;
   }
 }
 
+@mixin body-s-alt {
+  font-family: $manrope;
+  font-weight: 500;
+  font-size: pxtorem(24px);
+  line-height: 1.5;
+}
+
 @mixin body-xs {
-  font-family: $kayak-sans;
+  font-family: $manrope;
+  font-weight: 400;
   font-size: pxtorem(16px);
   line-height: 1.12;
 
@@ -144,8 +146,130 @@ $skippy-sharp: skippy-sharp, sans-serif;
   }
 }
 
+// Buttons
+
+@mixin button-text {
+  font-family: $itc;
+  font-weight: 500;
+  font-style: normal;
+  font-size: pxtorem(24px);
+  line-height: 1.25;
+
+  @include for-tablet-down {
+    font-size: pxtorem(20px);
+  }
+}
+
+@mixin button-text-alt {
+  font-family: $manrope;
+  font-weight: 600;
+  font-style: normal;
+  font-size: pxtorem(24px);
+  line-height: 1.3;
+
+  @include for-tablet-down {
+    font-size: pxtorem(16px);
+  }
+}
+
+// Misc
+
+@mixin link {
+  font-family: $manrope;
+  font-weight: 600;
+  font-style: normal;
+  font-size: pxtorem(24px);
+  line-height: 1.37;
+
+  @include for-tablet-down {
+    font-size: pxtorem(19px);
+  }
+}
+
+@mixin about-accordian-text {
+  font-family: $manrope;
+  font-weight: 400;
+  font-style: normal;
+  font-size: pxtorem(32px);
+  line-height: 1.25;
+
+  @include for-tablet-down {
+    font-size: pxtorem(16px);
+  }
+}
+
+@mixin story-tag-text {
+  font-family: $manrope;
+  font-weight: 600;
+  font-style: normal;
+  font-size: pxtorem(24px);
+  line-height: 1.37;
+
+  @include for-tablet-down {
+    font-size: pxtorem(20px);
+  }
+}
+
+@mixin tag {
+  font-family: $manrope;
+  font-weight: 600;
+  font-style: normal;
+  font-size: pxtorem(16px);
+  line-height: 1.37;
+}
+
+@mixin pagination {
+  font-family: $manrope;
+  font-weight: 500;
+  font-style: normal;
+  font-size: pxtorem(24px);
+  line-height: 1.6;
+
+  @include for-tablet-down {
+    font-size: pxtorem(40px);
+    line-height: 1;
+  }
+}
+
+@mixin cookies-text {
+  font-family: $itc;
+  font-weight: 500;
+  font-style: normal;
+  font-size: pxtorem(32px);
+  line-height: 2.6;
+
+  @include for-tablet-down {
+    font-size: pxtorem(17px);
+  }
+}
+
+@mixin cookies-text-alt {
+  font-family: $manrope;
+  font-weight: 200;
+  font-style: normal;
+  font-size: pxtorem(24px);
+  line-height: 1.37;
+
+  @include for-tablet-down {
+    font-size: pxtorem(15px);
+  }
+}
+
+// OLD NOT NEEDED
+
+@mixin body-m-alt {
+  // font-family: $kayak-sans;
+  font-size: pxtorem(24px);
+  line-height: 1.3;
+
+  @include for-tablet-down {
+    font-size: pxtorem(16px);
+    line-height: 1.12;
+  }
+}
+
 @mixin title-alt {
-  font-family: $skippy-sharp;
+  // font-family: $skippy-sharp;
   font-weight: 400;
   font-size: pxtorem(88px);
   line-height: 1.32;
@@ -155,40 +279,8 @@ $skippy-sharp: skippy-sharp, sans-serif;
   }
 }
 
-@mixin button-text {
-  font-family: $kayak-sans-bold;
-  font-size: pxtorem(32px);
-  line-height: 1.3;
-
-  @include for-tablet-down {
-    font-size: pxtorem(24px);
-    line-height: 1.16;
-  }
-}
-
-@mixin button-text-alt {
-  font-family: $kayak-sans-bold;
-  font-size: pxtorem(24px);
-  line-height: 1.3;
-
-  @include for-tablet-down {
-    font-size: pxtorem(16px);
-    line-height: 1;
-  }
-}
-
-@mixin about-accordian-text {
-  font-family: $kayak-sans;
-  font-size: pxtorem(32px);
-  line-height: 1.25;
-
-  @include for-tablet-down {
-    font-size: pxtorem(16px);
-  }
-}
-
 @mixin story-text {
-  font-family: $kayak-sans;
+  // font-family: $kayak-sans;
   font-size: pxtorem(28px);
   line-height: 1.21;
 
@@ -197,18 +289,8 @@ $skippy-sharp: skippy-sharp, sans-serif;
   }
 }
 
-@mixin tag-text {
-  font-family: $kayak-sans;
-  font-size: pxtorem(24px);
-  line-height: 1.12;
-
-  @include for-tablet-down {
-    font-size: pxtorem(18px);
-  }
-}
-
 @mixin tag-text-s {
-  font-family: $kayak-sans;
+  // font-family: $kayak-sans;
   font-size: pxtorem(18px);
   line-height: 1.12;
 
@@ -218,7 +300,7 @@ $skippy-sharp: skippy-sharp, sans-serif;
 }
 
 @mixin tag-text-l {
-  font-family: $kayak-sans;
+  // font-family: $kayak-sans;
   font-size: pxtorem(24px);
   line-height: 1.08;
 
@@ -228,19 +310,18 @@ $skippy-sharp: skippy-sharp, sans-serif;
   }
 }
 
-@mixin pagination {
-  font-family: $skippy-sharp;
-  font-weight: 400;
-  font-size: pxtorem(32px);
-  line-height: 1.25;
+@mixin tag-text {
+  // font-family: $kayak-sans;
+  font-size: pxtorem(24px);
+  line-height: 1.12;
 
   @include for-tablet-down {
-    font-size: pxtorem(24px);
+    font-size: pxtorem(18px);
   }
 }
 
 @mixin subtitle {
-  font-family: $kayak-sans-bold;
+  // font-family: $kayak-sans-bold;
   font-size: pxtorem(24px);
 
   @include for-tablet-down {
