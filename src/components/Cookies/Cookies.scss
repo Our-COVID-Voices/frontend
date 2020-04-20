@@ -4,7 +4,7 @@
 
 .cookies-banner {
   @include body-s;
-  background-color: $turqoise;
+  background-color: $green;
   color: $white;
   padding: space(24) space(40) !important;
   max-width: 100% !important ;
@@ -18,10 +18,11 @@
   }
 
   &--header {
-    @include heading-s;
+    @include cookies-text;
   }
 
   &--close {
+    @include cookies-text-alt;
     text-align: right;
 
     &:hover {
@@ -34,9 +35,5 @@
         margin-left: space(10);
       }
     }
-  }
-
-  &--content {
-    margin-top: space(16);
   }
 }
