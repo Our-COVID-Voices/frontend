@@ -13,10 +13,14 @@ interface IProps {
   filter?: boolean;
   purple?: boolean;
   ref?: RefObject<HTMLButtonElement>;
+  navy?: boolean;
 }
 
 const Button: FunctionComponent<IProps> = forwardRef(
-  ({ text, type, disabled, onClick, twoCol, small, filter, purple }, ref) => {
+  (
+    { text, type, disabled, onClick, twoCol, small, filter, purple, navy },
+    ref
+  ) => {
     return (
       <button
         disabled={disabled}
@@ -26,7 +30,8 @@ const Button: FunctionComponent<IProps> = forwardRef(
           "button--two-col": twoCol,
           "button--small": small,
           "button--filter": filter,
-          "button--purple": purple
+          "button--purple": purple,
+          "button--navy": navy,
         })}
         ref={ref}
       >
