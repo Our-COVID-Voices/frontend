@@ -4,15 +4,15 @@
 
 .tag {
   @include tag-text;
-  color: $green;
-  border: 1px solid $green;
+  color: $purple;
+  border: 1px solid $purple;
   width: fit-content;
   padding: space(12);
   display: inline-block;
   background-color: $white;
 
   &--selected {
-    background-color: $green;
+    background-color: $purple;
     color: $white;
   }
 

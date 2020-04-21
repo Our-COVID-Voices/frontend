@@ -38,6 +38,10 @@
     &--container {
       background-color: $faded-purple;
       padding: space(40);
+
+      @include for-tablet-down {
+        padding: space(20);
+      }
     }
 
     &--title {

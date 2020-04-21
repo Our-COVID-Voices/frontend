@@ -23,8 +23,8 @@ interface IProps extends RouteComponentProps {
 
 const Browse: FunctionComponent<IProps> = ({ experienceStore, history }) => {
   useEffect(() => {
-    // experienceStore.getTags();
-    // experienceStore.getExperiences();
+    experienceStore.getTags();
+    experienceStore.getExperiences();
   }, [experienceStore]);
 
   if (!experienceStore) return null;
