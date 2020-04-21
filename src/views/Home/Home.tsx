@@ -17,7 +17,6 @@ import NationalVoices from "../../assets/logo/national-voices.svg";
 import PPL from "../../assets/logo/ppl.jpg";
 import Footer from "../../components/Footer";
 import Layout from "../../components/Layout";
-import DonateButton from "../../components/DonateButton/DonateButton";
 
 const Home: FunctionComponent<RouteComponentProps> = ({ history }) => (
   <Layout>
