@@ -80,7 +80,7 @@
 
 @mixin about {
   @include body-l;
-  color: $grey;
+  color: $navy;
   margin-top: space(88);
 
   @include for-phone-only {
