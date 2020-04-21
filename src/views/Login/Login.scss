@@ -46,7 +46,7 @@
     }
 
     &--description {
-      @include tag-text;
+      @include body-s;
       color: $navy;
       margin-top: space(24);
     }
