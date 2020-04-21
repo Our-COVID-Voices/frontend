@@ -41,6 +41,15 @@ const Header: FunctionComponent<IProps> = ({ loggedIn }) => (
         >
           Contact
         </NavLink>
+        
+        <NavLink
+          className="header--link"
+          to="/about"
+          activeClassName="header--link--active"
+        >
+          About The Project
+        </NavLink>
+
 
         <DonateButton text="Donate" loggedIn={loggedIn} />
       </div>
