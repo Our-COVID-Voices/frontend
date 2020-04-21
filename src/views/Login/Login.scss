@@ -4,6 +4,10 @@
 .login {
   @include container;
 
+  &--form {
+    margin-top: space(24);
+  }
+
   &--inner {
     @include for-phone-only {
       text-align: center;
@@ -12,13 +16,13 @@
 
   &--title {
     @include heading-l;
-    color: $grey;
+    color: $navy;
     margin-bottom: space(32);
   }
 
   &--description {
     @include body-l;
-    color: $medium-grey;
+    color: $navy;
   }
 
   &--button-container {
@@ -43,7 +47,7 @@
 
     &--description {
       @include tag-text;
-      color: $grey;
+      color: $navy;
       margin-top: space(24);
     }
   }
