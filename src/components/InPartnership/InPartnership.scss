@@ -1,0 +1,37 @@
+@import "../../styles/breakpoints.scss";
+@import "../../styles/mixins.scss";
+@import "../../styles/fonts.scss";
+
+.in-partnership {
+  &--title {
+    @include body-s;
+  }
+
+  &--logo-container {
+    display: flex;
+    align-items: center;
+    margin-top: space(10);
+    margin-bottom: space(64);
+    flex-wrap: wrap;
+
+    svg {
+      width: 68px;
+    }
+  }
+
+  &--logo {
+    width: pxtorem(68px);
+
+    @include for-tablet-down {
+      width: pxtorem(50px);
+    }
+  }
+
+  &--logos {
+    margin-right: space(20);
+
+    @include for-tablet-down {
+      margin-right: space(10);
+    }
+  }
+}

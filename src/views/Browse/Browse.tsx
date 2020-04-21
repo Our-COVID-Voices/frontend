@@ -15,6 +15,7 @@ import Search from "./Search";
 import Results from "./Results";
 import Footer from "../../components/Footer";
 import Button from "../../components/Button";
+import InPartnership from "../../components/InPartnership/InPartnership";
 
 interface IProps extends RouteComponentProps {
   experienceStore: ExperienceStore;
@@ -22,8 +23,8 @@ interface IProps extends RouteComponentProps {
 
 const Browse: FunctionComponent<IProps> = ({ experienceStore, history }) => {
   useEffect(() => {
-    experienceStore.getTags();
-    experienceStore.getExperiences();
+    // experienceStore.getTags();
+    // experienceStore.getExperiences();
   }, [experienceStore]);
 
   if (!experienceStore) return null;
@@ -38,10 +39,10 @@ const Browse: FunctionComponent<IProps> = ({ experienceStore, history }) => {
           <Breadcrumb
             crumbs={[
               { url: "/", text: "Home" },
-              { url: "", text: "Stories" }
+              { url: "", text: "Stories" },
             ]}
           />
-          <p className="browse--subtitle">{cms("global.tagline")}</p>
+          <InPartnership />
         </div>
         <div className="flex-col--8 flex-col--tablet-large--12">
           <p className="browse--about mobile-hide">{cms("global.about")}</p>
@@ -71,7 +72,7 @@ const Browse: FunctionComponent<IProps> = ({ experienceStore, history }) => {
               text="Sign up and share"
               onClick={() =>
                 history.push({
-                  pathname: "/register"
+                  pathname: "/register",
                 })
               }
               twoCol={true}
