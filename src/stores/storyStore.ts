@@ -1,12 +1,12 @@
 import httpService from "../service/api";
 import { observable, action } from "mobx";
-import { IStory, ICategorisedTag } from "../utils/types";
+import { IStory, ITag } from "../utils/types";
 import ExperienceStore from "./experienceStore";
 
 export default class StoryStore {
   @observable story: IStory | null = null;
   @observable experienceStore: ExperienceStore | null = null;
-  @observable tags: ICategorisedTag[] = [];
+  @observable tags: ITag[] = [];
   @observable storyLoading: boolean = false;
 
   constructor(experienceStore: ExperienceStore) {
@@ -29,7 +29,7 @@ export default class StoryStore {
           await this.experienceStore.getTags();
         }
 
-        this.tags = this.experienceStore.categorizeTags(this.story.tags);
+        this.tags = this.story.tags;
       }
 
       this.storyLoading = false;
