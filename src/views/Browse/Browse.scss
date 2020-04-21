@@ -95,14 +95,14 @@
     }
 
     &--title {
-      @include heading-m;
-      color: $purple;
+      @include heading-s;
+      color: $navy;
       margin-bottom: space(40);
     }
 
     &--content {
       @include body-l;
-      color: $grey;
+      color: $navy;
     }
 
     &--button {

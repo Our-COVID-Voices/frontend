@@ -76,6 +76,7 @@ const Browse: FunctionComponent<IProps> = ({ experienceStore, history }) => {
                 })
               }
               twoCol={true}
+              purple={true}
             />
           </div>
         </div>
