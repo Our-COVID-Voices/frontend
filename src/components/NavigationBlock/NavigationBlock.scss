@@ -23,7 +23,7 @@
     text-align: center;
 
     &--outer {
-      padding: space(16) !important;
+      padding: space(8) !important;
     }
 
     &--buttons {
@@ -39,7 +39,7 @@
 
     &--description {
       @include heading-s;
-      color: $grey;
+      color: $navy;
       margin-bottom: space(32);
 
       @include for-phone-only {
