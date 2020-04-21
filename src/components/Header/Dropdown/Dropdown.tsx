@@ -27,20 +27,20 @@ const Dropdown = () => {
           <NavLink
             className="dropdown--link"
             activeClassName="dropdown--link--active"
-            to="/test"
+            to="/why"
           >
             Why we're doing this
           </NavLink>
           <NavLink
             className="dropdown--link"
             activeClassName="dropdown--link--active"
-            to="/test2"
+            to="/how"
           >
             What can I write about and how do I do this?
           </NavLink>
           <NavLink
             className="dropdown--link"
-            to="/"
+            to="/faqs"
             activeClassName="dropdown--link--active"
           >
             FAQs
