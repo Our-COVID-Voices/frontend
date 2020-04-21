@@ -220,14 +220,13 @@ $itc: itc-avant-garde-gothic-pro, sans-serif;
 
 @mixin pagination {
   font-family: $manrope;
-  font-weight: 500;
+  font-weight: 600;
   font-style: normal;
   font-size: pxtorem(24px);
   line-height: 1.6;
 
   @include for-tablet-down {
-    font-size: pxtorem(40px);
-    line-height: 1;
+    font-weight: 500;
   }
 }
 

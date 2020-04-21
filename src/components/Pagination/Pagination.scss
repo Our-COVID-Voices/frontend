@@ -9,7 +9,7 @@
     @include button-text-alt;
     display: flex;
     align-items: center;
-    color: $tradewind;
+    color: #603681;
 
     &--icon {
       @include body-xs;
@@ -24,8 +24,8 @@
     }
 
     &--current {
-      color: $grey;
-      border-bottom: 2px solid $grey;
+      color: $navy;
+      border-bottom: 2px solid $navy;
       display: inline-block;
       width: 20px;
       text-align: center;
@@ -53,6 +53,7 @@
     }
     .rc-pagination-slash {
       margin: 0 space(8);
+      color: $navy;
 
       @include for-phone-only {
         margin: 0;
