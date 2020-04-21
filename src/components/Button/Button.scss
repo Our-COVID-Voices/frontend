@@ -49,6 +49,10 @@ $shadow: inset 2px 2px 8px rgba(0, 0, 0, 0.5);
     white-space: normal;
     padding: space(20) space(72);
     height: auto;
+
+    @include for-tablet-down {
+      padding: space(20) space(32);
+    }
   }
 
   &--small {

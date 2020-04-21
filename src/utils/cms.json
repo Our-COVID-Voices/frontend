@@ -65,19 +65,19 @@
     "step-title": "Create account steps",
     "step-description": "Email, password, consent to sharing experiences.",
     "step-1-title": "Set up your account",
-    "step-1-description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultricies tincidunt congue.",
-    "step-1-hint": "Your email will be used to log in",
-    "step-2-title": "Choose your password",
-    "step-2-description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultricies tincidunt congue.",
-    "step-2-hint": "Your password will be encrypted",
+    "step-1-description": "Please type your email address below.",
+    "step-1-hint": "Through your email, we will let you know about the publication process and any other important information about your account.",
+    "step-2-title": "Create a password which you can remember.",
+    "step-2-description": "Use a combination of lower case and upper case letters, numbers and symbols.",
+    "step-2-hint": "The password you supply will be AES-256 bit encrypted (the same standard banks use)",
     "step-3-title": "Consent",
-    "step-3-description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultricies tincidunt congue.</p> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rutrum sem vel elit vehicula, vitae accumsan turpis scelerisque.</p>",
+    "step-3-description": "By creating an account for this site you will be able to add your experiences. Remember, your experiences will be read by people you haven’t met, so don't share anything you wouldn’t want a stranger to know.  We will review each experience to make sure it doesn’t break any of our rules before it is published. You can remove your experiences at any time.  National Voices will use everyone's writing to raise awareness of how Covid-19 has impacted people with very different lives and will also take this insight to decision makers who are in charge of the health and care system.",
     "confirmation": {
       "title": "Account created",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultricies tincidunt congue.",
+      "description": "Thank you for creating your account. You have two options now: you can submit your experience or go back to the home page to read other people’s submissions. If you are not sure what to write about, click on ‘Submit new experience’ to read our guidance.",
       "cta": {
-        "dashboard": "Go to dashboard",
-        "submit": "Submit new experience",
+        "dashboard": "Go to My Experiences",
+        "submit": "Submit New Experience",
         "mobile": "What would you like to do next?"
       }
     },
@@ -87,7 +87,7 @@
       "step-1-title": "Next step",
       "step-1-description": "Set your password to keep your account secure.",
       "step-2-title": "Next step",
-      "step-2-description": "Consent to sharing your stories and information with the app.",
+      "step-2-description": "Consent to sharing your experience and information on the website.",
       "step-3-title": "Next step",
       "step-3-description": "Click submit to finish creating your account.",
       "confirmation": "Browse through the experiences of others."

@@ -131,7 +131,6 @@ class Register extends Component<IProps> {
                 }
                 ref={this.buttonRef}
                 disabled={this.disableButton()}
-                purple={true}
               />
             </div>
           </div>

@@ -5,6 +5,10 @@
 .register {
   @include container;
 
+  &--form {
+    margin-top: space(24) !important;
+  }
+
   &--title {
     @include heading-l;
     color: $navy;
@@ -12,6 +16,7 @@
   }
 
   &--image {
+    margin-bottom: space(32);
     svg {
       @include for-phone-only {
         width: 115px;
