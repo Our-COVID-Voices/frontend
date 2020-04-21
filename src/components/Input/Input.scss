@@ -11,7 +11,7 @@
 
   &::placeholder {
     color: $navy;
-    @include body-m-alt;
+    @include body-m;
     line-height: revert;
   }
 
@@ -32,9 +32,8 @@
 }
 
 input[type="text"] {
-  @include body-m-alt;
+  @include body-m;
   line-height: revert;
-
 }
 
 input[type="password"]:not(:placeholder-shown) {
