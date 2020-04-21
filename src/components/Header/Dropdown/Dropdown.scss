@@ -1,0 +1,47 @@
+@import "../../../styles/fonts.scss";
+@import "../../../styles/colors.scss";
+@import "../../../styles/mixins.scss";
+
+.dropdown {
+  &--container {
+    display: inline-block;
+    margin-right: space(16);
+    position: relative;
+  }
+
+  &--button {
+    background-color: $light-grey;
+    @include button-text;
+    color: $navy;
+    border-radius: 26px;
+    padding: space(8) space(16);
+
+    &--icon {
+      margin-left: space(16);
+    }
+  }
+
+  &--menu {
+    background-color: $light-grey;
+    border-radius: 26px;
+    padding: space(8) space(12);
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+  }
+
+  &--link {
+    font-family: $itc;
+    font-weight: 500;
+    font-size: pxtorem(22px);
+    text-decoration: none;
+    padding: space(8) space(12);
+
+    &--active {
+      background-color: $medium-green;
+      border-radius: 26px;
+    }
+  }
+}

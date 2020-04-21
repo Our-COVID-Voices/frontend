@@ -8,6 +8,7 @@ import Logo from "../../assets/logo/logo_colour.svg";
 
 import "./Header.scss";
 import UserHeader from "./UserHeader";
+import Dropdown from "./Dropdown/Dropdown";
 
 interface IProps {
   loggedIn: boolean;
@@ -17,7 +18,7 @@ const Header: FunctionComponent<IProps> = ({ loggedIn }) => (
   <header>
     <Cookies />
     <UserHeader />
-    <div className="flex-container flex-container--no-padding flex-container--center header">
+    <nav className="flex-container flex-container--no-padding flex-container--center header">
       <NavLink
         to="/"
         className="header--link"
@@ -41,19 +42,12 @@ const Header: FunctionComponent<IProps> = ({ loggedIn }) => (
         >
           Contact
         </NavLink>
-        
-        <NavLink
-          className="header--link"
-          to="/about"
-          activeClassName="header--link--active"
-        >
-          About The Project
-        </NavLink>
 
+        <Dropdown />
 
         <DonateButton text="Donate" loggedIn={loggedIn} />
       </div>
-    </div>
+    </nav>
   </header>
 );
 
