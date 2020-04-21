@@ -1,6 +1,6 @@
-# Connecting Voices - Frontend
+# Our Covid Voices - Frontend
 
-The frontend website component to the [API](https://github.com/hearing-voices-network/api).
+The frontend website component to the [API](https://github.com/Our-COVID-Voices/api).
 
 ## Getting started
 
@@ -9,7 +9,7 @@ development and testing purposes.
 
 ### Prerequisites
 
-- [Hearing Voices Network - API](https://github.com/hearing-voices-network/api)
+- [Our COVID Voices - API](https://github.com/Our-COVID-Voices/api)
 - [Docker](https://www.docker.com)
 - [Yarn](https://yarnpkg.com/en/docs/install)
 
@@ -42,5 +42,5 @@ This project is intended to be deployed onto AWS to a S3 bucket.
 
 - [Ayup Digital](https://ayup.agency/)
 
-See also the list of [contributors](https://github.com/hearing-voices-network/frontend/graphs/contributors) who
+See also the list of [contributors](https://github.com/Our-COVID-Voices/frontend/graphs/contributors) who
 participated in this project.

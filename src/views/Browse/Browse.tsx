@@ -31,7 +31,7 @@ const Browse: FunctionComponent<IProps> = ({ experienceStore, history }) => {
   return (
     <Layout>
       <Helmet>
-        <title>Connecting Voices | Browse</title>
+        <title>Our COVID Voices | Browse</title>
       </Helmet>
       <div className="flex-container flex-container--no-padding flex-container--center browse">
         <div className="flex-col--12">

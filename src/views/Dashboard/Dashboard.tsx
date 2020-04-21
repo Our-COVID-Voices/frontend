@@ -28,7 +28,7 @@ const Dashboard: FunctionComponent<IProps> = ({ history, userStore }) => {
   return (
     <Layout>
       <Helmet>
-        <title>Connecting Voices | Dashboard</title>
+        <title>Our COVID Voices | Dashboard</title>
       </Helmet>
       <div className="flex-container flex-container--no-padding flex-container--center dashboard">
         <div className="flex-col--12">

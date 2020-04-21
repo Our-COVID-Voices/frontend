@@ -28,7 +28,7 @@ const Login: FunctionComponent<IProps> = ({ userStore, history }) => {
   return (
     <Layout>
       <Helmet>
-        <title>Connecting Voices | Login</title>
+        <title>Our COVID Voices | Login</title>
       </Helmet>
       <div className="flex-container flex-container--no-padding flex-container--center flex-container--justify login">
         <div className="flex-col--12 login--inner">

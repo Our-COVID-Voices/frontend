@@ -15,7 +15,7 @@ import Layout from "../../components/Layout";
 const Contribute: FunctionComponent<RouteComponentProps> = ({ history }) => (
   <Layout>
     <Helmet>
-      <title>Connecting Voices | Contribute</title>
+      <title>Our COVID Voices | Contribute</title>
     </Helmet>
     <div className="flex-container flex-container--no-padding flex-container--center contribute">
       <Breadcrumb
