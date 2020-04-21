@@ -93,7 +93,7 @@ class Register extends Component<IProps> {
     return (
       <Layout>
         <Helmet>
-          <title>Connecting Voices | Register</title>
+          <title>Our COVID Voices | Register</title>
         </Helmet>
         <div className="flex-container flex-container--no-padding flex-container--center flex-container--justify register">
           {registerStore.step > 0 && (

@@ -23,7 +23,7 @@ const About: FunctionComponent<IProps> = ({ userStore, history }) => {
   return (
     <Layout>
       <Helmet>
-        <title>Connecting Voices | About</title>
+        <title>Our COVID Voices | About</title>
       </Helmet>
       <div className="flex-container flex-container--no-padding flex-container--center about">
         <div

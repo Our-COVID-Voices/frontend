@@ -22,7 +22,7 @@ import DonateButton from "../../components/DonateButton/DonateButton";
 const Home: FunctionComponent<RouteComponentProps> = ({ history }) => (
   <Layout>
     <Helmet>
-      <title>Connecting Voices</title>
+      <title>Our COVID Voices</title>
     </Helmet>
     <div className="flex-container flex-container--no-padding flex-container--center home--welcome">
       <div className="flex-col--8 flex-col--tablet-large--12">

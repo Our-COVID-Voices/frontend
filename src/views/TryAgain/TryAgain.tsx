@@ -14,7 +14,7 @@ import Footer from "../../components/Footer";
 const TryAgain: FunctionComponent = () => (
   <Layout>
     <Helmet>
-      <title>Connecting Voices | Try Again</title>
+      <title>Our COVID Voices | Try Again</title>
     </Helmet>
     <div className="flex-container flex-container--no-padding flex-container--center try-again">
       <div className="flex-col--8 flex-col--tablet-large--12">

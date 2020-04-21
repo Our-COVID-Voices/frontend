@@ -13,7 +13,7 @@ import Link from "../../components/Link";
 const Problem: FunctionComponent<RouteComponentProps> = ({ history }) => (
   <Layout>
     <Helmet>
-      <title>Connecting Voices | Problem</title>
+      <title>Our COVID Voices | Problem</title>
     </Helmet>
     <div className="flex-container flex-container--no-padding flex-container--center flex-container--justify update-email">
       <div className="flex-col--12 my-account--back--container">

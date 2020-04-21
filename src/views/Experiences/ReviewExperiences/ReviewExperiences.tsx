@@ -84,7 +84,7 @@ class ReviewExperiences extends Component<IProps> {
         })}
       >
         <Helmet>
-          <title>Connecting Voices | Review Experience</title>
+          <title>Our COVID Voices | Review Experience</title>
         </Helmet>
         <Fragment>
           {reviewStore.loading ? (

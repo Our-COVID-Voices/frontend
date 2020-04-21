@@ -19,7 +19,7 @@ import Layout from "../../components/Layout";
 const NotFound: FunctionComponent<RouteComponentProps> = ({ history }) => (
   <Layout>
     <Helmet>
-      <title>Connecting Voices | Not Found</title>
+      <title>Our COVID Voices | Not Found</title>
     </Helmet>
     <div className="flex-container flex-container--no-padding flex-container--center home--welcome not-found">
       <div className="flex-col--8 flex-col--tablet-large--12">

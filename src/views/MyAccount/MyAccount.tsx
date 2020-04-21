@@ -14,7 +14,7 @@ import Footer from "../../components/Footer";
 const MyAccount: FunctionComponent<RouteComponentProps> = ({ history }) => (
   <Layout>
     <Helmet>
-      <title>Connecting Voices | My Account</title>
+      <title>Our COVID Voices | My Account</title>
     </Helmet>
     <div className="flex-container flex-container--no-padding flex-container--center flex-container--justify my-account">
       <div className="flex-col--12">

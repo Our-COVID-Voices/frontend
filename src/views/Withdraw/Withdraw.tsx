@@ -27,7 +27,7 @@ const Widthdraw: FunctionComponent<IProps> = ({ history, userStore }) => {
   return (
     <Layout>
       <Helmet>
-        <title>Connecting Voices | Withdraw</title>
+        <title>Our COVID Voices | Withdraw</title>
       </Helmet>
       <div className="flex-container flex-container--no-padding flex-container--center flex-container--justify my-account">
         <div className="flex-col--12 my-account--back--container">

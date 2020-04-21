@@ -36,7 +36,7 @@ const MyExperiences: FunctionComponent<IProps> = ({ history, userStore }) => {
   return (
     <Layout>
       <Helmet>
-        <title>Connecting Voices | My Experiences</title>
+        <title>Our COVID Voices | My Experiences</title>
       </Helmet>
       <div className="flex-container flex-container--no-padding flex-container--center my-experiences">
         <div className="flex-col--12">

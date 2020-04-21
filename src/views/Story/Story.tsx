@@ -42,7 +42,7 @@ const Story: FunctionComponent<IProps> = ({ storyStore, match }) => {
     <Layout>
       <Helmet>
         <title>
-          {`Connecting Voices | ${
+          {`Our COVID Voices | ${
             storyStore.story ? removeMd(storyStore.story.excerpt)  : "Selected Story"
           }`}
         </title>

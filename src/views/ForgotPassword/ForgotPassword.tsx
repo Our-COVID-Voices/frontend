@@ -11,7 +11,7 @@ import Layout from "../../components/Layout";
 const ForgotPassword: FunctionComponent = () => (
   <Layout>
     <Helmet>
-      <title>Connecting Voices | Forgot Password</title>
+      <title>Our COVID Voices | Forgot Password</title>
     </Helmet>
     <div className="flex-container flex-container--no-padding flex-container--center flex-container--justify forgot-password">
       <div className="flex-col--12 forgot-password--inner">
