@@ -2,8 +2,8 @@
 @import "../../styles/colors.scss";
 
 .link {
-  color: $ribienna;
-  display: block;
+  color: $purple;
+  display: inline-block;
 
   &--large {
     @include heading-m;
@@ -22,7 +22,7 @@
   }
 
   &--green {
-    color: $turqoise;
-    text-decoration-color: $turqoise;
+    color: $green;
+    text-decoration-color: $green;
   }
 }

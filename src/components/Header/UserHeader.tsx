@@ -1,127 +1,51 @@
 import React, { FunctionComponent } from "react";
 import ReactSVG from "react-svg";
-import { Link, withRouter, RouteComponentProps } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { NavLink } from "react-router-dom";
 import { observer, inject } from "mobx-react";
 
-import Cookies from "../Cookies";
-import Logo from "../../assets/logo/logo_white.svg";
-import HVN from "../../assets/logo/hvn-square.png";
-import Question from "../../assets/icons/question-circle-light.svg";
 import Account from "../../assets/icons/account-light.svg";
-import Dashboard from "../../assets/icons/dashboard-light.svg";
 
 import "./Header.scss";
 import UserStore from "../../stores/userStore";
 
-interface IProps extends RouteComponentProps {
+interface IProps {
   userStore?: UserStore;
 }
 
-const UserHeader: FunctionComponent<IProps> = ({
-  userStore,
-  match,
-  history
-}) => {
+const UserHeader: FunctionComponent<IProps> = ({ userStore }) => {
   if (!userStore) return null;
 
   return (
-    <header>
-      <Cookies />
-      <div className="user-header">
-        <div className="flex-container flex-container--no-padding flex-container--center">
-          <div className="flex-col--12 header--logo-container">
-            <Link to="/" className="header--link">
-              <img
-                src={HVN}
-                className="header--logo--square"
-                alt="Hearing Voices Network logo"
-              />
-              <ReactSVG src={Logo} className="header--logo" wrapper="span" />
-            </Link>
-          </div>
+    <div className="flex-container flex-container--no-padding flex-container--full-width user-header">
+      {userStore.loggedIn && (
+        <NavLink
+          to="/my-experiences"
+          className="user-header--link"
+          activeClassName="header--link--active"
+        >
+          My Experiences
+        </NavLink>
+      )}
 
-          {/* Mobile Links  */}
-          <div className="mobile-show header--links--outer">
-            <div className="flex-container flex-container--no-padding header--links">
-              <span className="user-header--link">
-                <Link className="header--link user-header--link" to="/about">
-                  About
-                  <ReactSVG
-                    src={Question}
-                    wrapper="span"
-                    className="header--icon"
-                  />
-                </Link>
-              </span>
-              <span className="user-header--link">
-                <Link className="header--link" to="/dashboard">
-                  Dashboard
-                  <ReactSVG
-                    src={Dashboard}
-                    wrapper="span"
-                    className="header--icon"
-                  />
-                </Link>
-              </span>
-              <span className="user-header--link">
-                <Link className="header--link" to="/account">
-                  My account
-                  <ReactSVG
-                    src={Account}
-                    wrapper="span"
-                    className="header--icon"
-                  />
-                </Link>
-              </span>
-            </div>
-          </div>
-
-          {/* Desktop Links */}
-
-          <div className="flex-container flex-container--no-padding header--links mobile-hide">
-            <span className="user-header--link">
-              <FontAwesomeIcon
-                icon="chevron-left"
-                className="user-header--chevron"
-              />
-              <Link
-                className="header--link user-header--link"
-                to={match.path === "/dashboard" ? "/" : "/dashboard"}
-              >
-                {`Go back to ${
-                  match.path === "/dashboard"
-                    ? "Connecting Voices"
-                    : "dashboard"
-                }`}
-              </Link>
-            </span>
-            <span className="user-header--link">
-              <Link className="header--link user-header--link" to="/browse">
-                View other's stories
-              </Link>
-            </span>
-            <span className="user-header--link">
-              <Link className="header--link" to="/account">
-                My account
-              </Link>
-            </span>
-            <span className="user-header--link">
-              <button
-                className="header--link"
-                onClick={() => {
-                  userStore.logOut();
-                  history.push("/");
-                }}
-              >
-                Log out
-              </button>
-            </span>
-          </div>
-        </div>
-      </div>
-    </header>
+      {userStore.loggedIn && (
+        <NavLink
+          to="/settings"
+          className="user-header--link"
+          activeClassName="header--link--active"
+        >
+          Settings
+        </NavLink>
+      )}
+      <NavLink
+        to="/login"
+        className="user-header--link user-header--link--login"
+        activeClassName="header--link--active"
+      >
+        {userStore.loggedIn ? "Log Out" : "Log In"}
+        <ReactSVG src={Account} wrapper="span" className="header--icon" />
+      </NavLink>
+    </div>
   );
 };
 
-export default inject("userStore")(withRouter(observer(UserHeader)));
+export default inject("userStore")(observer(UserHeader));

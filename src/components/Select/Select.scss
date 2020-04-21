@@ -3,8 +3,8 @@
 
 select {
   @include body-m-alt;
-  border: 1px solid $ribienna-dark;
-  color: $ribienna;
+  border: 1px solid $dark-purple;
+  color: $purple;
   padding: space(20);
   position: relative;
   padding-right: space(40);
@@ -32,7 +32,7 @@ select {
 
     &:after {
       position: absolute;
-      background-color: $ribienna;
+      background-color: $purple;
       background-image: url("../../assets/icons/chevron.svg");
       background-repeat: no-repeat;
       background-position: center;
@@ -53,7 +53,7 @@ select {
       position: relative;
       z-index: 99;
       background: none;
-      border: 1px solid $ribienna-dark;
+      border: 1px solid $dark-purple;
       border-radius: 0;
       margin-right: 40px;
     }

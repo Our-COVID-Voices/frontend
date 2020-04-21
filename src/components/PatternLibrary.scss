@@ -9,22 +9,22 @@
 
   &--l {
     @include heading-l;
-    color: $turqoise;
+    color: $green;
   }
 
   &--m {
     @include heading-m;
-    color: $ribienna;
+    color: $purple;
   }
 
   &--s {
     @include heading-s;
-    color: $ribienna;
+    color: $purple;
   }
 
   &--xs {
     @include heading-xs;
-    color: $turqoise;
+    color: $green;
   }
 }
 
@@ -42,7 +42,7 @@
 
   &--m {
     @include body-m;
-    color: $ribienna;
+    color: $purple;
   }
 
   &--m-alt {
@@ -52,7 +52,7 @@
 
   &--s {
     @include body-s;
-    color: $turqoise;
+    color: $green;
   }
 
   &--s-alt {

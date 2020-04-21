@@ -4,6 +4,7 @@ import get from "lodash/get";
 import groupBy from "lodash/groupBy";
 import { IStory } from "../utils/types";
 import { format } from "date-fns";
+import { email } from "../utils/regex";
 
 export default class UserStore {
   @observable loggedIn: boolean = false;
@@ -24,6 +25,8 @@ export default class UserStore {
   @observable newEmail: string = "";
   @observable changeEmailSuccess: boolean = false;
   @observable changeEmailErrors: [] = [];
+  @observable modalOpen: boolean = false;
+  @observable withdrawType: string = "undefined";
 
   @action
   async logIn() {
@@ -32,7 +35,7 @@ export default class UserStore {
     try {
       const data = await httpService.api.post("/login", {
         email: this.username,
-        password: this.password
+        password: this.password,
       });
 
       this.userId = get(data, "data.data.id");
@@ -59,17 +62,18 @@ export default class UserStore {
       this.experiencesLoading = true;
 
       const { data } = await httpService.api.get(
-        `/api/contributions?page=${pageNum}`
+        `/api/contributions?page=${pageNum}&filter[end_user_id]=${this.userId}
+        `
       );
 
-      if (this.experienceFilter) {
-        const experiences = get(data, "data");
+      const experiences = get(data, "data");
 
+      if (this.experienceFilter) {
         experiences.filter(
           (experience: IStory) => experience.status === this.experienceFilter
         );
       } else {
-        this.experiences = get(data, "data");
+        this.experiences = experiences;
       }
 
       this.currentPage = get(data, "meta.current_page");
@@ -159,7 +163,7 @@ export default class UserStore {
 
       try {
         await httpService.api.put(`/api/end-users/${this.userId}`, {
-          password: this.newPassword
+          password: this.newPassword,
         });
 
         this.changePasswordSuccess = true;
@@ -178,7 +182,7 @@ export default class UserStore {
 
     try {
       await httpService.api.put(`/api/end-users/${this.userId}`, {
-        email: this.newEmail
+        email: this.newEmail,
       });
 
       this.changeEmailSuccess = true;
@@ -188,12 +192,24 @@ export default class UserStore {
     }
   };
 
-  deleteAccount = async (deleteType: string) => {
+  @action
+  setDeleteType = (deleteType: string) => {
+    this.withdrawType = deleteType;
+    this.toggleModal();
+  };
+
+  @action
+  toggleModal = () => {
+    this.modalOpen = !this.modalOpen;
+  };
+
+  deleteAccount = async () => {
     try {
       await httpService.api.delete(
-        `/api/end-users/${this.userId}?type=${deleteType}`
+        `/api/end-users/${this.userId}?type=${this.withdrawType}`
       );
 
+      this.toggleModal();
       this.logOut();
     } catch ({ response }) {
       console.error(response);
@@ -202,6 +218,6 @@ export default class UserStore {
 
   @computed
   get loginDisabled() {
-    return !this.username || !this.password;
+    return !email.test(this.username) || !this.password;
   }
 }

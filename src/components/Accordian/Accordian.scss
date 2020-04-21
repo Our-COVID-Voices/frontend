@@ -46,7 +46,7 @@
     margin: 0;
     width: 100%;
     border-radius: 11px;
-    background-color: $light-turqoise;
+    background-color: $light-green;
 
     &--grey {
       background-color: $light-grey;
@@ -63,7 +63,7 @@
   &--subtitle {
     @include body-xs;
     display: inline;
-    font-family: $kayak-sans-bold;
+    // font-family: $kayak-sans-bold;
     color: $tradewind-light;
     margin-left: space(16);
 

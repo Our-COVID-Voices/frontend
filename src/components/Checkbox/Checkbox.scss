@@ -32,7 +32,7 @@
       top: 7px;
       position: absolute;
       left: 7px;
-      color: $turqoise;
+      color: $green;
     }
   }
 
@@ -49,6 +49,10 @@
     @include for-phone-only {
       margin-right: space(20);
     }
+  }
+
+  input[type="checkbox"]:focus + label > span {
+    outline: 1px solid $medium-grey;
   }
 
   input[type="checkbox"] + label span:before,

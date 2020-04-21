@@ -9,11 +9,15 @@ import "./Home.scss";
 
 import Button from "../../components/Button";
 
-import Pencil from "../../assets/icons/pencil.svg";
+import Pencil from "../../assets/icons/pencil-solid.svg";
 import Community from "../../assets/icons/community.svg";
 import Security from "../../assets/icons/security.svg";
+import Ayup from "../../assets/logo/ayup-white.svg";
+import NationalVoices from "../../assets/logo/national-voices.svg";
+import PPL from "../../assets/logo/ppl.jpg";
 import Footer from "../../components/Footer";
 import Layout from "../../components/Layout";
+import DonateButton from "../../components/DonateButton/DonateButton";
 
 const Home: FunctionComponent<RouteComponentProps> = ({ history }) => (
   <Layout>
@@ -23,14 +27,31 @@ const Home: FunctionComponent<RouteComponentProps> = ({ history }) => (
     <div className="flex-container flex-container--no-padding flex-container--center home--welcome">
       <div className="flex-col--8 flex-col--tablet-large--12">
         <h1 className="home--welcome--title">{cms("home.title")}</h1>
-        <h2 className="home--welcome--subtitle">{cms("global.tagline")}</h2>
-        <p className="home--welcome--about">{cms("global.about")}</p>
+        <h2 className="home--welcome--subtitle">{cms("home.subtitle")}</h2>
+        <div className="home--welcome--logo-container">
+          <ReactSVG
+            src={NationalVoices}
+            wrapper="span"
+            className="home--welcome--logos"
+          />
+          <img
+            src={PPL}
+            alt="logo for PPL"
+            className="home--welcome--logos home--welcome--ppl"
+          />
+          <ReactSVG
+            src={Ayup}
+            wrapper="span"
+            className="home--welcome--logos"
+          />
+        </div>
+        <p className="home--welcome--about">{cms("home.content")}</p>
       </div>
     </div>
-    <div className="flex-container flex-container--no-padding flex-container--full-width  home--experiences--container">
+    <div className="flex-container flex-container--no-padding flex-container--center home--experiences">
       <div className="flex-col--12 home--experiences">
         <div className="flex-container flex-container--center flex-container--justify">
-          <div className="flex-col--7 flex-col--tablet-large--12">
+          <div className="flex-col--6 flex-col--tablet-large--12">
             <h3 className="home--experiences--title">
               {cms("home.experiences.title")}
             </h3>
@@ -41,7 +62,7 @@ const Home: FunctionComponent<RouteComponentProps> = ({ history }) => (
               text="Browse experiences"
               onClick={() =>
                 history.push({
-                  pathname: "/browse"
+                  pathname: "/browse",
                 })
               }
             />
@@ -50,22 +71,28 @@ const Home: FunctionComponent<RouteComponentProps> = ({ history }) => (
       </div>
     </div>
     <div className="flex-container flex-container--center flex-container--align-center home--share">
-      <div className="flex-col--mobile--12 flex-col--tablet--12 flex-col--6">
+      <div className="flex-col--12">
         <h4 className="home--share--title">{cms("home.share.title")}</h4>
-        <div className="flex-col--tablet--10 flex-col--mobile-small--12 home--share--description--container">
+      </div>
+      <div className="flex-col--mobile--12 flex-col--tablet--12 flex-col--6">
+        <div className="flex-col--tablet--10 flex-col--mobile--12 flex-col--mobile-small--12 home--share--description--container">
           <div className="home--share--description">
-            <ReactSVG src={Pencil} />
-            <p> {cms("home.share.experiences")}</p>
+            <ReactSVG src={Pencil} wrapper="span" />
+            <h5 style={{ display: "inline" }}>
+              {cms("home.share.experiences")}
+            </h5>
           </div>
 
           <div className="home--share--description">
-            <ReactSVG src={Community} />
-            <p>{cms("home.share.community")}</p>
+            <ReactSVG src={Community} wrapper="span" />
+            <h5 style={{ display: "inline" }}>{cms("home.share.community")}</h5>
           </div>
 
           <div className="home--share--description">
-            <ReactSVG src={Security} />
-            <p>{cms("home.share.contributions")}</p>
+            <ReactSVG src={Security} wrapper="span" />
+            <h5 style={{ display: "inline" }}>
+              {cms("home.share.contributions")}
+            </h5>
           </div>
         </div>
       </div>
@@ -74,10 +101,10 @@ const Home: FunctionComponent<RouteComponentProps> = ({ history }) => (
           text="Sign up and share"
           onClick={() =>
             history.push({
-              pathname: "/register"
+              pathname: "/register",
             })
           }
-          twoCol={true}
+          navy={true}
         />
         <p className="home--share--content">{cms("home.share.content")}</p>
       </div>
@@ -88,11 +115,14 @@ const Home: FunctionComponent<RouteComponentProps> = ({ history }) => (
           <h5 className="home--footer--title">{cms("home.footer.title")}</h5>
           <p className="home--footer--content">{cms("home.footer.content")}</p>
         </div>
+        <div className="flex-col--12 home--footer--button">
+          <Button purple={true} text="Donate" />
+        </div>
         <div className="flex-col--8 flex-col--tablet-large--12">
-          <p className="home--footer--contact">
+          <h6 className="home--footer--contact">
             {cms("home.footer.contact")}{" "}
             <a href={`mailto:${cms("global.email")}`}>{cms("global.email")}</a>
-          </p>
+          </h6>
         </div>
       </div>
     </Footer>

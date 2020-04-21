@@ -41,6 +41,8 @@ export default class ExperienceStore {
 
   @action
   getExperiences = async () => {
+    this.filterOptionsVisible = false;
+
     try {
       const { data } = await httpService.api.post("/contributions", {
         page: this.currentPage,
@@ -70,7 +72,9 @@ export default class ExperienceStore {
   filterResults = () => {
     this.filters = this.selectedTags.map(tag => `${tag.id}`).join(",");
 
-    this.experiencesLoading = false;
+    this.experiencesLoading = true;
+    this.currentPage = 1;
+
     this.getExperiences();
 
     this.filteredResultsShowing = true;
@@ -86,6 +90,13 @@ export default class ExperienceStore {
 
   @action
   handleAddition = (tag: ITag) => {
+    if (
+      tag.id !== "untagged" &&
+      this.selectedTags.some(tags => tags.id === "untagged")
+    ) {
+      this.clearTags(tag);
+    }
+
     const tags = this.selectedTags.slice();
     const newTags = ([] as ITag[]).concat(tags, tag);
     this.selectedTags = newTags;
@@ -104,16 +115,20 @@ export default class ExperienceStore {
       tag.id !== "untagged" &&
       this.selectedTags.some(tags => tags.id === "untagged")
     ) {
-      const indexOfUntagged = this.selectedTags.indexOf(UNTAGGED);
-      this.removeTag(indexOfUntagged);
+      this.clearTags(tag);
     }
 
     if (this.selectedTags.some(tags => tags.id === tag.id)) {
-      const indexOfTag = this.selectedTags.indexOf(tag);
-      this.removeTag(indexOfTag);
+      this.clearTags(tag);
     } else {
       this.handleAddition(tag);
     }
+  };
+
+  @action
+  clearTags = (tag: ITag) => {
+    const indexOfTag = this.selectedTags.indexOf(tag);
+    this.removeTag(indexOfTag);
   };
 
   @action

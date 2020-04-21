@@ -6,6 +6,7 @@ import Helmet from "react-helmet";
 import "./Register.scss";
 
 import { cms } from "../../utils/cms";
+import { email } from "../../utils/regex";
 
 import Intro from "./Intro";
 import StepOne from "./StepOne";
@@ -72,7 +73,7 @@ class Register extends Component<IProps> {
         return false;
 
       case 1:
-        return !registerStore.email;
+        return !email.test(registerStore.email);
 
       case 2:
         return !registerStore.password;
@@ -89,7 +90,6 @@ class Register extends Component<IProps> {
     const { registerStore } = this.props;
 
     if (registerStore.showConfirmation) return <Confirmation />;
-
     return (
       <Layout>
         <Helmet>

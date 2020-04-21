@@ -5,6 +5,10 @@ import { Link, RouteComponentProps } from "react-router-dom";
 import { observer, inject } from "mobx-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Helmet from "react-helmet";
+<<<<<<< HEAD
+=======
+import removeMd from "remove-markdown";
+>>>>>>> develop
 
 import "./Story.scss";
 
@@ -42,7 +46,11 @@ const Story: FunctionComponent<IProps> = ({ storyStore, match }) => {
       <Helmet>
         <title>
           {`Connecting Voices | ${
+<<<<<<< HEAD
             storyStore.story ? storyStore.story.excerpt : "Selected Story"
+=======
+            storyStore.story ? removeMd(storyStore.story.excerpt)  : "Selected Story"
+>>>>>>> develop
           }`}
         </title>
       </Helmet>
@@ -67,10 +75,12 @@ const Story: FunctionComponent<IProps> = ({ storyStore, match }) => {
                   </Link>
                 </div>
                 <div className="flex-col--6 flex-col--tablet--12 story--info--date">
-                  {`Date added ${format(
-                    new Date(storyStore.story.created_at),
-                    "do MMMM yyyy"
-                  )}`}
+                  <h1>
+                    {`Date added ${format(
+                      new Date(storyStore.story.created_at),
+                      "do MMMM yyyy"
+                    )}`}
+                  </h1>
                 </div>
               </div>
             </div>
@@ -92,9 +102,9 @@ const Story: FunctionComponent<IProps> = ({ storyStore, match }) => {
       <Footer green={true}>
         <div className="flex-container flex-container--no-padding flex-container--justify flex-container--center story--footer">
           <div className="flex-col--11">
-            <h5 className="story--footer--title">
+            <h2 className="story--footer--title">
               {cms("story.footer.title")}
-            </h5>
+            </h2>
           </div>
           <div className="flex-col--11">
             {!storyStore.storyLoading && (
@@ -104,7 +114,7 @@ const Story: FunctionComponent<IProps> = ({ storyStore, match }) => {
                     (category: ICategorisedTag, i: number) => {
                       return (
                         <div className="story--tags--category">
-                          <p className="story--tags--category--title">{`${category.name}:`}</p>
+                          <h3 className="story--tags--category--title">{`${category.name}:`}</h3>
                           <div style={{ display: "flex" }}>
                             {category.tags.map((tag: ITag) => (
                               <Tag story={true} text={tag.name}></Tag>

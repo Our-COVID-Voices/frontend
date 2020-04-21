@@ -3,7 +3,6 @@ import { observer, inject } from "mobx-react";
 import cx from "classnames";
 
 import UserStore from "../../stores/userStore";
-import UserHeader from "../Header/UserHeader";
 import Header from "../Header";
 
 interface IProps {
@@ -15,18 +14,17 @@ interface IProps {
 const Layout: FunctionComponent<IProps> = ({
   children,
   userStore,
-  className
+  className,
 }) => {
   if (!userStore) return null;
 
   return (
     <div
       className={cx({
-        [`${className}`]: className
+        [`${className}`]: className,
       })}
     >
-      {userStore.loggedIn ? <UserHeader /> : <Header />}
-
+      <Header loggedIn={userStore.loggedIn} />
       {children}
     </div>
   );

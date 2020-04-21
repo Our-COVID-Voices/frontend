@@ -53,7 +53,7 @@
 
     &--title {
       @include heading-m;
-      color: $ribienna;
+      color: $purple;
       margin-bottom: space(40);
     }
 
@@ -69,11 +69,11 @@
 
     &--contact {
       @include heading-xs;
-      color: $ribienna;
+      color: $purple;
 
       a {
         @include body-l;
-        color: $ribienna;
+        color: $purple;
         display: block;
       }
     }

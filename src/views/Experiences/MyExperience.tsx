@@ -5,6 +5,7 @@ import { format } from "date-fns";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import get from "lodash/get";
+import lowerCase from 'lodash/lowerCase'
 import ReactMarkdown from "react-markdown";
 import Helmet from "react-helmet";
 
@@ -68,22 +69,37 @@ const MyExperience: FunctionComponent<IProps> = ({ storyStore, match }) => {
               </div>
             </div>
 
-            {storyStore.story.status === "private" && (
+            {storyStore.story.status !== "changes_requested" && (
               <div className="flex-col--mobile--12 flex-col--5">
                 <div className="experience-privacy--hint">
                   <ReactSVG src={Padlock} />
-                  <span>{cms("story.privacy")}</span>
+                  <span>
+                    {`${cms("story.privacy")} ${lowerCase(storyStore.story.status)}`}
+                  </span>
                 </div>
               </div>
             )}
 
             {storyStore.story.status === "changes_requested" && (
-              <div className="flex-col--mobile--12 flex-col--5">
-                <div className="experience-privacy--hint">
-                  <ReactSVG src={Pencil} />
-                  <span>{cms("story.changes")}</span>
+              <Fragment>
+                <div className="flex-col--mobile--12 flex-col--5">
+                  <div className="experience-privacy--hint">
+                    <ReactSVG src={Pencil} />
+                    <span>{cms("story.changes")}</span>
+                  </div>
                 </div>
-              </div>
+
+                <div className="flex-col--12" style={{ textAlign: "center" }}>
+                  <Link
+                    to={`/my-experiences/review/${get(
+                      match,
+                      "params.storyId"
+                    )}`}
+                  >
+                    <Button text="View changes" small={true} />
+                  </Link>
+                </div>
+              </Fragment>
             )}
 
             <div

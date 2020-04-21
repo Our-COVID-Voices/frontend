@@ -4,9 +4,11 @@
   },
   "home": {
     "title": "Welcome",
+    "subtitle": "In partnership with",
+    "content": "Collecting first-person accounts of living through the 2020 Covid19 pandemic in the UK. This is a place where you can explore and share your experiences anonymously.",
     "experiences": {
-      "title": "Read other people’s experiences",
-      "content": "Discover other people’s experiences of hearing voices…"
+      "title": "Discover other people’s experiences of the pandemic",
+      "content": "The Covid-19 virus has disrupted the way we live our lives. Read other people’s experiences of this time of change"
     },
     "share": {
       "title": "Share your experience",
@@ -16,13 +18,13 @@
       "contributions": "Contributions are anonymous"
     },
     "footer": {
-      "title": "Contact us",
-      "content": "Need help with anything, or noticed something that doesn’t look right, contact the Hearing Voices Network admin.",
+      "title": "National Voices is [short explanation of National Voices]",
+      "content": "If you need help with anything check out the Frequently Asked Questions.  If you have noticed something that does not look right, please contact the website admin.",
       "contact": "Email us at"
     }
   },
   "global": {
-    "email": "info@hearing-voices.org",
+    "email": "info@domain",
     "tagline": "Created by Hearing Voices Network England",
     "about": "Collecting first-person accounts of voices, from people who hear voices. This is a place where you can explore and share your experiences anonymously."
   },
@@ -136,7 +138,7 @@
     "footer": {
       "title": "Tags"
     },
-    "privacy": "This story is private",
+    "privacy": "This story is",
     "changes": "There are suggested changes for this story"
   },
   "my-experiences": {
@@ -205,7 +207,8 @@
   "withdraw": {
     "title": "Withdraw account",
     "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultricies tincidunt congue.",
-    "hint": "You can’t undo withdrawl"
+    "hint": "You can’t undo withdrawl",
+    "confirmation": "Are you sure you would like to withdraw your account?"
   },
 
   "review": {

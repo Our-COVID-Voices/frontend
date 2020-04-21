@@ -21,7 +21,7 @@ const Cookies: FunctionComponent<IProps> = ({ loggedIn, cookieStore }) => {
       className={cx(
         "flex-container flex-container--mobile-no-padding flex-container--align-center cookies-banner",
         {
-          "cookies-banner--grey": loggedIn
+          "cookies-banner--grey": loggedIn,
         }
       )}
     >
@@ -45,7 +45,7 @@ const Cookies: FunctionComponent<IProps> = ({ loggedIn, cookieStore }) => {
         <span className="cookies-banner--header">Cookies</span>
       </div>
 
-      <div className="flex-col--8 flex-col--tablet--6 flex-col--mobile--12 cookies-banner--content">
+      <div className="flex-col--8 flex-col--tablet--6 flex-col--mobile--12">
         {cms("header.cookies")}
       </div>
       <div className="flex-col--2 flex-col--tablet--3 flex-col--mobile--5 mobile-hide cookies-banner--close">

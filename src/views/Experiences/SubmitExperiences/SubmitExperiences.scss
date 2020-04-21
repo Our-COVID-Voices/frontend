@@ -113,7 +113,7 @@
   &--word-count {
     margin-top: space(40);
     text-align: center;
-    color: $turqoise;
+    color: $green;
 
     &--count {
       @include body-s-alt;
@@ -142,7 +142,7 @@
 
     &--title {
       @include heading-xs;
-      color: $turqoise;
+      color: $green;
       margin-bottom: space(12);
     }
 
@@ -208,7 +208,7 @@
 
   &--skip {
     @include heading-xs;
-    color: $ribienna;
+    color: $purple;
     text-decoration: underline;
     cursor: pointer;
   }

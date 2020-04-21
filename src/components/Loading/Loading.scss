@@ -3,7 +3,7 @@
 @import "../../styles/animations.scss";
 
 .loading {
-  background-color: $light-turqoise;
+  background-color: $light-green;
   padding: space(64);
   text-align: center;
   max-width: 450px;
@@ -15,7 +15,7 @@
 
   &--text {
     @include heading-m;
-    color: $turqoise;
+    color: $green;
     margin-top: space(24);
     line-height: 1;
   }

@@ -5,7 +5,9 @@
 
 .home {
   &--welcome {
-    padding: space(40) space(24) !important;
+    background-color: $purple;
+    margin-top: space(20) !important;
+    padding: space(120) !important;
     position: relative;
     overflow: hidden;
 
@@ -17,89 +19,70 @@
       padding: space(40) !important;
     }
 
-    @include for-tablet-large-up {
-      &:after {
-        @include faded-background;
-      }
-    }
-
     &--title {
-      @include heading-xl;
-      color: $grey;
+      @include heading-l;
+      color: $white;
     }
 
     &--subtitle {
-      @include subtitle;
-      color: $turqoise;
+      @include body-s;
+      color: $white;
+    }
+
+    &--logo-container {
+      display: flex;
+      align-items: center;
+      margin-top: space(10);
+      margin-bottom: space(64);
+      flex-wrap: wrap;
+
+      @include for-tablet-down {
+        svg {
+          width: 90px;
+        }
+      }
+    }
+
+    &--ppl {
+      width: pxtorem(68px);
+
+      @include for-tablet-down {
+        width: pxtorem(50px);
+      }
+    }
+
+    &--logos {
+      margin-right: space(20);
+
+      @include for-tablet-down {
+        margin-right: space(10);
+      }
     }
 
     &--about {
-      @include about;
+      @include body-l;
+      color: $white;
     }
   }
 
   &--experiences {
-    position: relative;
     padding: pxtorem(169px) 0;
-    background-color: $light-turqoise;
+    background-color: $light-green;
     text-align: center;
-    margin-top: space(120);
 
     @include for-phone-only {
       margin-top: space(72);
       padding: space(48) 0 space(64);
     }
 
-    &--container {
-      position: relative;
-
-      &:before {
-        position: absolute;
-        content: "";
-        left: 0;
-        width: 100%;
-        height: 150px;
-        background-image: url("../../assets/lines/Line2-green.svg");
-        background-repeat: no-repeat;
-        background-position: 80% 120px;
-        background-size: 110%;
-        z-index: 10;
-
-        @include for-phone-only {
-          background-image: url("../../assets/lines/Line2-green-mobile.svg");
-          background-position: 80% 67px;
-        }
-      }
-
-      &:after {
-        position: absolute;
-        left: 0;
-        content: "";
-        width: 100%;
-        height: 45px;
-        background-image: url("../../assets/lines/Line2-green.svg");
-        background-repeat: no-repeat;
-        background-size: 110%;
-        bottom: -24px;
-
-        @include for-phone-only {
-          background-image: url("../../assets/lines/Line2-green-mobile.svg");
-        }
-      }
-    }
-
     &--title {
-      @include heading-l;
-      color: $turqoise;
-
-      @include for-phone-only {
-        line-height: 1;
-      }
+      @include heading-m;
+      color: $navy;
     }
 
     &--content {
-      @include body-l;
-      color: $grey;
+      @include about-accordian-text;
+      color: $navy;
       margin-top: space(32);
       margin-bottom: space(80);
 
@@ -122,45 +105,40 @@
     }
 
     &--title {
-      @include heading-l;
-      color: $ribienna;
+      @include heading-m;
+      color: $navy;
+      text-align: center;
+      margin-bottom: space(56);
 
       @include for-tablet-down {
         line-height: 1;
-        text-align: center;
+        margin-bottom: space(40);
       }
     }
 
     &--description {
       @include body-l;
-      color: $grey;
-      margin: space(56) 0;
+      color: $navy;
+      display: flex;
+      align-items: center;
+      margin: space(24) 0;
 
-      @include for-phone-only {
-        margin: space(40) 0;
+      &:first-of-type {
+        margin-top: 0;
       }
 
-      p {
-        display: inline;
+      svg {
+        width: 60px;
       }
-
-      div {
-        svg {
-          width: 52px;
-          color: grey;
-          margin-right: space(24);
-          float: left;
-        }
-      }
-
-      &--container {
-        margin: 0 auto;
+      h5 {
+        margin-left: space(20);
       }
     }
 
     &--content {
-      @include body-s-alt;
-      color: $grey;
+      @include body-m;
+      font-weight: 400;
+      color: $navy;
       margin-top: space(40);
 
       @include for-phone-only {
@@ -183,28 +161,36 @@
     }
 
     &--title {
-      @include heading-m;
-      color: $ribienna;
+      @include heading-s;
+      color: $navy;
       margin-bottom: space(40);
     }
 
     &--content {
       @include body-l;
-      color: $grey;
+      color: $navy;
       margin-bottom: space(80);
 
       @include for-phone-only {
-        margin-bottom: space(16);
+        margin-bottom: space(32);
       }
     }
 
+    &--button {
+      color: $navy;
+      margin-bottom: space(80);
+
+      @include for-phone-only {
+        margin-bottom: space(32);
+      }
+    }
     &--contact {
       @include heading-xs;
-      color: $ribienna;
+      color: $purple;
 
       a {
         @include body-l;
-        color: $ribienna;
+        color: $purple;
         display: block;
       }
     }
