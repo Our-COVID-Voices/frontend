@@ -8,7 +8,7 @@
 
   &--crumb {
     @include heading-l;
-    color: $green;
+    color: $navy;
     display: inline;
 
     li {
@@ -16,7 +16,7 @@
     }
 
     &--active {
-      color: $grey;
+      color: $navy;
     }
   }
 
@@ -25,7 +25,7 @@
 
     display: inline;
     margin: 0 space(24);
-    color: $grey;
+    color: $navy;
 
     @include for-phone-only {
       margin: 0 space(16);
