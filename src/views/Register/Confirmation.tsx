@@ -47,6 +47,7 @@ const Confirmation: FunctionComponent<RouteComponentProps> = ({ history }) => (
               text={cms("register.confirmation.cta.submit")}
               twoCol={true}
               onClick={() => history.push({ pathname: "/submit-experience" })}
+              purple={true}
             />
           }
           mobileRightButton={
