@@ -4,20 +4,20 @@
 
 .privacy-button {
   @include button-text-alt;
-  color: $ribienna-dark;
-  border: 2px solid $ribienna-dark;
+  color: $dark-purple;
+  border: 2px solid $dark-purple;
   border-radius: 30px;
   padding: space(8) space(24);
 
   @include for-phone-only {
     padding: pxtorem(4px) space(10);
-    border: 1px solid $ribienna-dark;
+    border: 1px solid $dark-purple;
   }
 
   button {
     @include button-text-alt;
     padding: 0;
-    color: $ribienna-dark;
+    color: $dark-purple;
   }
 
   &--open {
@@ -30,7 +30,7 @@
     }
 
     &--title {
-      background-color: $light-ribienna;
+      background-color: $light-purple;
       border-radius: 19px;
       padding: pxtorem(4px) space(16);
 

@@ -2,7 +2,7 @@
 @import "../../styles/colors.scss";
 
 .link {
-  color: $ribienna;
+  color: $purple;
   display: inline-block;
 
   &--large {
@@ -22,7 +22,7 @@
   }
 
   &--green {
-    color: $turqoise;
-    text-decoration-color: $turqoise;
+    color: $green;
+    text-decoration-color: $green;
   }
 }

@@ -4,15 +4,15 @@
 
 .tag {
   @include tag-text;
-  color: $turqoise;
-  border: 1px solid $turqoise;
+  color: $green;
+  border: 1px solid $green;
   width: fit-content;
   padding: space(12);
   display: inline-block;
   background-color: $white;
 
   &--selected {
-    background-color: $turqoise;
+    background-color: $green;
     color: $white;
   }
 
@@ -21,8 +21,8 @@
   }
 
   &--search {
-    color: $ribienna;
-    border-color: $ribienna;
+    color: $purple;
+    border-color: $purple;
     margin: space(12) space(8) space(8) space(16);
     height: fit-content;
     cursor: pointer;
@@ -32,7 +32,7 @@
     }
 
     &--selected {
-      background-color: $ribienna;
+      background-color: $purple;
       color: $white;
     }
 

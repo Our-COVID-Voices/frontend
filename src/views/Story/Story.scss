@@ -31,7 +31,7 @@
 
     &--back {
       @include subtitle;
-      color: $turqoise;
+      color: $green;
       text-decoration: none;
     }
   }
@@ -56,7 +56,7 @@
 
     &--title {
       @include heading-m;
-      color: $turqoise;
+      color: $green;
       margin-bottom: space(40);
     }
   }

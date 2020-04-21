@@ -51,12 +51,12 @@
     color: $grey;
     text-align: left;
     margin-top: space(32);
-    font-family: $kayak-sans-bold;
+    // font-family: $kayak-sans-bold;
   }
 
   &--changes {
     @include body-l;
-    font-family: $kayak-sans-bold;
+    // font-family: $kayak-sans-bold;
     color: $medium-grey;
     text-align: left;
     margin: space(12) 0;

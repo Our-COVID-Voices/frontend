@@ -35,7 +35,7 @@ export default class UserStore {
     try {
       const data = await httpService.api.post("/login", {
         email: this.username,
-        password: this.password
+        password: this.password,
       });
 
       this.userId = get(data, "data.data.id");
@@ -66,9 +66,7 @@ export default class UserStore {
         `
       );
 
-
       const experiences = get(data, "data");
-   
 
       if (this.experienceFilter) {
         experiences.filter(
@@ -165,7 +163,7 @@ export default class UserStore {
 
       try {
         await httpService.api.put(`/api/end-users/${this.userId}`, {
-          password: this.newPassword
+          password: this.newPassword,
         });
 
         this.changePasswordSuccess = true;
@@ -184,7 +182,7 @@ export default class UserStore {
 
     try {
       await httpService.api.put(`/api/end-users/${this.userId}`, {
-        email: this.newEmail
+        email: this.newEmail,
       });
 
       this.changeEmailSuccess = true;
