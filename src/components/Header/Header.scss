@@ -7,7 +7,7 @@
   margin-bottom: space(120) !important;
 
   @include for-desktop-down {
-    padding: 0 space(24);
+    padding: 0 space(24) !important;
   }
 
   @include for-tablet-down {
