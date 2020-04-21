@@ -6,12 +6,16 @@
     @include subtitle;
     display: flex;
     justify-content: space-between;
-    color: #62717a;
+    color: $navy;
     background-color: $white;
     border: 1px solid #979797;
     border-radius: 8px;
     padding: space(12) space(24);
     position: relative;
     margin: space(8) 0;
+  }
+
+  &--icon {
+    color: $medium-navy;
   }
 }

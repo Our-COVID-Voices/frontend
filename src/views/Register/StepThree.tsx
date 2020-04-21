@@ -14,17 +14,17 @@ const StepThree: FunctionComponent<IProps> = ({ registerStore }) => {
 
   return (
     <Fragment>
-      <div className="flex-col--12">
+      <div className="flex-col--12 register--form">
         <h1 className="register--title">{cms("register.step-3-title")}</h1>
         <p
           className="register--description"
           dangerouslySetInnerHTML={{
-            __html: cms("register.step-3-description")
+            __html: cms("register.step-3-description"),
           }}
         />
         <Link
           size="small"
-          text="Link to privacy policy"
+          text="Our Agreement with You"
           href="/privacy-policy"
           green={true}
           newWindow={true}
@@ -33,7 +33,7 @@ const StepThree: FunctionComponent<IProps> = ({ registerStore }) => {
       <div className="flex-col--10 register--checkbox">
         <Checkbox
           id="consent"
-          label="I accept the privacy policy"
+          label="I accept the agreement"
           onChange={() => registerStore.toggleConsent()}
           checked={registerStore.consent}
         />

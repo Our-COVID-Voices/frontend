@@ -2,7 +2,7 @@
 @import "../../styles/colors.scss";
 
 .link {
-  color: $purple;
+  color: $navy;
   display: inline-block;
 
   &--large {
@@ -17,8 +17,8 @@
     @include body-l;
   }
 
-  &--grey {
-    color: $grey;
+  &--purple {
+    color: $purple;
   }
 
   &--green {

@@ -20,7 +20,7 @@ interface IProps extends RouteComponentProps {
 
 const Confirmation: FunctionComponent<IProps> = ({
   history,
-  contributionStore
+  contributionStore,
 }) => {
   if (!contributionStore) return null;
 
@@ -58,7 +58,7 @@ const Confirmation: FunctionComponent<IProps> = ({
                 twoCol={true}
                 onClick={() =>
                   history.push({
-                    pathname: "/my-experiences"
+                    pathname: "/my-experiences",
                   })
                 }
               />
@@ -68,7 +68,7 @@ const Confirmation: FunctionComponent<IProps> = ({
                 text="View my experiences"
                 onClick={() =>
                   history.push({
-                    pathname: "/my-experiences"
+                    pathname: "/my-experiences",
                   })
                 }
               />
@@ -105,7 +105,7 @@ const Confirmation: FunctionComponent<IProps> = ({
         <div className="flex-container flex-container--center flex-container--justify experience-entry--footer">
           <div className="flex-col--8 flex-col--tablet-large--10 guidance--footer--content">
             <Link size="medium" text="View other's stories" href="/browse" />
-            <p className="login--footer--description">
+            <p className="register--footer--description">
               {cms("register.footer.confirmation")}
             </p>
           </div>

@@ -5,13 +5,18 @@
 .register {
   @include container;
 
+  &--form {
+    margin-top: space(24) !important;
+  }
+
   &--title {
     @include heading-l;
-    color: $grey;
+    color: $navy;
     margin-bottom: space(32);
   }
 
   &--image {
+    margin-bottom: space(32);
     svg {
       @include for-phone-only {
         width: 115px;
@@ -27,29 +32,30 @@
 
   &--description {
     @include body-l;
-    color: $medium-grey;
+    color: $navy;
     margin-bottom: space(32);
 
     p {
-      margin: space(8) 0;
+      margin: space(16) 0;
     }
 
     &--tight {
       @include body-l;
-      color: $medium-grey;
+      color: $navy;
       margin-bottom: 0;
     }
   }
 
   &--subtitle {
     @include body-l;
-    color: $grey;
+    color: $navy;
     margin-bottom: space(24);
+    font-weight: bold;
   }
 
   &--step-description {
     @include body-l;
-    color: $medium-grey;
+    color: $navy;
     margin-bottom: space(56);
 
     @include for-phone-only {
@@ -81,14 +87,14 @@
     }
 
     &--title {
-      @include heading-m;
-      color: $green;
+      @include heading-s;
+      color: $navy;
       margin-bottom: space(24);
     }
 
     &--description {
       @include body-l;
-      color: $medium-grey;
+      color: $navy;
       margin-bottom: space(32);
     }
   }

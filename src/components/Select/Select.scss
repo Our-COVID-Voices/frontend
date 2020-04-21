@@ -2,7 +2,7 @@
 @import "./../../styles/fonts.scss";
 
 select {
-  @include body-m-alt;
+  @include body-m;
   border: 1px solid $dark-purple;
   color: $purple;
   padding: space(20);

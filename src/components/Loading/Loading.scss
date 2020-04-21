@@ -3,10 +3,10 @@
 @import "../../styles/animations.scss";
 
 .loading {
-  background-color: $light-green;
+  background-color: $faded-purple;
   padding: space(64);
   text-align: center;
-  max-width: 450px;
+  max-width: 500px;
   border-radius: 11px;
 
   @include for-phone-only {
@@ -15,13 +15,13 @@
 
   &--text {
     @include heading-m;
-    color: $green;
+    color: $purple;
     margin-top: space(24);
     line-height: 1;
   }
 
   &--spinner {
     animation: rotation 2s infinite linear;
-    margin-bottom: space(12);
+    margin-bottom: space(24);
   }
 }

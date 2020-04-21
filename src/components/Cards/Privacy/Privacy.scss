@@ -14,7 +14,7 @@
   }
 
   &--content {
-    @include body-m-alt;
+    @include body-m;
     color: $grey;
     padding: space(16) space(24);
     background-color: $light-grey;

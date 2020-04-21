@@ -22,20 +22,18 @@ const NavigationBlock: FunctionComponent<IProps> = ({
   rightButton,
   leftDescription,
   rightDescription,
-  mobileDescription
+  mobileDescription,
 }) => (
   <Fragment>
     <div className="flex-container flex-container--center flex-container--no-padding mobile-hide navigation-block">
       <div className="flex-col--6 navigation-block__column">
         <div className="navigation-block__column--inner">
           <div>
-            <h2 className="navigation-block__column--title--purple">
-              {leftTitle}
-            </h2>
+            <h2 className="navigation-block__column--title">{leftTitle}</h2>
           </div>
           <div
             className={cx({
-              "navigation-block--button-container": !leftDescription
+              "navigation-block--button-container": !leftDescription,
             })}
           >
             {leftButton}
@@ -56,7 +54,7 @@ const NavigationBlock: FunctionComponent<IProps> = ({
           </div>
           <div
             className={cx({
-              "navigation-block--button-container": !rightDescription
+              "navigation-block--button-container": !rightDescription,
             })}
           >
             {rightButton}

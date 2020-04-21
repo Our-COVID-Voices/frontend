@@ -11,7 +11,7 @@
     @include body-m;
     cursor: pointer;
     margin-bottom: 0;
-    color: $grey;
+    color: $navy;
 
     @include for-phone-only {
       font-size: pxtorem(18px);
@@ -45,6 +45,8 @@
     cursor: pointer;
     background-color: $light-grey;
     position: relative;
+    outline: 1px solid $medium-green;
+    border-radius: 6px;
 
     @include for-phone-only {
       margin-right: space(20);
@@ -52,7 +54,7 @@
   }
 
   input[type="checkbox"]:focus + label > span {
-    outline: 1px solid $medium-grey;
+    outline: 1px solid $medium-green;
   }
 
   input[type="checkbox"] + label span:before,

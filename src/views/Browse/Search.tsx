@@ -44,7 +44,7 @@ class Search extends Component<IProps> {
       filterOptionsVisible,
       toggleFilterOptions,
       filterResults,
-      selectNoTag
+      selectNoTag,
     } = experienceStore;
 
     return (
@@ -70,14 +70,13 @@ class Search extends Component<IProps> {
             <Button
               onClick={() => filterResults()}
               text="Filter"
-              filter={true}
               ref={this.buttonRef}
             />
           </div>
         </div>
 
         <div className="flex-col--12">
-          <div className="flex-container flex-container--no-padding flex-container--justify browse--filter--options">
+          <div className="flex-container flex-container--no-padding browse--filter--options">
             <button
               aria-expanded={filterOptionsVisible}
               aria-controls="filter-content"
@@ -97,11 +96,8 @@ class Search extends Component<IProps> {
               id="filter-content"
               aria-labelledby="filter-header"
             >
-              <p className="browse--filter--about">
-                {cms("browse.filter.about")}
-              </p>
               {showFilters && (
-                <Fragment>
+                <div className="browse--filter--container">
                   <Filters
                     handleTagSelect={experienceStore.handleTagSelect}
                     selectedTags={experienceStore.selectedTags}
@@ -124,7 +120,7 @@ class Search extends Component<IProps> {
                         }}
                         selected={isTagSelected({
                           id: "untagged",
-                          name: "No tag"
+                          name: "No tag",
                         })}
                         onKeyPress={(e: any) => {
                           if (e.key === "Enter") {
@@ -136,7 +132,7 @@ class Search extends Component<IProps> {
                     </div>
                   </div>
 
-                  <div className="flex-container flex-container--no-padding flex-container--justify browse--filter--options">
+                  <div className="flex-container flex-container--no-padding browse--filter--options">
                     <button
                       aria-expanded={filterOptionsVisible}
                       aria-controls="filter-content"
@@ -147,7 +143,7 @@ class Search extends Component<IProps> {
                       Hide filter options
                     </button>
                   </div>
-                </Fragment>
+                </div>
               )}
             </div>
           )}

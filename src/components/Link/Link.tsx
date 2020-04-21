@@ -7,7 +7,7 @@ interface IProps {
   text: string;
   href: string;
   size: "small" | "medium" | "large";
-  grey?: boolean;
+  purple?: boolean;
   green?: boolean;
   newWindow?: boolean;
 }
@@ -16,14 +16,14 @@ const Link: FunctionComponent<IProps> = ({
   text,
   href,
   size,
-  grey,
+  purple,
   green,
   newWindow
 }) => (
   <a
     href={href}
     className={cx(`link link--${size}`, {
-      "link--grey": grey,
+      "link--purple": purple,
       "link--green": green
     })}
     target={newWindow ? "__blank" : "__self"}

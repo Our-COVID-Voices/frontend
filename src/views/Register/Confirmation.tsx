@@ -47,6 +47,7 @@ const Confirmation: FunctionComponent<RouteComponentProps> = ({ history }) => (
               text={cms("register.confirmation.cta.submit")}
               twoCol={true}
               onClick={() => history.push({ pathname: "/submit-experience" })}
+              purple={true}
             />
           }
           mobileRightButton={
@@ -61,7 +62,7 @@ const Confirmation: FunctionComponent<RouteComponentProps> = ({ history }) => (
         />
       </div>
     </div>
-    <Footer purple={true}>
+    <Footer navy={true}>
       <div className="flex-container flex-container--center flex-container--no-padding flex-container--align-center register--footer">
         <div className="flex-col--12 flex-col--tablet-large--12">
           <Link size="medium" text="View other's stories" href="/" />

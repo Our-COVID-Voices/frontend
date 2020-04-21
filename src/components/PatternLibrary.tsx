@@ -186,7 +186,7 @@ const PatternLibrary = () => (
       <Link href="/" text="View other's stories" size="large" />
       <Link href="/" text="View other's stories" size="medium" />
       <Link href="/" text="info@hearing-voices.org" size="small" />
-      <Link href="/" text="Privacy policy" size="small" grey={true} />
+      <Link href="/" text="Privacy policy" size="small" purple={true} />
     </div>
     <div className="section flex-col--12">
       <Tag text="Talking" />

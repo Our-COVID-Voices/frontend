@@ -28,7 +28,7 @@ const Filters: FunctionComponent<IProps> = ({
   experienceStore,
   handleTagSelect,
   selectedTags,
-  isTagSelected
+  isTagSelected,
 }) => {
   if (!experienceStore) return null;
 
@@ -59,7 +59,10 @@ const Filter: FunctionComponent<IFilterProps> = observer(
           onClick={() => toggleTagList(!open)}
         >
           {title}
-          <FontAwesomeIcon icon="chevron-down" />
+          <FontAwesomeIcon
+            icon={open ? "minus" : "plus"}
+            className="filters--icon"
+          />
         </button>
 
         {open && (

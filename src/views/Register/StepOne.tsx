@@ -16,11 +16,11 @@ const StepOne: FunctionComponent<IProps> = ({ registerStore }) => {
 
   return (
     <form
-      onSubmit={e => {
+      onSubmit={(e) => {
         e.preventDefault();
         registerStore.nextStep();
       }}
-      className="flex-container flex-container--no-padding flex-container--center flex-container--justify"
+      className="flex-container flex-container--no-padding flex-container--center flex-container--justify register--form"
     >
       <div className="flex-col--12">
         <h1 className="register--title">{cms("register.step-1-title")}</h1>
