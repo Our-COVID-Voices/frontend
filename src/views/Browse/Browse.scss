@@ -35,6 +35,11 @@
       padding: space(32) space(6) !important;
     }
 
+    &--container {
+      background-color: $faded-purple;
+      padding: space(40);
+    }
+
     &--title {
       @include heading-xs;
       font-family: $itc;
@@ -54,11 +59,13 @@
 
     &--options {
       &-toggle {
-        @include heading-xs;
+        @include body-m;
+        font-weight: normal;
         text-decoration: underline;
         color: $navy;
         margin: space(16) 0;
         cursor: pointer;
+        padding: 0;
       }
     }
 
@@ -78,7 +85,7 @@
 
       &--title {
         @include body-s-alt;
-        color: $grey;
+        color: $navy;
         margin-top: space(20);
         display: inline;
       }
@@ -149,7 +156,7 @@
   margin: 0 space(8) space(8) 0;
   padding: space(8);
   border: 1px solid $purple;
-  border-radius: 2px;
+  border-radius: 21px;
   background: $white;
 }
 
@@ -220,6 +227,7 @@
 
 .react-tags__suggestions li {
   border: 1px solid $purple;
+  border-radius: 21px;
   margin: 0 space(8) space(8) 0;
   padding: space(8);
   color: $purple;

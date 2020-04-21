@@ -255,6 +255,17 @@ $itc: itc-avant-garde-gothic-pro, sans-serif;
   }
 }
 
+@mixin subtitle {
+  font-family: $itc;
+  font-weight: 500;
+  font-size: pxtorem(24px);
+  line-height: 1.2;
+
+  @include for-tablet-down {
+    font-size: pxtorem(20px);
+  }
+}
+
 // OLD NOT NEEDED
 
 @mixin body-m-alt {
@@ -317,14 +328,5 @@ $itc: itc-avant-garde-gothic-pro, sans-serif;
 
   @include for-tablet-down {
     font-size: pxtorem(18px);
-  }
-}
-
-@mixin subtitle {
-  // font-family: $kayak-sans-bold;
-  font-size: pxtorem(24px);
-
-  @include for-tablet-down {
-    font-size: pxtorem(20px);
   }
 }

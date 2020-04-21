@@ -96,11 +96,8 @@ class Search extends Component<IProps> {
               id="filter-content"
               aria-labelledby="filter-header"
             >
-              <p className="browse--filter--about">
-                {cms("browse.filter.about")}
-              </p>
               {showFilters && (
-                <Fragment>
+                <div className="browse--filter--container">
                   <Filters
                     handleTagSelect={experienceStore.handleTagSelect}
                     selectedTags={experienceStore.selectedTags}
@@ -135,7 +132,7 @@ class Search extends Component<IProps> {
                     </div>
                   </div>
 
-                  <div className="flex-container flex-container--no-padding flex-container--justify browse--filter--options">
+                  <div className="flex-container flex-container--no-padding browse--filter--options">
                     <button
                       aria-expanded={filterOptionsVisible}
                       aria-controls="filter-content"
@@ -146,7 +143,7 @@ class Search extends Component<IProps> {
                       Hide filter options
                     </button>
                   </div>
-                </Fragment>
+                </div>
               )}
             </div>
           )}

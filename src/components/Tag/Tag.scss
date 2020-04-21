@@ -26,6 +26,7 @@
     margin: space(12) space(8) space(8) space(16);
     height: fit-content;
     cursor: pointer;
+    border-radius: 21px;
 
     @include for-phone-only {
       margin: pxtorem(6px) pxtorem(4px) pxtorem(4px) space(8);
