@@ -265,6 +265,43 @@ $itc: itc-avant-garde-gothic-pro, sans-serif;
   }
 }
 
+@mixin tag-text-s {
+  font-family: $manrope;
+  font-weight: 500;
+
+  font-size: pxtorem(18px);
+  line-height: 1.12;
+
+  @include for-tablet-down {
+    font-size: pxtorem(14px);
+  }
+}
+
+@mixin tag-text-l {
+  font-family: $manrope;
+  font-weight: 500;
+
+  font-size: pxtorem(24px);
+  line-height: 1.08;
+
+  @include for-tablet-down {
+    font-size: pxtorem(16px);
+    line-height: 1.12;
+  }
+}
+
+@mixin tag-text {
+  font-family: $manrope;
+  font-weight: 500;
+
+  font-size: pxtorem(24px);
+  line-height: 1.12;
+
+  @include for-tablet-down {
+    font-size: pxtorem(18px);
+  }
+}
+
 // OLD NOT NEEDED
 
 @mixin body-m-alt {
@@ -296,36 +333,5 @@ $itc: itc-avant-garde-gothic-pro, sans-serif;
 
   @include for-tablet-down {
     font-size: pxtorem(24px);
-  }
-}
-
-@mixin tag-text-s {
-  // font-family: $kayak-sans;
-  font-size: pxtorem(18px);
-  line-height: 1.12;
-
-  @include for-tablet-down {
-    font-size: pxtorem(14px);
-  }
-}
-
-@mixin tag-text-l {
-  // font-family: $kayak-sans;
-  font-size: pxtorem(24px);
-  line-height: 1.08;
-
-  @include for-tablet-down {
-    font-size: pxtorem(16px);
-    line-height: 1.12;
-  }
-}
-
-@mixin tag-text {
-  // font-family: $kayak-sans;
-  font-size: pxtorem(24px);
-  line-height: 1.12;
-
-  @include for-tablet-down {
-    font-size: pxtorem(18px);
   }
 }
