@@ -9,7 +9,7 @@ import ReactSVG from "react-svg";
 import "./InPartnership.scss";
 
 const InPartnership = () => (
-  <div>
+  <div className="in-partnership--container">
     <h2 className="in-partnership--title">{cms("home.subtitle")}</h2>
     <div className="in-partnership--logo-container">
       <img
