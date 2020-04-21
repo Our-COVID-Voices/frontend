@@ -44,7 +44,7 @@ class Search extends Component<IProps> {
       filterOptionsVisible,
       toggleFilterOptions,
       filterResults,
-      selectNoTag
+      selectNoTag,
     } = experienceStore;
 
     return (
@@ -70,14 +70,13 @@ class Search extends Component<IProps> {
             <Button
               onClick={() => filterResults()}
               text="Filter"
-              filter={true}
               ref={this.buttonRef}
             />
           </div>
         </div>
 
         <div className="flex-col--12">
-          <div className="flex-container flex-container--no-padding flex-container--justify browse--filter--options">
+          <div className="flex-container flex-container--no-padding browse--filter--options">
             <button
               aria-expanded={filterOptionsVisible}
               aria-controls="filter-content"
@@ -124,7 +123,7 @@ class Search extends Component<IProps> {
                         }}
                         selected={isTagSelected({
                           id: "untagged",
-                          name: "No tag"
+                          name: "No tag",
                         })}
                         onKeyPress={(e: any) => {
                           if (e.key === "Enter") {

@@ -6,12 +6,6 @@
   @include container;
   position: relative;
 
-  @include for-tablet-large-up {
-    &:after {
-      @include faded-background;
-    }
-  }
-
   &--subtitle {
     @include subtitle;
     color: $green;
@@ -26,7 +20,6 @@
   }
 
   &--filter {
-    background-color: $light-purple;
     padding: space(16) !important;
     position: relative;
 
@@ -38,28 +31,15 @@
       padding: space(16) !important;
     }
 
-    @include for-phone-only {
-      &:before {
-        position: absolute;
-        content: "";
-        background-image: url("../../assets/lines/Line2-purple-mobile.svg");
-        width: 100%;
-        height: 22px;
-        background-repeat: no-repeat;
-        background-size: contain;
-        bottom: -8px;
-        left: 0;
-      }
-    }
-
     @include for-tablet-large-up {
-      margin-top: space(120) !important;
       padding: space(32) space(6) !important;
     }
 
     &--title {
-      @include heading-s;
-      color: $purple;
+      @include heading-xs;
+      font-family: $itc;
+      font-weight: 500;
+      color: $navy;
       margin-bottom: space(32);
 
       @include for-phone-only {
@@ -76,7 +56,7 @@
       &-toggle {
         @include heading-xs;
         text-decoration: underline;
-        color: $purple;
+        color: $navy;
         margin: space(16) 0;
         cursor: pointer;
       }
@@ -139,10 +119,11 @@
   @include body-m-alt;
   position: relative;
   padding: space(8) 0 0 space(8);
-  border: 1px solid $purple;
+  border: 1px solid $navy;
   border-radius: 1px;
   display: inline-block;
   background-color: $white;
+  margin-right: space(20);
 
   /* IE10 flexbox bug, children overlfow parent. Setting width minus button makes it correct. */
   width: calc(100% - 120px);

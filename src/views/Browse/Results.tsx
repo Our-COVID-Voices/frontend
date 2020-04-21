@@ -30,7 +30,7 @@ const Results: FunctionComponent<IProps> = ({ experienceStore }) => {
         <Fragment>
           <div className="flex-col--12">
             <h2 className="results--count">{`${experiences.length} ${
-              experiences.length > 1 ? "stories" : "story"
+              experiences.length > 1 ? "experiences" : "experience"
             }`}</h2>
           </div>
           <div className="flex-col--12">

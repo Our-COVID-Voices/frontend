@@ -129,7 +129,7 @@
   },
   "browse": {
     "filter": {
-      "title": "You can browse experiences by choosing tags.",
+      "title": "Start typing here to find experiences that you’d like to read. Most experiences have a number of tags which describe what they are about.",
       "about": "Select by category to explore more tags",
       "no-tag": "You can also search for experiences with"
     }
