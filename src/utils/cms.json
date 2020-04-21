@@ -59,9 +59,9 @@
     "footer": "Need help logging in or need to reset  your password."
   },
   "register": {
-    "title": "Hi there",
+    "title": "Hi there,",
     "error": "Unable to register your account. Please check the email address has not already been registered.",
-    "description": "At the Hearing Voices Network were collecting first-person accounts of stories, from people who experience voices, visions and other unusual sensory perceptions.",
+    "description": "Our Covid Voices is about capturing experiences we don’t hear that much about. We are particularly keen to hear from people who have had ongoing health issues or a disability long before Covid-19 happened. If you sign up you’ll be able to share up to 700 words of writing. You can write about whatever Covid-19 experiences matter most to you, for instance: loneliness; looking after someone else or yourself; how you engage with health or care services; how you buy food; and what you do to stay connected to people. We are not looking for the most dramatic, heart breaking or inspiring stuff. We want to know what it’s really like to live with ill health or disability or support someone who does during this period. <p>There is no obligation to give your name. You can submit a single experience, or multiple ones over a period of time.</p> ",
     "step-title": "Create account steps",
     "step-description": "Email, password, consent to sharing experiences.",
     "step-1-title": "Set up your account",

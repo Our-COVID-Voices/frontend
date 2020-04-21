@@ -5,7 +5,10 @@ const Intro: FunctionComponent = () => (
   <Fragment>
     <div className="flex-col--12">
       <h1 className="register--title">{cms("register.title")}</h1>
-      <p className="register--description">{cms("register.description")}</p>
+      <p
+        className="register--description"
+        dangerouslySetInnerHTML={{ __html: cms("register.description") }}
+      />
     </div>
 
     <div className="flex-col--12">
