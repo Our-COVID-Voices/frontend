@@ -247,12 +247,12 @@
 
   &--title {
     @include heading-s;
-    color: $grey;
+    color: $navy;
     margin-bottom: space(32);
   }
 
   &--about {
     @include body-l;
-    color: #62717a;
+    color: $navy;
   }
 }

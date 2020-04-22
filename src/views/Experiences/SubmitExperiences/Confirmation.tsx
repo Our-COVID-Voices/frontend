@@ -28,7 +28,7 @@ const Confirmation: FunctionComponent<IProps> = ({
     <Layout>
       <div className="flex-container flex-container--no-padding flex-container--center flex-container--justify experience-confirmation">
         <div className="flex-col--10">
-          <ReactSVG src={Submitted} />
+          <ReactSVG src={Submitted} className="guidance--image" />
 
           <h1 className="experience-confirmation--title">
             {cms("submission-confirmation.title")}
@@ -83,6 +83,7 @@ const Confirmation: FunctionComponent<IProps> = ({
                   history.push({ pathname: "/submit-experience" });
                   contributionStore.contributionSubmitted = false;
                 }}
+                purple={true}
               />
             }
             mobileRightButton={
@@ -104,7 +105,11 @@ const Confirmation: FunctionComponent<IProps> = ({
       <Footer purple={true}>
         <div className="flex-container flex-container--center flex-container--justify experience-entry--footer">
           <div className="flex-col--8 flex-col--tablet-large--10 guidance--footer--content">
-            <Link size="medium" text="View other's stories" href="/browse" />
+            <Link
+              size="medium"
+              text="View other's experiences"
+              href="/browse"
+            />
             <p className="register--footer--description">
               {cms("register.footer.confirmation")}
             </p>
