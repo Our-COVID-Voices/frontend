@@ -2,10 +2,10 @@
 @import "./../../styles/fonts.scss";
 
 select {
-  @include body-m;
+  @include body-s;
   border: 1px solid $dark-purple;
   color: $purple;
-  padding: space(20);
+  padding: space(12) space(16);
   position: relative;
   padding-right: space(40);
 
@@ -45,6 +45,8 @@ select {
       right: 0;
       top: 0;
       z-index: 98;
+      border-top-right-radius: 9px;
+      border-bottom-right-radius: 9px;
     }
 
     select {
@@ -56,6 +58,7 @@ select {
       border: 1px solid $dark-purple;
       border-radius: 0;
       margin-right: 40px;
+      border-radius: 9px;
     }
   }
 }
