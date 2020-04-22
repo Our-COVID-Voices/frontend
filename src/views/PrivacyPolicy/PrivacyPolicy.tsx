@@ -11,6 +11,7 @@ import UserStore from "../../stores/userStore";
 import "./PrivacyPolicy.scss";
 import Layout from "../../components/Layout";
 import Breadcrumb from "../../components/Breadcrumb";
+import Checkbox from "../../components/Checkbox";
 
 interface IProps extends RouteComponentProps {
   userStore?: UserStore;
@@ -28,7 +29,7 @@ const PrivacyPolicy: FunctionComponent<IProps> = ({ userStore, history }) => {
         <div className="flex-col--12">
           <div
             className={cx("flex-col--12", {
-              "my-account--back--container": userStore.loggedIn
+              "my-account--back--container": userStore.loggedIn,
             })}
           >
             {userStore.loggedIn ? (
@@ -42,7 +43,7 @@ const PrivacyPolicy: FunctionComponent<IProps> = ({ userStore, history }) => {
               <Breadcrumb
                 crumbs={[
                   { text: "Home", url: "/" },
-                  { text: "Privacy policy", url: "" }
+                  { text: "Privacy policy", url: "" },
                 ]}
               />
             )}
@@ -51,7 +52,8 @@ const PrivacyPolicy: FunctionComponent<IProps> = ({ userStore, history }) => {
         <div
           className={cx("flex-col--tablet-large--12", {
             "flex-col--12": !userStore.loggedIn,
-            "privacy-policy--content--container flex-col--8": userStore.loggedIn
+            "privacy-policy--content--container flex-col--8":
+              userStore.loggedIn,
           })}
         >
           {userStore.loggedIn && (
@@ -61,6 +63,21 @@ const PrivacyPolicy: FunctionComponent<IProps> = ({ userStore, history }) => {
             className="privacy-policy--content"
             dangerouslySetInnerHTML={{ __html: cms("privacy.content") }}
           />
+
+          <form>
+            <Checkbox
+              label="I agree to be contacted by National Voices during the next 3 years, so I can decide whether to take part in further conversations or similar projects."
+              checked={false}
+              id="consent-1"
+              onChange={() => console.log("checked")}
+            />
+            <Checkbox
+              label="I do not agree to be contacted by National Voices. "
+              checked={false}
+              id="consent-2"
+              onChange={() => console.log("checked")}
+            />
+          </form>
         </div>
       </div>
     </Layout>

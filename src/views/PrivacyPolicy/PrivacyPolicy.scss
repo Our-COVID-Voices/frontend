@@ -13,13 +13,13 @@
 
   &--title {
     @include heading-l;
-    color: $grey;
+    color: $navy;
     margin-top: space(32);
   }
 
   &--content {
     @include about;
-    color: $medium-grey;
+    color: $navy;
 
     margin-top: space(88);
 
@@ -29,10 +29,6 @@
 
     p {
       margin: space(16) 0;
-
-      @include for-phone-only {
-        margin: space(8) 0;
-      }
     }
 
     &--container {
@@ -40,5 +36,13 @@
         padding: 0 space(32) !important;
       }
     }
+  }
+
+  .checkbox {
+    margin-top: space(16);
+  }
+
+  form {
+    margin-top: space(32);
   }
 }
