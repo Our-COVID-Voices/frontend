@@ -149,11 +149,9 @@
   },
   "writing-guidance": {
     "guidance-one-title": "Writing guidance",
-    "guidance-one-1": "Lorem ipsum dolor sit amet, adipiscing elit. Vivamus ultricies tincidunt congue.",
-    "guidance-one-2": "Lorem ipsum dolor sit amet, adipiscing elit.",
+    "guidance-one-1": "<p>You can write as little or as much as you like, once or as many times as you want to. Our Covid Voices is not a writing competition, where only the most dramatic or inspirational stories get published. We want to hear about everybody’s experiences.</p><p>You can talk about what has been different for you during the pandemic; what has worried you; and what has brought you comfort, joy and pleasure. Show others what the everyday experience of getting by in this time of crisis is really like. Our Covid Voices will share your experiences in your own words and on your own terms.</p><p>Please avoid sharing anything that you or others might want to keep private.  Please don’t identify organisations or other people by name if you write about them.  What you write will be read by anyone who comes to this site, so don’t share anything that you want to remain private.</p>",
     "guidance-two-title": "Guidelines",
-    "guidance-two-1": "Lorem ipsum dolor sit amet, adipiscing elit. Vivamus ultricies tincidunt congue.",
-    "guidance-two-2": "Lorem ipsum dolor sit amet, adipiscing elit. Vivamus ultricies tincidunt congue."
+    "guidance-two-1": "<ul>Please do not include:<li>Full names</li><li>Phone numbers</li><li>Email addresses</li><li>Addresses</li><li>NHS numbers</li><li>Documents’ numbers</li><li>Links to websites</li></ul><p>Please see our <a href='/writing-guidance'>writing guidelines</a> and <a href='/privacy-policy'>our contract with you</a> for more details</p>"
   },
   "submission": {
     "title": "New experience",
