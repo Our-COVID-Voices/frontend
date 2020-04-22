@@ -40,7 +40,7 @@ const MyExperiences: FunctionComponent<IProps> = ({ history, userStore }) => {
       </Helmet>
       <div className="flex-container flex-container--no-padding flex-container--center my-experiences">
         <div className="flex-col--12">
-          <div className="flex-container flex-container--no-padding flex-container--center flex-container--align-center">
+          <div className="flex-container flex-container--no-padding flex-container--center flex-container--align-center my-experiences--nav">
             <button
               onClick={() => history.goBack()}
               className="my-experiences--back"
