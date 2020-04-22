@@ -37,7 +37,7 @@ const GuidanceTwo: FunctionComponent<IProps> = ({ contributionStore }) => {
           />
         </div>
       </div>
-      <Footer green={true}>
+      <Footer navy={true}>
         <div className="flex-container flex-container--center flex-container--justify guidance--footer">
           <div className="flex-col--8 flex-col--tablet-large--12 guidance--footer--content">
             <Button

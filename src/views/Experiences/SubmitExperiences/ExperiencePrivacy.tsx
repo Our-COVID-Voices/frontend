@@ -60,7 +60,7 @@ const ExperiencePrivacy: FunctionComponent<IProps> = ({
           </div>
         )}
       </div>
-      <Footer green={true}>
+      <Footer navy={true}>
         <div className="flex-container flex-container--center flex-container--justify experience-entry--footer">
           <div className="flex-col--8 flex-col--tablet-large--10 guidance--footer--content">
             <h5 className="experience-entry--footer--title">

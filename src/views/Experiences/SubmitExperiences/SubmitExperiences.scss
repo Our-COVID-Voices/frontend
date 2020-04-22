@@ -194,8 +194,9 @@
   }
 
   &--about {
+    text-align: left;
     @include body-l;
-    color: #62717a;
+    color: $navy;
     margin-bottom: space(32);
   }
 
@@ -207,14 +208,19 @@
 .experience-tags {
   &--title {
     @include heading-s;
-    color: $grey;
+    color: $navy;
     margin-bottom: space(32);
   }
 
   &--about {
+    text-align: left;
     @include body-l;
-    color: #62717a;
+    color: $navy;
     margin-bottom: space(32);
+
+    p {
+      margin: space(16) 0;
+    }
   }
 
   &--continue {
@@ -222,15 +228,15 @@
   }
 
   &--skip {
-    @include heading-xs;
-    color: $purple;
+    @include heading-s;
+    color: $navy;
     text-decoration: underline;
     cursor: pointer;
   }
 
   &--footer-about {
-    @include body-s-alt;
-    color: $grey;
+    @include body-l;
+    color: $navy;
     margin-top: space(16);
   }
 }

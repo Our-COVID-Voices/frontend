@@ -159,7 +159,7 @@
     "footer": {
       "title": "Next step",
       "step-1-about": "When you click public below your writing will be sent to our moderators and will then be published. This may take a period of days. You’ll be notified when it appears on the site. If you click private your experience will be saved, but will not be sent to our moderators for publication. You can choose to make it public from <a href='/my-experiences'>my experiences</a>",
-      "step-2-about": "Tag characteristics, tone and descriptions of your experience.",
+      "step-2-about": "Tags are important, because they allow others to search for a particular topic through all submissions. The available tags are grouped in categories which you can browse below.",
       "step-3-about": "If you don’t want to add tags you can skip this step."
     }
   },
@@ -170,7 +170,7 @@
   },
   "experience-tags": {
     "title": "Your experience",
-    "about": "Lorem ipsum dolor sit amet, adipiscing elit. Vivamus ultricies tincidunt congue."
+    "about": "<p>Choose the tags that best describe your situation and experience. Please choose accurate tags. They really help everyone to find experiences they can connect with.</p><p>You can use as many tags as you want. The moderator will also be able to apply relevant tags to your submission.</p>"
   },
   "submission-confirmation": {
     "title": "Submitted",
