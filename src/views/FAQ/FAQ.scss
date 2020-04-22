@@ -2,6 +2,8 @@
 @import "../../styles/mixins.scss";
 
 .faq {
+  @include container;
+
   &--container {
     margin-top: space(88);
 

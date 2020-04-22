@@ -14,7 +14,7 @@ const FAQ: FunctionComponent<RouteComponentProps> = ({ history }) => (
     <Helmet>
       <title>Our COVID Voices | FAQs</title>
     </Helmet>
-    <div className="flex-container flex-container--no-padding flex-container--justify flex-container--center">
+    <div className="flex-container flex-container--no-padding flex-container--justify flex-container--center faq">
       <Breadcrumb
         crumbs={[
           { text: "Home", url: "/" },
