@@ -11,6 +11,7 @@ import UserStore from "../../stores/userStore";
 import "./PrivacyPolicy.scss";
 import Layout from "../../components/Layout";
 import Breadcrumb from "../../components/Breadcrumb";
+import Checkbox from "../../components/Checkbox";
 
 interface IProps extends RouteComponentProps {
   userStore?: UserStore;
@@ -62,6 +63,21 @@ const PrivacyPolicy: FunctionComponent<IProps> = ({ userStore, history }) => {
             className="privacy-policy--content"
             dangerouslySetInnerHTML={{ __html: cms("privacy.content") }}
           />
+
+          <form>
+            <Checkbox
+              label="I agree to be contacted by National Voices during the next 3 years, so I can decide whether to take part in further conversations or similar projects."
+              checked={false}
+              id="consent-1"
+              onChange={() => console.log("checked")}
+            />
+            <Checkbox
+              label="I do not agree to be contacted by National Voices. "
+              checked={false}
+              id="consent-2"
+              onChange={() => console.log("checked")}
+            />
+          </form>
         </div>
       </div>
     </Layout>
