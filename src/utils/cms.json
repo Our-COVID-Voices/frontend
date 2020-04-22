@@ -112,7 +112,7 @@
     }
   },
   "dashboard": {
-    "about": "We’re trying to collect first-person accounts of stories, share your experiences anonymously.",
+    "about": "<p>National Voices has created Our Covid Voices to make it as easy as possible to share with the world what life is like for you right now.</p><p>National Voices will use the insight you will generate to influence national and local decision-makers. This will make it easier for them to develop policies and services that have a positive and tangible impact on people’s lives. The experiences shared on this website will help them get a clearer picture of what is happening now, and help us at National Voices make a better case for what needs to happen once this crisis ends.</p><p>Things will be different than they are now. We want to make sure that they are also better.</p>",
     "experiences": "Go to my experiences",
     "submit": "Write now",
     "description": "Write now, or read about other’s experiences",
