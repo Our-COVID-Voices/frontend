@@ -19,6 +19,16 @@ const UserHeader: FunctionComponent<IProps> = ({ userStore }) => {
     <div className="flex-container flex-container--no-padding flex-container--full-width user-header">
       {userStore.loggedIn && (
         <NavLink
+          to="/dashboard"
+          className="user-header--link"
+          activeClassName="header--link--active"
+        >
+          Dashboard
+        </NavLink>
+      )}
+
+      {userStore.loggedIn && (
+        <NavLink
           to="/my-experiences"
           className="user-header--link"
           activeClassName="header--link--active"
