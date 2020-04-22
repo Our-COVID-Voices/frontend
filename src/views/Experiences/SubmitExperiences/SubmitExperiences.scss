@@ -102,12 +102,12 @@
 
   &--title {
     @include heading-s;
-    color: $grey;
+    color: $navy;
   }
 
   &--date {
     @include body-m;
-    color: $grey;
+    color: $medium-navy;
     margin-top: space(8);
   }
 
@@ -154,21 +154,21 @@
     }
 
     &--title {
-      @include heading-xs;
-      color: $green;
+      @include heading-s;
+      color: $navy;
       margin-bottom: space(12);
     }
 
     &--description {
-      @include body-m;
-      color: $grey;
+      @include body-l;
+      color: $navy;
       margin-bottom: space(32);
     }
 
     &--cancel {
       @include button-text-alt;
       text-decoration: underline;
-      color: $grey;
+      color: $navy;
       margin-top: space(24);
     }
   }

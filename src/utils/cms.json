@@ -158,7 +158,7 @@
     "date": "Today",
     "footer": {
       "title": "Next step",
-      "step-1-about": "You will select if you want this experience to be private or public",
+      "step-1-about": "When you click public below your writing will be sent to our moderators and will then be published. This may take a period of days. You’ll be notified when it appears on the site. If you click private your experience will be saved, but will not be sent to our moderators for publication. You can choose to make it public from <a href='/my-experiences'>my experiences</a>",
       "step-2-about": "Tag characteristics, tone and descriptions of your experience.",
       "step-3-about": "If you don’t want to add tags you can skip this step."
     }
