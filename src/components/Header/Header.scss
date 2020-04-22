@@ -17,6 +17,14 @@
     justify-content: space-between;
   }
 
+  &--logged-in {
+    background-color: $purple;
+
+    @include for-tablet-down {
+      background-color: $purple !important;
+    }
+  }
+
   &--link {
     text-decoration: none;
     display: inline-block;
@@ -46,7 +54,7 @@
 
   &--logo {
     display: inline-block;
-    margin-top: space(16);
+    margin: space(16) 0;
 
     @include for-tablet-down {
       margin-top: 0;
@@ -69,6 +77,10 @@
     color: $navy;
     margin-top: space(48);
     justify-content: flex-end !important;
+
+    &--logged-in {
+      color: $white;
+    }
 
     @include for-tablet-down {
       margin-top: space(32);
@@ -125,6 +137,10 @@
     svg {
       vertical-align: middle;
       height: 20px;
+    }
+
+    &--logged-in {
+      color: $white;
     }
   }
 

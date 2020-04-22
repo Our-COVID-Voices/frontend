@@ -6,6 +6,7 @@ import cx from "classnames";
 import Cookies from "../Cookies";
 import DonateButton from "../DonateButton/DonateButton";
 import Logo from "../../assets/logo/logo_colour.svg";
+import LogoWhite from "../../assets/logo/logo_white.svg";
 import Menu from "../../assets/icons/menu.svg";
 import Account from "../../assets/icons/account-light.svg";
 
@@ -31,48 +32,74 @@ const Header: FunctionComponent<IProps> = ({ loggedIn }) => {
         <div className="tablet-hide">
           <UserHeader />
         </div>
-
-        <nav className="flex-container flex-container--no-padding flex-container--center header">
-          <NavLink
-            to="/"
-            className="header--link"
-            activeClassName="header--link--active"
+        <div
+          className={cx({
+            "header--logged-in": loggedIn,
+          })}
+        >
+          <nav
+            className={cx(
+              "flex-container flex-container--no-padding flex-container--center header",
+              {
+                "header--logged-in": loggedIn,
+              }
+            )}
           >
-            <ReactSVG src={Logo} className="header--logo" wrapper="span" />
-          </NavLink>
-
-          {/* Mobile Nav */}
-
-          <button
-            className="tablet-show mobile-nav--button"
-            onClick={() => toggleBurger(!open)}
-          >
-            <span>
-              Menu <ReactSVG src={Menu} wrapper="span" />
-            </span>
-          </button>
-
-          <div className="flex-container flex-container--no-padding flex-container--align-center header--links tablet-hide">
             <NavLink
+              to="/"
               className="header--link"
-              to="/browse"
               activeClassName="header--link--active"
             >
-              Browse Experiences
+              <ReactSVG
+                src={loggedIn ? LogoWhite : Logo}
+                className="header--logo"
+                wrapper="span"
+              />
             </NavLink>
-            <NavLink
-              className="header--link"
-              to="/contact"
-              activeClassName="header--link--active"
+
+            {/* Mobile Nav */}
+
+            <button
+              className={cx("tablet-show mobile-nav--button", {
+                "mobile-nav--button--logged-in": loggedIn,
+              })}
+              onClick={() => toggleBurger(!open)}
             >
-              Contact
-            </NavLink>
+              <span>
+                Menu <ReactSVG src={Menu} wrapper="span" />
+              </span>
+            </button>
 
-            <Dropdown />
+            <div
+              className={cx(
+                "flex-container flex-container--no-padding flex-container--align-center header--links tablet-hide",
+                {
+                  "header--links--logged-in": loggedIn,
+                }
+              )}
+            >
+              <NavLink
+                className="header--link"
+                to="/browse"
+                activeClassName="header--link--active"
+              >
+                Browse Experiences
+              </NavLink>
+              <NavLink
+                className="header--link"
+                to="/contact"
+                activeClassName="header--link--active"
+              >
+                Contact
+              </NavLink>
 
-            <DonateButton text="Donate" loggedIn={loggedIn} />
-          </div>
-        </nav>
+              <Dropdown loggedIn={loggedIn} />
+
+              <DonateButton text="Donate" loggedIn={loggedIn} />
+            </div>
+          </nav>
+        </div>
+
         {/* 
         Expanded Mobile Nav */}
 

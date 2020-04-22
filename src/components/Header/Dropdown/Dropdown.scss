@@ -19,10 +19,16 @@
     &--icon {
       margin-left: space(16);
     }
+
+    &--logged-in {
+      background-color: transparent;
+      color: $white;
+      border: 2px solid $white;
+    }
   }
 
   &--menu {
-    background-color: $light-grey;
+    background-color: $purple;
     border-radius: 26px;
     padding: space(8) space(12);
     display: flex;
@@ -42,6 +48,10 @@
     &--active {
       background-color: $medium-green;
       border-radius: 26px;
+
+      &--logged-in {
+        background-color: $navy;
+      }
     }
   }
 }
