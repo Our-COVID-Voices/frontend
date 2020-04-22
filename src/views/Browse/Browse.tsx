@@ -45,7 +45,10 @@ const Browse: FunctionComponent<IProps> = ({ experienceStore, history }) => {
           <InPartnership />
         </div>
         <div className="flex-col--8 flex-col--tablet-large--12">
-          <p className="browse--about mobile-hide">{cms("global.about")}</p>
+          <p
+            className="browse--about mobile-hide"
+            dangerouslySetInnerHTML={{ __html: cms("browse.about") }}
+          />
           <AboutAccordian
             text={cms("global.about")}
             className="browse--about--mobile mobile-show"
@@ -69,7 +72,7 @@ const Browse: FunctionComponent<IProps> = ({ experienceStore, history }) => {
           </div>
           <div className="flex-col--mobile--12 flex-col--tablet--12 flex-col--4 browse--footer--button">
             <Button
-              text="Sign up and share"
+              text="Would you like to take part and share your experiences?"
               onClick={() =>
                 history.push({
                   pathname: "/register",

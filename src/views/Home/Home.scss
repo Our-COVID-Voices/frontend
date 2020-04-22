@@ -175,6 +175,10 @@
       color: $navy;
       margin-bottom: space(80);
 
+      p {
+        margin: space(16) 0;
+      }
+
       @include for-phone-only {
         margin-bottom: space(32);
       }
