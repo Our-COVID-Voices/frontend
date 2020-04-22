@@ -112,7 +112,10 @@ const Home: FunctionComponent<RouteComponentProps> = ({ history }) => (
       <div className="flex-container flex-container--center home--footer">
         <div className="flex-col--8 flex-col--tablet-large--12">
           <h5 className="home--footer--title">{cms("home.footer.title")}</h5>
-          <p className="home--footer--content">{cms("home.footer.content")}</p>
+          <p
+            className="home--footer--content"
+            dangerouslySetInnerHTML={{ __html: cms("home.footer.content") }}
+          ></p>
         </div>
         <div className="flex-col--12 home--footer--button">
           <Button purple={true} text="Donate" />

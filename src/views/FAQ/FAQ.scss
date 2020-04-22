@@ -1,0 +1,36 @@
+@import "../../styles/fonts.scss";
+@import "../../styles/mixins.scss";
+
+.faq {
+  @include container;
+
+  &--container {
+    margin-top: space(88);
+
+    @include for-phone-only {
+      margin-top: space(40);
+    }
+  }
+
+  &--title {
+    @include heading-s;
+    color: $navy;
+    margin-bottom: space(32);
+  }
+
+  &--content {
+    @include body-s-alt;
+    color: $navy;
+    margin-bottom: space(56);
+
+    p {
+      margin: space(16) 0;
+    }
+
+    @include for-phone-only {
+      @include for-phone-only {
+        margin-bottom: space(32);
+      }
+    }
+  }
+}

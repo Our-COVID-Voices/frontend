@@ -18,8 +18,8 @@
       "contributions": "Contributions are anonymous"
     },
     "footer": {
-      "title": "National Voices is [short explanation of National Voices]",
-      "content": "If you need help with anything check out the Frequently Asked Questions.  If you have noticed something that does not look right, please contact the website admin.",
+      "title": "",
+      "content": "<p>National Voices is coalition of 150 charities, supporting people with physical and mental health problems and disabilty, and those who are facing inequality or discrimination. This means we can draw on the experiences of million of people.</p><p>If you need help with anything check out the Frequently Asked Questions.  If you have noticed something that does not look right, please contact the website admin.</p>",
       "contact": "Email us at"
     }
   },
@@ -67,8 +67,8 @@
     "step-1-title": "Set up your account",
     "step-1-description": "Please type your email address below.",
     "step-1-hint": "Through your email, we will let you know about the publication process and any other important information about your account.",
-    "step-2-title": "Create a password which you can remember.",
-    "step-2-description": "Use a combination of lower case and upper case letters, numbers and symbols.",
+    "step-2-title": "Choose your password",
+    "step-2-description": "Create a password which you can remember.Use a combination of lower case and upper case letters, numbers and symbols.",
     "step-2-hint": "The password you supply will be AES-256 bit encrypted (the same standard banks use)",
     "step-3-title": "Consent",
     "step-3-description": "By creating an account for this site you will be able to add your experiences. Remember, your experiences will be read by people you haven’t met, so don't share anything you wouldn’t want a stranger to know.  We will review each experience to make sure it doesn’t break any of our rules before it is published. You can remove your experiences at any time.  National Voices will use everyone's writing to raise awareness of how Covid-19 has impacted people with very different lives and will also take this insight to decision makers who are in charge of the health and care system.",
@@ -128,6 +128,7 @@
     "withdraw": "I would like to withdraw"
   },
   "browse": {
+    "about": "<p>The arrival of the Covid-19 virus has made everyday life feel very different. Health and care services are being delivered differently, and many services have stopped altogether. Our ability to take part in our communities and to see friends and family is limited. Everything from food shopping, to home care, to doctors appointments has changed.</p><p>The media are mostly telling the stories of people who do not live their lives with additional challenges and conditions. However, many live with one or more ongoing health conditions, ill-health or disability. Many use health or social care services regularly to keep well. Some are more at risk from Covid-19. Some are having their health and wellbeing put at risk by what they have to do to keep others safe. The voices of these people have not been the focus of much of the national discussion.</p><p>During this period, we think it is more important than ever that the voices of those most at risk and those who are having their lives most disrupted should be heard. Decisions made about how health, care and support are provided to people during this period and in the future are having real, everyday implications for people's lives. These decisions should be based on understanding how all people actually live their lives, and experience their health and illness. Bad decisions will be made without this understanding.</p><p>Our Covid Voices wants to share with the world how those with long-term conditions, disabilities and other health and care needs are living during the pandemic in the UK. Our Covid Voices aims to be a first draft of history, with people across the country sharing their experiences of the UK under lockdown as they happen.</p><p>National Voices will use the insight you will generate to influence national and local decision-makers. This will make it easier for them to develop policies and services that have a positive and tangible impact on people’s lives. The experiences shared on this website will help them get a clearer picture of what is happening now, and help us at National Voices make a better case for what needs to happen once this crisis ends.</p><p>Things will be different than they are now. We want to make sure that they are also better.</p>",
     "filter": {
       "title": "Start typing here to find experiences that you’d like to read. Most experiences have a number of tags which describe what they are about.",
       "about": "Select by category to explore more tags",

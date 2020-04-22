@@ -45,7 +45,7 @@ const Dropdown: FunctionComponent<IProps> = ({ loggedIn }) => {
             activeClassName={cx("dropdown--link--active", {
               "dropdown--link--active--logged-in": loggedIn,
             })}
-            to="/how"
+            to="/writing-guidance"
           >
             What can I write about and how do I do this?
           </NavLink>
