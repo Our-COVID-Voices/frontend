@@ -201,7 +201,7 @@
   },
   "withdraw": {
     "title": "Withdraw account",
-    "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultricies tincidunt congue.",
+    "about": "You can remove your account and / or submissions from this website at any time. This will not affect your right. Please note that if you have already submitted your experience, this might have already been read by others. Choose one of the following options:",
     "hint": "You can’t undo withdrawl",
     "confirmation": "Are you sure you would like to withdraw your account?"
   },

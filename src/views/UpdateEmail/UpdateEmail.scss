@@ -7,7 +7,7 @@
 
   &--title {
     @include heading-l;
-    color: $grey;
+    color: $navy;
     margin: space(16) 0;
 
     @include for-tablet-large-up {
@@ -17,7 +17,7 @@
 
   &--about {
     @include body-l;
-    color: $grey;
+    color: $navy;
   }
 
   &--form {
