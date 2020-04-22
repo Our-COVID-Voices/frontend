@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useState } from "react";
+import React, { FunctionComponent, useState, Fragment, useEffect } from "react";
 import ReactSVG from "react-svg";
 import { NavLink } from "react-router-dom";
 import cx from "classnames";
@@ -9,17 +9,25 @@ import Logo from "../../assets/logo/logo_colour.svg";
 import LogoWhite from "../../assets/logo/logo_white.svg";
 import Menu from "../../assets/icons/menu.svg";
 import Account from "../../assets/icons/account-light.svg";
+import User from "../../assets/icons/user.svg";
 
 import "./Header.scss";
 import UserHeader from "./UserHeader";
 import Dropdown from "./Dropdown/Dropdown";
+import Button from "../Button";
 
 interface IProps {
   loggedIn: boolean;
 }
 
 const Header: FunctionComponent<IProps> = ({ loggedIn }) => {
-  const [open, toggleBurger] = useState(false);
+  const [open, toggleBurger] = useState(true);
+
+  useEffect(() => {
+    if (open) {
+      document.getElementsByTagName("body")[0].style.overflow = "hidden";
+    }
+  }, [open]);
 
   return (
     <header>
@@ -104,70 +112,105 @@ const Header: FunctionComponent<IProps> = ({ loggedIn }) => {
         Expanded Mobile Nav */}
 
         {open && (
-          <div className="mobile-nav--inner tablet-show">
-            <NavLink
-              className="mobile-nav--link"
-              to="/"
-              onClick={() => toggleBurger(!open)}
-            >
-              Home
-            </NavLink>
-            <NavLink
-              className="mobile-nav--link"
-              to="/browse"
-              onClick={() => toggleBurger(!open)}
-            >
-              Browse Experiences
-            </NavLink>
-            <NavLink
-              className="mobile-nav--link"
-              to="/contact"
-              onClick={() => toggleBurger(!open)}
-            >
-              Contact
-            </NavLink>
-            <NavLink
-              className="mobile-nav--link"
-              to="/about"
-              onClick={() => toggleBurger(!open)}
-            >
-              About The Project
-            </NavLink>
+          <div>
+            <div className="mobile-nav--inner tablet-show">
+              <NavLink
+                className="mobile-nav--link"
+                to="/"
+                onClick={() => toggleBurger(!open)}
+              >
+                Home
+              </NavLink>
+              <NavLink
+                className="mobile-nav--link"
+                to="/browse"
+                onClick={() => toggleBurger(!open)}
+              >
+                Browse Experiences
+              </NavLink>
+              <NavLink
+                className="mobile-nav--link"
+                to="/contact"
+                onClick={() => toggleBurger(!open)}
+              >
+                Contact
+              </NavLink>
+              <NavLink
+                className="mobile-nav--link"
+                to="/about"
+                onClick={() => toggleBurger(!open)}
+              >
+                About The Project
+              </NavLink>
 
-            <NavLink
-              className="mobile-nav--link mobile-nav--link-secondary"
-              to="/why"
-              onClick={() => toggleBurger(!open)}
-            >
-              Why we're doing this
-            </NavLink>
-            <NavLink
-              className="mobile-nav--link mobile-nav--link-secondary"
-              to="/how"
-              onClick={() => toggleBurger(!open)}
-            >
-              What can I write about and how do I do this?
-            </NavLink>
-            <NavLink
-              className="mobile-nav--link mobile-nav--link-secondary"
-              to="/faqs"
-              onClick={() => toggleBurger(!open)}
-            >
-              FAQs
-            </NavLink>
+              <NavLink
+                className="mobile-nav--link mobile-nav--link-secondary"
+                to="/why"
+                onClick={() => toggleBurger(!open)}
+              >
+                Why we're doing this
+              </NavLink>
+              <NavLink
+                className="mobile-nav--link mobile-nav--link-secondary"
+                to="/how"
+                onClick={() => toggleBurger(!open)}
+              >
+                What can I write about and how do I do this?
+              </NavLink>
+              <NavLink
+                className="mobile-nav--link mobile-nav--link-secondary"
+                to="/faqs"
+                onClick={() => toggleBurger(!open)}
+              >
+                FAQs
+              </NavLink>
 
-            <NavLink
-              className="mobile-nav--link"
-              to="/login"
-              onClick={() => toggleBurger(!open)}
-            >
-              Login{" "}
-              <ReactSVG
-                src={Account}
-                wrapper="span"
-                className="mobile-nav--icon"
-              />
-            </NavLink>
+              <NavLink
+                className="mobile-nav--link"
+                to="/login"
+                onClick={() => toggleBurger(!open)}
+              >
+                Login
+                <ReactSVG
+                  src={Account}
+                  wrapper="span"
+                  className="mobile-nav--icon"
+                />
+              </NavLink>
+            </div>
+            {loggedIn && (
+              <div className="mobile-nav--logged-in">
+                <ReactSVG src={User} className="mobile-nav--logged-in--icon" />
+
+                <div className="mobile-nav--logged-in--links">
+                  <NavLink
+                    className="mobile-nav--link"
+                    to="/dashboard"
+                    onClick={() => toggleBurger(!open)}
+                  >
+                    Dashboard
+                  </NavLink>
+
+                  <NavLink
+                    className="mobile-nav--link"
+                    to="/my-experiences"
+                    onClick={() => toggleBurger(!open)}
+                  >
+                    My Experiences
+                  </NavLink>
+
+                  <NavLink
+                    className="mobile-nav--link"
+                    to="/account"
+                    onClick={() => toggleBurger(!open)}
+                  >
+                    Settings
+                  </NavLink>
+
+                  <Button text="Logout" navy={true} small={true} />
+                </div>
+              </div>
+            )}
           </div>
         )}
       </div>

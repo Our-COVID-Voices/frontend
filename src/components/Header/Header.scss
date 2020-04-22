@@ -158,7 +158,6 @@
     background-color: $purple;
     color: $white;
     padding: space(40) space(60);
-    height: 100%;
     text-align: center;
   }
 
@@ -177,6 +176,24 @@
     svg {
       height: 20px;
       color: $medium-purple;
+    }
+  }
+
+  &--logged-in {
+    color: $navy;
+    background-color: $white;
+    padding: space(40) space(12);
+
+    &--icon {
+      text-align: center;
+      margin-bottom: space(20);
+      svg {
+        height: 100px;
+      }
+    }
+
+    &--links {
+      text-align: center;
     }
   }
 }
