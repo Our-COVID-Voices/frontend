@@ -165,8 +165,8 @@
   },
   "experience-privacy": {
     "title": "Before you submit",
-    "about": "Lorem ipsum dolor sit amet, adipiscing elit. Vivamus ultricies tincidunt congue.",
-    "hint": "Your experience will be sent to be reviewed"
+    "about": "Before you click ‘submit’, please ensure you have followed the <a href='/writing-guidance' target='_blank'>guidelines</a>. If you change your mind, you will be able to delete your story at any point.",
+    "hint": "Your story will be reviewed by a moderator, to ensure that it complies with the guidelines. We will let you know via email when it is published."
   },
   "experience-tags": {
     "title": "Your experience",

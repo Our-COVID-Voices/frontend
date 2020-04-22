@@ -117,6 +117,8 @@
 }
 
 @mixin back {
+  margin-bottom: space(16);
+  text-align: left;
   @include for-tablet-large-up {
     margin-top: space(16);
   }

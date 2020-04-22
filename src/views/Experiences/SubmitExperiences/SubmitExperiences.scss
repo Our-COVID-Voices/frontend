@@ -178,6 +178,8 @@
   text-align: center;
 
   &--icon {
+    margin-bottom: space(12);
+
     @include for-tablet-down {
       svg {
         height: 150px;
@@ -187,7 +189,7 @@
 
   &--title {
     @include heading-s;
-    color: $grey;
+    color: $navy;
     margin-bottom: space(32);
   }
 
