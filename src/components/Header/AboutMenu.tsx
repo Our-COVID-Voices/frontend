@@ -20,7 +20,7 @@ const AboutMenu: FunctionComponent<IProps> = ({ toggleBurger, open }) => (
     </NavLink>
     <NavLink
       className="mobile-nav--link mobile-nav--link-secondary"
-      to="/how"
+      to="/writing-guidance"
       onClick={() => toggleBurger(!open)}
     >
       What can I write about and how do I do this?
