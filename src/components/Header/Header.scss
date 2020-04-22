@@ -142,6 +142,10 @@
     &--logged-in {
       color: $white;
     }
+
+    &--close {
+      width: pxtorem(20px) !important;
+    }
   }
 
   &--active {
@@ -195,5 +199,15 @@
     &--links {
       text-align: center;
     }
+  }
+
+  &--expand {
+    @include button-text;
+    color: $white;
+    text-decoration: underline;
+  }
+
+  &--full-height {
+    height: 100vh;
   }
 }

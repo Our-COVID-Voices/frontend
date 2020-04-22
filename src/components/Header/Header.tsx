@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useState, Fragment, useEffect } from "react";
+import React, { FunctionComponent, useState, useEffect, Fragment } from "react";
 import ReactSVG from "react-svg";
 import { NavLink } from "react-router-dom";
 import cx from "classnames";
@@ -8,13 +8,14 @@ import DonateButton from "../DonateButton/DonateButton";
 import Logo from "../../assets/logo/logo_colour.svg";
 import LogoWhite from "../../assets/logo/logo_white.svg";
 import Menu from "../../assets/icons/menu.svg";
-import Account from "../../assets/icons/account-light.svg";
 import User from "../../assets/icons/user.svg";
 
 import "./Header.scss";
 import UserHeader from "./UserHeader";
 import Dropdown from "./Dropdown/Dropdown";
 import Button from "../Button";
+import AboutMenu from "./AboutMenu";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 interface IProps {
   loggedIn: boolean;
@@ -22,6 +23,7 @@ interface IProps {
 
 const Header: FunctionComponent<IProps> = ({ loggedIn }) => {
   const [open, toggleBurger] = useState(true);
+  const [expandedMenu, expandMenu] = useState(false);
 
   useEffect(() => {
     if (open) {
@@ -74,7 +76,15 @@ const Header: FunctionComponent<IProps> = ({ loggedIn }) => {
               onClick={() => toggleBurger(!open)}
             >
               <span>
-                Menu <ReactSVG src={Menu} wrapper="span" />
+                Menu{" "}
+                {open ? (
+                  <FontAwesomeIcon
+                    icon="times"
+                    className="mobile-nav--button--close"
+                  />
+                ) : (
+                  <ReactSVG src={Menu} wrapper="span" />
+                )}
               </span>
             </button>
 
@@ -112,8 +122,12 @@ const Header: FunctionComponent<IProps> = ({ loggedIn }) => {
         Expanded Mobile Nav */}
 
         {open && (
-          <div>
-            <div className="mobile-nav--inner tablet-show">
+          <Fragment>
+            <div
+              className={cx("mobile-nav--inner", {
+                "mobile-nav--full-height": !loggedIn,
+              })}
+            >
               <NavLink
                 className="mobile-nav--link"
                 to="/"
@@ -143,40 +157,22 @@ const Header: FunctionComponent<IProps> = ({ loggedIn }) => {
                 About The Project
               </NavLink>
 
-              <NavLink
-                className="mobile-nav--link mobile-nav--link-secondary"
-                to="/why"
-                onClick={() => toggleBurger(!open)}
-              >
-                Why we're doing this
-              </NavLink>
-              <NavLink
-                className="mobile-nav--link mobile-nav--link-secondary"
-                to="/how"
-                onClick={() => toggleBurger(!open)}
-              >
-                What can I write about and how do I do this?
-              </NavLink>
-              <NavLink
-                className="mobile-nav--link mobile-nav--link-secondary"
-                to="/faqs"
-                onClick={() => toggleBurger(!open)}
-              >
-                FAQs
-              </NavLink>
+              {!expandedMenu && loggedIn && (
+                <button
+                  onClick={() => expandMenu(!expandedMenu)}
+                  className="mobile-nav--expand"
+                >
+                  See more
+                </button>
+              )}
 
-              <NavLink
-                className="mobile-nav--link"
-                to="/login"
-                onClick={() => toggleBurger(!open)}
-              >
-                Login
-                <ReactSVG
-                  src={Account}
-                  wrapper="span"
-                  className="mobile-nav--icon"
-                />
-              </NavLink>
+              {expandedMenu && loggedIn && (
+                <AboutMenu toggleBurger={toggleBurger} open={open} />
+              )}
+
+              {!loggedIn && (
+                <AboutMenu toggleBurger={toggleBurger} open={open} />
+              )}
             </div>
             {loggedIn && (
               <div className="mobile-nav--logged-in">
@@ -211,7 +207,7 @@ const Header: FunctionComponent<IProps> = ({ loggedIn }) => {
                 </div>
               </div>
             )}
-          </div>
+          </Fragment>
         )}
       </div>
     </header>
