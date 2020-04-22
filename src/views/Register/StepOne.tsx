@@ -1,4 +1,4 @@
-import React, { FunctionComponent, Fragment } from "react";
+import React, { FunctionComponent } from "react";
 import { cms } from "../../utils/cms";
 import ReactSVG from "react-svg";
 import { observer, inject } from "mobx-react";
