@@ -22,7 +22,7 @@ interface IProps {
 }
 
 const Header: FunctionComponent<IProps> = ({ loggedIn }) => {
-  const [open, toggleBurger] = useState(true);
+  const [open, toggleBurger] = useState(false);
   const [expandedMenu, expandMenu] = useState(false);
 
   useEffect(() => {
@@ -122,9 +122,9 @@ const Header: FunctionComponent<IProps> = ({ loggedIn }) => {
         Expanded Mobile Nav */}
 
         {open && (
-          <Fragment>
+          <div className="tablet-show">
             <div
-              className={cx("mobile-nav--inner", {
+              className={cx("mobile-nav--inner ", {
                 "mobile-nav--full-height": !loggedIn,
               })}
             >
@@ -207,7 +207,7 @@ const Header: FunctionComponent<IProps> = ({ loggedIn }) => {
                 </div>
               </div>
             )}
-          </Fragment>
+          </div>
         )}
       </div>
     </header>
