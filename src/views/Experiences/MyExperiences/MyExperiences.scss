@@ -32,7 +32,7 @@
 
     &--about {
       @include body-s-alt;
-      color: $grey;
+      color: $navy;
 
       margin-top: space(32);
 
@@ -71,14 +71,14 @@
 
 .entry-summary {
   @include body-s-alt;
-  color: $grey;
+  color: $navy;
   border-bottom: 2px solid $light-grey;
   padding: space(16) !important;
   cursor: pointer;
 
   &--tags {
     @include body-s;
-    color: $medium-grey;
+    color: $green;
     margin-top: space(8);
 
     @include for-phone-only {
