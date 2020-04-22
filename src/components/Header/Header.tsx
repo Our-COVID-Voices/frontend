@@ -7,6 +7,7 @@ import Cookies from "../Cookies";
 import DonateButton from "../DonateButton/DonateButton";
 import Logo from "../../assets/logo/logo_colour.svg";
 import Menu from "../../assets/icons/menu.svg";
+import Account from "../../assets/icons/account-light.svg";
 
 import "./Header.scss";
 import UserHeader from "./UserHeader";
@@ -126,6 +127,19 @@ const Header: FunctionComponent<IProps> = ({ loggedIn }) => {
               onClick={() => toggleBurger(!open)}
             >
               FAQs
+            </NavLink>
+
+            <NavLink
+              className="mobile-nav--link"
+              to="/login"
+              onClick={() => toggleBurger(!open)}
+            >
+              Login{" "}
+              <ReactSVG
+                src={Account}
+                wrapper="span"
+                className="mobile-nav--icon"
+              />
             </NavLink>
           </div>
         )}

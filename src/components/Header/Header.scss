@@ -156,4 +156,11 @@
       font-size: space(16);
     }
   }
+
+  &--icon {
+    svg {
+      height: 20px;
+      color: $medium-purple;
+    }
+  }
 }
