@@ -29,7 +29,7 @@ const UserHeader: FunctionComponent<IProps> = ({ userStore }) => {
 
       {userStore.loggedIn && (
         <NavLink
-          to="/settings"
+          to="/account"
           className="user-header--link"
           activeClassName="header--link--active"
         >
