@@ -16,7 +16,11 @@
   }
 
   &--image {
+    margin-bottom: space(24);
+
     @include for-phone-only {
+      margin-bottom: space(12);
+
       svg {
         width: 115px;
       }
@@ -25,7 +29,7 @@
 
   &--title {
     @include heading-m;
-    color: $grey;
+    color: $navy;
     margin-bottom: space(12);
 
     @include for-tablet-large-up {
@@ -35,13 +39,22 @@
 
   &--step {
     @include heading-xs;
-    color: $medium-grey;
+    color: $medium-navy;
   }
 
   &--content {
     @include body-l;
-    color: $medium-grey;
+    color: $navy;
     margin: space(12) 0;
+    text-align: left;
+
+    p {
+      margin: space(16) 0;
+    }
+
+    li {
+      list-style-position: inside;
+    }
 
     @include for-tablet-large-up {
       margin: space(24) 0;
@@ -74,7 +87,7 @@
 
     &--skip {
       @include body-m;
-      color: #62717a;
+      color: $navy;
       text-decoration: underline;
       margin-top: space(24);
       cursor: pointer;
@@ -89,12 +102,12 @@
 
   &--title {
     @include heading-s;
-    color: $grey;
+    color: $navy;
   }
 
   &--date {
     @include body-m;
-    color: $grey;
+    color: $medium-navy;
     margin-top: space(8);
   }
 
@@ -141,21 +154,21 @@
     }
 
     &--title {
-      @include heading-xs;
-      color: $green;
+      @include heading-s;
+      color: $navy;
       margin-bottom: space(12);
     }
 
     &--description {
-      @include body-m;
-      color: $grey;
+      @include body-l;
+      color: $navy;
       margin-bottom: space(32);
     }
 
     &--cancel {
       @include button-text-alt;
       text-decoration: underline;
-      color: $grey;
+      color: $navy;
       margin-top: space(24);
     }
   }
@@ -165,6 +178,8 @@
   text-align: center;
 
   &--icon {
+    margin-bottom: space(12);
+
     @include for-tablet-down {
       svg {
         height: 150px;
@@ -174,13 +189,14 @@
 
   &--title {
     @include heading-s;
-    color: $grey;
+    color: $navy;
     margin-bottom: space(32);
   }
 
   &--about {
+    text-align: left;
     @include body-l;
-    color: #62717a;
+    color: $navy;
     margin-bottom: space(32);
   }
 
@@ -192,14 +208,19 @@
 .experience-tags {
   &--title {
     @include heading-s;
-    color: $grey;
+    color: $navy;
     margin-bottom: space(32);
   }
 
   &--about {
+    text-align: left;
     @include body-l;
-    color: #62717a;
+    color: $navy;
     margin-bottom: space(32);
+
+    p {
+      margin: space(16) 0;
+    }
   }
 
   &--continue {
@@ -207,15 +228,15 @@
   }
 
   &--skip {
-    @include heading-xs;
-    color: $purple;
+    @include heading-s;
+    color: $navy;
     text-decoration: underline;
     cursor: pointer;
   }
 
   &--footer-about {
-    @include body-s-alt;
-    color: $grey;
+    @include body-l;
+    color: $navy;
     margin-top: space(16);
   }
 }
@@ -226,12 +247,12 @@
 
   &--title {
     @include heading-s;
-    color: $grey;
+    color: $navy;
     margin-bottom: space(32);
   }
 
   &--about {
     @include body-l;
-    color: #62717a;
+    color: $navy;
   }
 }

@@ -43,7 +43,7 @@ const MyExperience: FunctionComponent<IProps> = ({ storyStore, match }) => {
       <Helmet>
         <title>
           {`Connecting Voices | ${
-            storyStore.story ? storyStore.story.excerpt : "Selected Story"
+            storyStore.story ? storyStore.story.excerpt : "Selected Experience"
           }`}
         </title>
       </Helmet>
@@ -59,7 +59,7 @@ const MyExperience: FunctionComponent<IProps> = ({ storyStore, match }) => {
                     experiences
                   </Link>
                 </div>
-                <div className="flex-col--6 flex-col--tablet--12 story--info--date">
+                <div className="flex-col--12 story--info--date">
                   {`Date added ${format(
                     new Date(storyStore.story.created_at),
                     "do MMMM yyyy"
@@ -115,7 +115,6 @@ const MyExperience: FunctionComponent<IProps> = ({ storyStore, match }) => {
 
             <div className="flex-col--mobile--12 flex-col--11">
               <div className="flex-container flex-container--center flex-container--no-padding flex-container--align-center story--tags--list">
-                {/* <div className="flex-col--12"> */}
                 {storyStore.tags.length ? (
                   storyStore.tags.map((tag) => (
                     <Tag story={true} text={tag.name}></Tag>
@@ -124,14 +123,13 @@ const MyExperience: FunctionComponent<IProps> = ({ storyStore, match }) => {
                   <Tag story={true} text="No tag" />
                 )}
               </div>
-              {/* </div> */}
             </div>
           </Fragment>
         ) : (
           <Loading input="selected story" />
         )}
       </div>
-      <Footer green={true}>
+      <Footer navy={true}>
         <div className="flex-container flex-container--center flex-container--justify register--footer">
           <div className="flex-col--8 flex-col--tablet-large--12">
             <h3 className="register--footer--title">Edit this story</h3>

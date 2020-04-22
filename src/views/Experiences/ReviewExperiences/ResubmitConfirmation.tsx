@@ -21,14 +21,14 @@ interface IProps extends RouteComponentProps {
 
 const ResubmitConfirmation: FunctionComponent<IProps> = ({
   history,
-  reviewStore
+  reviewStore,
 }) => {
   if (!reviewStore) return null;
   return (
     <Layout>
       <div className="flex-container flex-container--no-padding flex-container--center flex-container--justify experience-confirmation">
         <div className="flex-col--10">
-          <ReactSVG src={Resubmitted} />
+          <ReactSVG src={Resubmitted} className="guidance--image" />
 
           <h1 className="experience-confirmation--title">
             {cms("review.confirmation.title")}
@@ -58,7 +58,7 @@ const ResubmitConfirmation: FunctionComponent<IProps> = ({
                 twoCol={true}
                 onClick={() =>
                   history.push({
-                    pathname: "/my-experiences"
+                    pathname: "/my-experiences",
                   })
                 }
               />
@@ -68,7 +68,7 @@ const ResubmitConfirmation: FunctionComponent<IProps> = ({
                 text="View my experiences"
                 onClick={() =>
                   history.push({
-                    pathname: "/my-experiences"
+                    pathname: "/my-experiences",
                   })
                 }
               />
@@ -82,6 +82,7 @@ const ResubmitConfirmation: FunctionComponent<IProps> = ({
                 onClick={() => {
                   history.push({ pathname: "/submit-experience" });
                 }}
+                purple={true}
               />
             }
             mobileRightButton={

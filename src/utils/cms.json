@@ -112,7 +112,7 @@
     }
   },
   "dashboard": {
-    "about": "We’re trying to collect first-person accounts of stories, share your experiences anonymously.",
+    "about": "<p>National Voices has created Our Covid Voices to make it as easy as possible to share with the world what life is like for you right now.</p><p>National Voices will use the insight you will generate to influence national and local decision-makers. This will make it easier for them to develop policies and services that have a positive and tangible impact on people’s lives. The experiences shared on this website will help them get a clearer picture of what is happening now, and help us at National Voices make a better case for what needs to happen once this crisis ends.</p><p>Things will be different than they are now. We want to make sure that they are also better.</p>",
     "experiences": "Go to my experiences",
     "submit": "Write now",
     "description": "Write now, or read about other’s experiences",
@@ -143,46 +143,44 @@
     "about": "There is currently no stories in my experiences.",
     "cta": "Start new story",
     "footer": {
-      "link": "View other’s stories",
+      "link": "View other’s experiences",
       "about": "Browse through the experiences of others."
     }
   },
   "writing-guidance": {
     "guidance-one-title": "Writing guidance",
-    "guidance-one-1": "Lorem ipsum dolor sit amet, adipiscing elit. Vivamus ultricies tincidunt congue.",
-    "guidance-one-2": "Lorem ipsum dolor sit amet, adipiscing elit.",
+    "guidance-one-1": "<p>You can write as little or as much as you like, once or as many times as you want to. Our Covid Voices is not a writing competition, where only the most dramatic or inspirational stories get published. We want to hear about everybody’s experiences.</p><p>You can talk about what has been different for you during the pandemic; what has worried you; and what has brought you comfort, joy and pleasure. Show others what the everyday experience of getting by in this time of crisis is really like. Our Covid Voices will share your experiences in your own words and on your own terms.</p><p>Please avoid sharing anything that you or others might want to keep private.  Please don’t identify organisations or other people by name if you write about them.  What you write will be read by anyone who comes to this site, so don’t share anything that you want to remain private.</p>",
     "guidance-two-title": "Guidelines",
-    "guidance-two-1": "Lorem ipsum dolor sit amet, adipiscing elit. Vivamus ultricies tincidunt congue.",
-    "guidance-two-2": "Lorem ipsum dolor sit amet, adipiscing elit. Vivamus ultricies tincidunt congue."
+    "guidance-two-1": "<ul>Please do not include:<li>Full names</li><li>Phone numbers</li><li>Email addresses</li><li>Addresses</li><li>NHS numbers</li><li>Documents’ numbers</li><li>Links to websites</li></ul><p>Please see our <a href='/writing-guidance'>writing guidelines</a> and <a href='/privacy-policy'>our contract with you</a> for more details</p>"
   },
   "submission": {
     "title": "New experience",
     "date": "Today",
     "footer": {
       "title": "Next step",
-      "step-1-about": "You will select if you want this experience to be private or public",
-      "step-2-about": "Tag characteristics, tone and descriptions of your experience.",
+      "step-1-about": "When you click public below your writing will be sent to our moderators and will then be published. This may take a period of days. You’ll be notified when it appears on the site. If you click private your experience will be saved, but will not be sent to our moderators for publication. You can choose to make it public from <a href='/my-experiences'>my experiences</a>",
+      "step-2-about": "Tags are important, because they allow others to search for a particular topic through all submissions. The available tags are grouped in categories which you can browse below.",
       "step-3-about": "If you don’t want to add tags you can skip this step."
     }
   },
   "experience-privacy": {
     "title": "Before you submit",
-    "about": "Lorem ipsum dolor sit amet, adipiscing elit. Vivamus ultricies tincidunt congue.",
-    "hint": "Your experience will be sent to be reviewed"
+    "about": "Before you click ‘submit’, please ensure you have followed the <a href='/writing-guidance' target='_blank'>guidelines</a>. If you change your mind, you will be able to delete your story at any point.",
+    "hint": "Your story will be reviewed by a moderator, to ensure that it complies with the guidelines. We will let you know via email when it is published."
   },
   "experience-tags": {
     "title": "Your experience",
-    "about": "Lorem ipsum dolor sit amet, adipiscing elit. Vivamus ultricies tincidunt congue."
+    "about": "<p>Choose the tags that best describe your situation and experience. Please choose accurate tags. They really help everyone to find experiences they can connect with.</p><p>You can use as many tags as you want. The moderator will also be able to apply relevant tags to your submission.</p>"
   },
   "submission-confirmation": {
     "title": "Submitted",
-    "about": "Lorem ipsum dolor sit amet, adipiscing elit. Vivamus ultricies tincidunt congue.",
+    "about": "Congratulations for submitting your experience. We will be in touch to let you know the outcome of the moderation process.",
     "hint": "Your experience will be sent to be reviewed"
   },
   "my-account": {
     "title": "My account",
     "footer": {
-      "about": "Find out what where your data is stored and how only the Hearing Voice Network will use it."
+      "about": "Find out what where your data is stored and how only the National Voices will use it."
     }
   },
   "update-email": {
@@ -203,7 +201,7 @@
   },
   "withdraw": {
     "title": "Withdraw account",
-    "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultricies tincidunt congue.",
+    "about": "You can remove your account and / or submissions from this website at any time. This will not affect your right. Please note that if you have already submitted your experience, this might have already been read by others. Choose one of the following options:",
     "hint": "You can’t undo withdrawl",
     "confirmation": "Are you sure you would like to withdraw your account?"
   },
@@ -215,7 +213,7 @@
     "hint": "Your experience will remain private until changes are made",
     "confirmation": {
       "title": "Re-submitted",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultricies tincidunt congue.",
+      "description": "Congratulations for re-submitting your experience. We will be in touch to let you know the outcome of the moderation process.",
       "hint": "Your experience will be sent to be reviewed"
     }
   }

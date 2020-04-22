@@ -7,8 +7,7 @@
   &--icon {
     margin-right: space(8);
     font-size: pxtorem(24px);
-    color: $medium-grey;
-    color: $tradewind;
+    color: $navy;
 
     @include for-phone-only {
       font-size: pxtorem(18px);
@@ -17,14 +16,13 @@
 
     &--open {
       transform: rotate(180deg);
-      color: grey;
+      color: $navy;
     }
   }
 
   &--content {
     padding: space(16) 0;
     opacity: 0;
-
     animation: fadeIn 200ms ease-in-out 0s forwards;
   }
 
@@ -46,16 +44,12 @@
     margin: 0;
     width: 100%;
     border-radius: 11px;
-    background-color: $light-green;
-
-    &--grey {
-      background-color: $light-grey;
-    }
+    background-color: $faded-navy;
   }
 
   &--title {
-    @include heading-xs;
-    color: $grey;
+    @include subtitle;
+    color: $navy;
     line-height: pxtorem(36px);
     display: inline;
   }
@@ -63,8 +57,7 @@
   &--subtitle {
     @include body-xs;
     display: inline;
-    // font-family: $kayak-sans-bold;
-    color: $tradewind-light;
+    color: $navy;
     margin-left: space(16);
 
     @include for-phone-only {

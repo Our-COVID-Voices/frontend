@@ -1,4 +1,4 @@
-import React, { Fragment, Component, RefObject } from "react";
+import React, { Component, RefObject } from "react";
 import ReactTags from "react-tag-autocomplete";
 import { observer, inject } from "mobx-react";
 

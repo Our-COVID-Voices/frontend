@@ -8,9 +8,12 @@
 
   &--about {
     @include about;
-    color: $medium-grey;
-    text-align: center;
+    color: $navy;
     font-weight: normal;
+
+    p {
+      margin: space(16) 0;
+    }
 
     @include for-phone-only {
       margin-top: space(48);
@@ -42,19 +45,19 @@
 
     &--title {
       @include heading-m;
-      color: $grey;
+      color: $navy;
       margin-bottom: space(24);
     }
 
     &--privacy-about {
       @include body-l;
-      color: $medium-grey;
+      color: $navy;
       margin-bottom: space(32);
     }
 
     &--link {
       @include button-text;
-      color: $grey;
+      color: $navy;
 
       &--container {
         display: flex;

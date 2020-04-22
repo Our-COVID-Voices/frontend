@@ -18,7 +18,7 @@ const MAX_WORD_COUNT = 700;
 
 const ExperienceEntry: FunctionComponent<IProps> = ({
   history,
-  contributionStore
+  contributionStore,
 }) => {
   if (!contributionStore) return null;
 
@@ -54,7 +54,7 @@ const ExperienceEntry: FunctionComponent<IProps> = ({
           <p
             className={cx("submission--word-count--count", {
               "submission--word-count--count-max":
-                contributionStore.wordCount > MAX_WORD_COUNT
+                contributionStore.wordCount > MAX_WORD_COUNT,
             })}
           >
             Word count
@@ -63,15 +63,19 @@ const ExperienceEntry: FunctionComponent<IProps> = ({
           </p>
         </div>
       </div>
-      <Footer green={true}>
+      <Footer navy={true}>
         <div className="flex-container flex-container--center flex-container--justify experience-entry--footer">
           <div className="flex-col--8 flex-col--tablet-large--10 guidance--footer--content">
             <h5 className="experience-entry--footer--title">
               {cms("submission.footer.title")}
             </h5>
-            <p className="experience-entry--footer--description">
-              {cms("submission.footer.step-1-about")}
-            </p>
+            <p
+              className="experience-entry--footer--description"
+              dangerouslySetInnerHTML={{
+                __html: cms("submission.footer.step-1-about"),
+              }}
+            />
+
             <Button
               text="Next Step"
               onClick={() => contributionStore.increaseStep("contribution")}

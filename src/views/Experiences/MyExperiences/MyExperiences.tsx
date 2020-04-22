@@ -3,7 +3,7 @@ import { observer, inject } from "mobx-react";
 import {
   withRouter,
   Link as RouteLink,
-  RouteComponentProps
+  RouteComponentProps,
 } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Helmet from "react-helmet";
@@ -40,7 +40,7 @@ const MyExperiences: FunctionComponent<IProps> = ({ history, userStore }) => {
       </Helmet>
       <div className="flex-container flex-container--no-padding flex-container--center my-experiences">
         <div className="flex-col--12">
-          <div className="flex-container flex-container--no-padding flex-container--center flex-container--align-center">
+          <div className="flex-container flex-container--no-padding flex-container--center flex-container--align-center my-experiences--nav">
             <button
               onClick={() => history.goBack()}
               className="my-experiences--back"
@@ -53,30 +53,30 @@ const MyExperiences: FunctionComponent<IProps> = ({ history, userStore }) => {
                 { value: "all", text: "See all" },
                 {
                   value: "public",
-                  text: "Public"
+                  text: "Public",
                 },
                 {
                   value: "private",
-                  text: "Private"
+                  text: "Private",
                 },
                 {
                   value: "in_review",
-                  text: "In review"
+                  text: "In review",
                 },
                 {
                   value: "to_review",
-                  text: "To review"
-                }
+                  text: "To review",
+                },
               ]}
               placeholder="See all"
               id="type"
-              onChange={e => {
+              onChange={(e) => {
                 userStore.filterResults(e.target.value);
               }}
             />
 
             <Button
-              text="New story"
+              text="New Experience"
               onClick={() => history.push("/submit-experience")}
               small={true}
             />
@@ -110,7 +110,7 @@ const MyExperiences: FunctionComponent<IProps> = ({ history, userStore }) => {
         />
       </div>
 
-      <Footer purple={true}>
+      <Footer navy={true}>
         <div className="flex-container flex-container--center flex-container--no-padding flex-container--align-center my-experiences--footer">
           <div className="flex-col--mobile--12 flex-col--tablet--12 flex-col--8">
             <RouteLink to="/browse" className="link link--medium">

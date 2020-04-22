@@ -38,16 +38,11 @@ const Problem: FunctionComponent<RouteComponentProps> = ({ history }) => (
         </div>
       </div>
     </div>
-    <Footer grey={true}>
+    <Footer navy={true}>
       <div className="flex-container flex-container--center flex-container--justify my-account--footer">
         <div className="flex-col--8 flex-col--tablet-large--10 my-account--footer--content">
           <RouterLink to="/privacy-policy">
-            <Link
-              text="Privacy Policy"
-              href="/privacy-policy"
-              size="medium"
-              purple={true}
-            />
+            <Link text="Privacy Policy" href="/privacy-policy" size="medium" />
           </RouterLink>
           <p className="my-account--footer--about">
             {cms("my-account.footer.about")}

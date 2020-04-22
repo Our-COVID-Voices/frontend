@@ -60,11 +60,13 @@ const Widthdraw: FunctionComponent<IProps> = ({ history, userStore }) => {
           <div className="flex-container flex-container--no-padding flex-container--center flex-container--justify">
             <div className="flex-col--8 flex-col--tablet-large--12">
               <h2 className="withdraw--subtitle">
-                Permanently delete account and data
+                Permanently delete account and data:
               </h2>
               <p className="withdraw--about">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                ultricies tincidunt congue.
+                If you choose this option, you will delete your account
+                information and any submissions you have sent so far. The
+                submissions will be deleted and it will not be possible for you
+                or anyone else to read them.
               </p>
             </div>
 
@@ -81,11 +83,14 @@ const Widthdraw: FunctionComponent<IProps> = ({ history, userStore }) => {
           <div className="flex-container flex-container--no-padding flex-container--center flex-container--justify">
             <div className="flex-col--8 flex-col--tablet-large--12">
               <h2 className="withdraw--subtitle">
-                Withdraw from the study and don't delete my data
+                Withdraw from the project, but keep my data:{" "}
               </h2>
               <p className="withdraw--about">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                ultricies tincidunt congue.
+                If you choose this option, you will delete your account
+                information from the website. National Voices will not keep a
+                record of your contact details and will not be able to contact
+                you in the future. Your submission(s) remain public on the
+                website, so you and others will be able to read them.
               </p>
             </div>
 
@@ -99,7 +104,7 @@ const Widthdraw: FunctionComponent<IProps> = ({ history, userStore }) => {
           </div>
         </div>
       </div>
-      <Footer grey={true}>
+      <Footer navy={true}>
         <div className="flex-container flex-container--center flex-container--justify my-account--footer">
           <div className="flex-col--8 flex-col--tablet-large--10 my-account--footer--content">
             <RouterLink to="/privacy-policy">
@@ -107,7 +112,6 @@ const Widthdraw: FunctionComponent<IProps> = ({ history, userStore }) => {
                 text="Privacy Policy"
                 href="/privacy-policy"
                 size="medium"
-                purple={true}
               />
             </RouterLink>
             <p className="my-account--footer--about">

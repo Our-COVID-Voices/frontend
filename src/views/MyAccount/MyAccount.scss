@@ -21,7 +21,7 @@
 
   &--title {
     @include heading-l;
-    color: $grey;
+    color: $navy;
     margin: space(32) 0;
 
     @include for-tablet-large-up {
@@ -37,7 +37,6 @@
 
   &--withdraw {
     a {
-      @include heading-xs;
       margin-top: space(32);
     }
   }
@@ -56,12 +55,12 @@
 
     &--title {
       @include button-text-alt;
-      color: $grey;
+      color: $navy;
     }
 
     &--link {
       @include body-s-alt;
-      color: #62717a;
+      color: $navy;
     }
 
     &--withdraw {
@@ -86,7 +85,7 @@
 
     &--about {
       @include body-s-alt;
-      color: $grey;
+      color: $navy;
       margin-top: space(24);
     }
   }
@@ -118,7 +117,7 @@
 
   h2 {
     @include subtitle;
-    color: $grey;
+    color: $navy;
   }
 
   @include for-tablet-large-up {
