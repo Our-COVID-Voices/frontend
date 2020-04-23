@@ -4,26 +4,20 @@ import cx from "classnames";
 import "./DonateButton.scss";
 
 interface IProps {
-  text: string;
-  onClick?: (event?: any) => void;
-  loggedIn?: boolean;
+  navy?: boolean;
 }
 
-const DonateButton: FunctionComponent<IProps> = ({
-  onClick,
-  text,
-  loggedIn = false,
-}) => {
+const DonateButton: FunctionComponent<IProps> = ({ navy = false }) => {
   return (
-    <button
-      type="button"
-      onClick={onClick}
+    <a
+      href="https://donorbox.org/our-covid-voices"
+      target="__blank"
       className={cx("donate-button", {
-        "donate-button--logged-in": loggedIn,
+        "donate-button--navy": navy,
       })}
     >
-      {text}
-    </button>
+      Donate
+    </a>
   );
 };
 

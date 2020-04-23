@@ -8,6 +8,7 @@ import Footer from "../../components/Footer";
 import { cms } from "../../utils/cms";
 import Button from "../../components/Button";
 import { withRouter, RouteComponentProps } from "react-router";
+import DonateButton from "../../components/DonateButton/DonateButton";
 
 const WritingGuidance: FunctionComponent<RouteComponentProps> = ({
   history,
@@ -113,7 +114,7 @@ const WritingGuidance: FunctionComponent<RouteComponentProps> = ({
           ></p>
         </div>
         <div className="flex-col--12 home--footer--button">
-          <Button purple={true} text="Donate" />
+          <DonateButton />
         </div>
         <div className="flex-col--8 flex-col--tablet-large--12">
           <h6 className="home--footer--contact">
