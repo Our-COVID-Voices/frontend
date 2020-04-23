@@ -70,6 +70,7 @@
     "step-2-hint": "The password you supply will be AES-256 bit encrypted (the same standard banks use)",
     "step-3-title": "Consent",
     "step-3-description": "By creating an account for this site you will be able to add your experiences. Remember, your experiences will be read by people you haven’t met, so don't share anything you wouldn’t want a stranger to know.  We will review each experience to make sure it doesn’t break any of our rules before it is published. You can remove your experiences at any time.  National Voices will use everyone's writing to raise awareness of how Covid-19 has impacted people with very different lives and will also take this insight to decision makers who are in charge of the health and care system.",
+    "step-4-title": "Our contract with you",
     "confirmation": {
       "title": "Account created",
       "description": "Thank you for creating your account. You have two options now: you can submit your experience or go back to the home page to read other people’s submissions. If you are not sure what to write about, click on ‘Submit new experience’ to read our guidance.",
