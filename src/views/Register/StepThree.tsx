@@ -22,13 +22,6 @@ const StepThree: FunctionComponent<IProps> = ({ registerStore }) => {
             __html: cms("register.step-3-description"),
           }}
         />
-        <Link
-          size="small"
-          text="Our Agreement with You"
-          href="/privacy-policy"
-          green={true}
-          newWindow={true}
-        />
       </div>
       <div className="flex-col--10 register--checkbox">
         <Checkbox
