@@ -115,7 +115,7 @@
 .user-header {
   background-color: $light-grey;
   padding: space(16) space(72) space(20) space(72) !important;
-  justify-content: end !important;
+  justify-content: flex-end !important;
 
   &--link {
     @include button-text;

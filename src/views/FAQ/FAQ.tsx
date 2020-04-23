@@ -87,7 +87,7 @@ const FAQ: FunctionComponent<RouteComponentProps> = ({ history }) => (
           </p>
         </div>
 
-        <h1 className="faq--title">Who are National Voices?</h1>
+        <h1 className="faq--title">Who has come together to do this work?</h1>
         <div className="faq--content">
           <p>
             National Voices is a very small organisation, and this is a very
@@ -99,7 +99,7 @@ const FAQ: FunctionComponent<RouteComponentProps> = ({ history }) => (
             Laura, for free. We are grateful for all the support we received.
           </p>
         </div>
-        <h1 className="faq--title">Who are National Voices?</h1>
+        <h1 className="faq--title">Who is funding this work?</h1>
         <div className="faq--content">
           <p>
             Because we needed to act quickly, we couldn’t wait for funding to be
@@ -139,7 +139,7 @@ const FAQ: FunctionComponent<RouteComponentProps> = ({ history }) => (
           </p>
         </div>
 
-        <h1 className="faq--title">Who can take part? </h1>
+        <h1 className="faq--title">Who can take part?</h1>
         <div className="faq--content">
           <p>
             Anyone who want to tell their story of life under Covid-19 can take
