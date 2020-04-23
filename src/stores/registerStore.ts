@@ -10,7 +10,7 @@ export default class RegisterStore {
   @observable password: string = "";
   @observable userStore: UserStore | null = null;
   @observable registerError: boolean = false;
-
+  @observable canContact: boolean | undefined = undefined;
   constructor(userStore: UserStore) {
     this.userStore = userStore;
   }
@@ -48,13 +48,14 @@ export default class RegisterStore {
     try {
       const params = {
         email: this.email,
-        password: this.password
+        password: this.password,
+        country: this.canContact,
       };
 
       const {
         data: {
-          data: { id }
-        }
+          data: { id },
+        },
       } = await httpService.api.post("/api/end-users", params);
 
       this.showConfirmation = true;
@@ -75,5 +76,10 @@ export default class RegisterStore {
   handleChange = (value: string, field: string) => {
     // @ts-ignore
     this[field] = value;
+  };
+
+  @action
+  handleContact = (value: boolean) => {
+    this.canContact = value;
   };
 }
