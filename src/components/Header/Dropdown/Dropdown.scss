@@ -28,7 +28,7 @@
   }
 
   &--menu {
-    background-color: $purple;
+    background-color: $light-grey;
     border-radius: 26px;
     padding: space(8) space(12);
     display: flex;
@@ -36,6 +36,10 @@
     position: absolute;
     width: 100%;
     z-index: 100;
+
+    &--logged-in {
+      background-color: $purple;
+    }
   }
 
   &--link {

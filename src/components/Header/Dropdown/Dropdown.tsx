@@ -30,7 +30,12 @@ const Dropdown: FunctionComponent<IProps> = ({ loggedIn }) => {
       </button>
 
       {open && (
-        <div className="dropdown--menu" id="menu-list">
+        <div
+          className={cx("dropdown--menu", {
+            "dropdown--menu--logged-in": loggedIn,
+          })}
+          id="menu-list"
+        >
           <NavLink
             className="dropdown--link"
             activeClassName={cx("dropdown--link--active", {
