@@ -41,7 +41,7 @@ const Dropdown: FunctionComponent<IProps> = ({ loggedIn }) => {
             activeClassName={cx("dropdown--link--active", {
               "dropdown--link--active--logged-in": loggedIn,
             })}
-            to="/why"
+            to="/about"
           >
             Why we're doing this
           </NavLink>
