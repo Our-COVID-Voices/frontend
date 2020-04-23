@@ -8,6 +8,8 @@ import { cms } from "../../utils/cms";
 import "./Home.scss";
 
 import Button from "../../components/Button";
+import Footer from "../../components/Footer";
+import Layout from "../../components/Layout";
 
 import Pencil from "../../assets/icons/pencil-solid.svg";
 import Community from "../../assets/icons/community.svg";
@@ -15,8 +17,8 @@ import Security from "../../assets/icons/security.svg";
 import Ayup from "../../assets/logo/ayup-white.svg";
 import NationalVoices from "../../assets/logo/national-voices.svg";
 import PPL from "../../assets/logo/ppl.jpg";
-import Footer from "../../components/Footer";
-import Layout from "../../components/Layout";
+import SmallBubbles from "../../assets/images/small-bubbles.png";
+import LaptopBubbles from "../../assets/images/laptop-small-bubble.png";
 
 const Home: FunctionComponent<RouteComponentProps> = ({ history }) => (
   <Layout>
@@ -44,6 +46,7 @@ const Home: FunctionComponent<RouteComponentProps> = ({ history }) => (
             className="home--welcome--logos"
           />
         </div>
+        <img src={SmallBubbles} className="home--welcome--bubbles" alt="" />
         <p className="home--welcome--about">{cms("home.content")}</p>
       </div>
     </div>
@@ -110,21 +113,20 @@ const Home: FunctionComponent<RouteComponentProps> = ({ history }) => (
     </div>
     <Footer purple={true}>
       <div className="flex-container flex-container--center home--footer">
-        <div className="flex-col--8 flex-col--tablet-large--12">
+        <div className="flex-col--mobile--12 flex-col--tablet--12 flex-col--8">
           <h5 className="home--footer--title">{cms("home.footer.title")}</h5>
           <p
             className="home--footer--content"
             dangerouslySetInnerHTML={{ __html: cms("home.footer.content") }}
           ></p>
-        </div>
-        <div className="flex-col--12 home--footer--button">
           <Button purple={true} text="Donate" />
-        </div>
-        <div className="flex-col--8 flex-col--tablet-large--12">
           <h6 className="home--footer--contact">
             {cms("home.footer.contact")}{" "}
             <a href={`mailto:${cms("global.email")}`}>{cms("global.email")}</a>
           </h6>
+        </div>
+        <div className="flex-col--mobile--12 flex-col--tablet--12 flex-col--tablet-large--12 flex-col--4 home--footer--image">
+          <img src={LaptopBubbles} alt="" />
         </div>
       </div>
     </Footer>
