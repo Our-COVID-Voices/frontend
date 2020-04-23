@@ -22,6 +22,7 @@ export default class RegisterStore {
     this.showConfirmation = false;
     this.email = "";
     this.password = "";
+    this.canContact = undefined;
     this.registerError = false;
   };
 
