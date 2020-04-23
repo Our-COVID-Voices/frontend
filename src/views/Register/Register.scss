@@ -76,6 +76,18 @@
     }
   }
 
+  &--consent {
+    margin-top: space(80);
+
+    @include for-phone-only {
+      margin-top: space(40);
+    }
+
+    .checkbox {
+      margin: space(20) 0;
+    }
+  }
+
   &--footer {
     padding-top: space(120) !important;
     padding-bottom: space(120) !important;
