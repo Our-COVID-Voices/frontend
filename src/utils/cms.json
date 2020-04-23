@@ -97,7 +97,7 @@
   },
   "forgot-password": {
     "title": "Forgotten password",
-    "description": "Need to reset your password? You can do so by entering your email and having a reset link sent to you.",
+    "description": "Need to reset you password? Enter your email address below and we'll send a password reset link to you.",
     "footer": {
       "title": "Help?",
       "description": "You will need to fill in your email so that we can make sure it’s you."
@@ -151,7 +151,7 @@
     "guidance-one-title": "Writing guidance",
     "guidance-one-1": "<p>You can write as little or as much as you like, once or as many times as you want to. Our Covid Voices is not a writing competition, where only the most dramatic or inspirational stories get published. We want to hear about everybody’s experiences.</p><p>You can talk about what has been different for you during the pandemic; what has worried you; and what has brought you comfort, joy and pleasure. Show others what the everyday experience of getting by in this time of crisis is really like. Our Covid Voices will share your experiences in your own words and on your own terms.</p><p>Please avoid sharing anything that you or others might want to keep private.  Please don’t identify organisations or other people by name if you write about them.  What you write will be read by anyone who comes to this site, so don’t share anything that you want to remain private.</p>",
     "guidance-two-title": "Guidelines",
-    "guidance-two-1": "<ul>Please do not include:<li>Full names</li><li>Phone numbers</li><li>Email addresses</li><li>Addresses</li><li>NHS numbers</li><li>Documents’ numbers</li><li>Links to websites</li></ul><p>Please see our <a href='/writing-guidance'>writing guidelines</a> and <a href='/privacy-policy'>our contract with you</a> for more details</p>"
+    "guidance-two-1": "<ul>Please do not include:<li>Full names</li><li>Phone numbers</li><li>Email addresses</li><li>Addresses</li><li>NHS numbers</li><li>Links to websites</li></ul><p>Please don't include any information that will make it easy to identify exactly where you live</p><p>Please see our <a href='/writing-guidance'>writing guidelines</a> and <a href='/privacy-policy'>our contract with you</a> for more details</p>"
   },
   "submission": {
     "title": "New experience",
@@ -174,26 +174,26 @@
   },
   "submission-confirmation": {
     "title": "Submitted",
-    "about": "Congratulations for submitting your experience. We will be in touch to let you know the outcome of the moderation process.",
+    "about": "We will by in touch to let you know when your experience is shared on the site. We may also contact you if your uploaded experience doesn't fit our <a href='/writing-guidance' target='__blank'>writing guidelines</a>",
     "hint": "Your experience will be sent to be reviewed"
   },
   "my-account": {
     "title": "My account",
     "footer": {
-      "about": "Find out what where your data is stored and how only the National Voices will use it."
+      "about": "Your experiences are vital. Find out how National Voices will use and look after them."
     }
   },
   "update-email": {
     "title": "Change email",
-    "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultricies tincidunt congue."
+    "about": "Please enter the new email address you would like to use for your account. You will recieve a verification sent to the email account you enter."
   },
   "change-password": {
     "title": "Change password",
-    "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultricies tincidunt congue."
+    "about": "Use the form below to change your password."
   },
   "problem": {
     "title": "Problem?",
-    "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultricies tincidunt congue."
+    "about": "If you have any questions or problems using this site, please get in touch or check the <a href='/faq' target='_blank'>FAQs</a>"
   },
   "notification": {
     "title": "Notifcation Settings",
