@@ -11,6 +11,7 @@ const DonateButton: FunctionComponent<IProps> = ({ navy = false }) => {
   return (
     <a
       href="https://donorbox.org/our-covid-voices"
+      target="__blank"
       className={cx("donate-button", {
         "donate-button--navy": navy,
       })}
