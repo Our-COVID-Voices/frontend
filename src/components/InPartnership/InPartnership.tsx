@@ -12,21 +12,27 @@ const InPartnership = () => (
   <div className="in-partnership--container">
     <h2 className="in-partnership--title">{cms("home.subtitle")}</h2>
     <div className="in-partnership--logo-container">
-      <img
-        src={NationalVoicesColor}
-        alt="logo for PPL"
-        className="in-partnership--logo in-partnership--logos"
-      />
-      <img
-        src={PPL}
-        alt="logo for PPL"
-        className="in-partnership--logo in-partnership--logos"
-      />
-      <ReactSVG
-        src={AyupColor}
-        wrapper="span"
-        className="in-partnership--logos"
-      />
+      <a href="https://www.nationalvoices.org.uk/" target="__blank">
+        <img
+          src={NationalVoicesColor}
+          alt="logo for PPL"
+          className="in-partnership--logo in-partnership--logos"
+        />
+      </a>
+      <a href="https://ppl.org.uk/" target="__blank">
+        <img
+          src={PPL}
+          alt="logo for PPL"
+          className="in-partnership--logo in-partnership--logos"
+        />
+      </a>
+      <a href="https://ayup.agency" target="__blank">
+        <ReactSVG
+          src={AyupColor}
+          wrapper="span"
+          className="in-partnership--logos"
+        />
+      </a>
     </div>
   </div>
 );

@@ -29,21 +29,27 @@ const Home: FunctionComponent<RouteComponentProps> = ({ history }) => (
         <h1 className="home--welcome--title">{cms("home.title")}</h1>
         <h2 className="home--welcome--subtitle">{cms("home.subtitle")}</h2>
         <div className="home--welcome--logo-container">
-          <ReactSVG
-            src={NationalVoices}
-            wrapper="span"
-            className="home--welcome--logos"
-          />
-          <img
-            src={PPL}
-            alt="logo for PPL"
-            className="home--welcome--logos home--welcome--ppl"
-          />
-          <ReactSVG
-            src={Ayup}
-            wrapper="span"
-            className="home--welcome--logos"
-          />
+          <a href="https://www.nationalvoices.org.uk/" target="__blank">
+            <ReactSVG
+              src={NationalVoices}
+              wrapper="span"
+              className="home--welcome--logos"
+            />
+          </a>
+          <a href="https://ppl.org.uk/" target="__blank">
+            <img
+              src={PPL}
+              alt="logo for PPL"
+              className="home--welcome--logos home--welcome--ppl"
+            />
+          </a>
+          <a href="https://ayup.agency" target="__blank">
+            <ReactSVG
+              src={Ayup}
+              wrapper="span"
+              className="home--welcome--logos"
+            />
+          </a>
         </div>
         <p className="home--welcome--about">{cms("home.content")}</p>
       </div>
