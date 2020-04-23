@@ -17,6 +17,7 @@ import NationalVoices from "../../assets/logo/national-voices.svg";
 import PPL from "../../assets/logo/ppl.jpg";
 import Footer from "../../components/Footer";
 import Layout from "../../components/Layout";
+import DonateButton from "../../components/DonateButton/DonateButton";
 
 const Home: FunctionComponent<RouteComponentProps> = ({ history }) => (
   <Layout>
@@ -118,7 +119,7 @@ const Home: FunctionComponent<RouteComponentProps> = ({ history }) => (
           ></p>
         </div>
         <div className="flex-col--12 home--footer--button">
-          <Button purple={true} text="Donate" />
+          <DonateButton />
         </div>
         <div className="flex-col--8 flex-col--tablet-large--12">
           <h6 className="home--footer--contact">
