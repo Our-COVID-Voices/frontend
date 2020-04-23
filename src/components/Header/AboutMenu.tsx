@@ -13,7 +13,7 @@ const AboutMenu: FunctionComponent<IProps> = ({ toggleBurger, open }) => (
   <Fragment>
     <NavLink
       className="mobile-nav--link mobile-nav--link-secondary"
-      to="/why"
+      to="/about"
       onClick={() => toggleBurger(!open)}
     >
       Why we're doing this
