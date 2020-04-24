@@ -6,8 +6,8 @@
 .about-accordian {
   &--content {
     @include body-xs;
-    color: $grey;
-    background-color: $light-green;
+    color: $navy;
+    background-color: $light-grey;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     padding: space(10) space(20);
@@ -21,7 +21,7 @@
   &--button {
     @include button-text-alt;
     width: 100%;
-    background-color: $tradewind;
+    background-color: $navy;
     color: $white;
     border-radius: 5px;
     z-index: 1;
