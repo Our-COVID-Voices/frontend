@@ -1,13 +1,16 @@
 import React, { FunctionComponent } from "react";
 import Layout from "../../components/Layout";
 import Helmet from "react-helmet";
+import ReactSVG from "react-svg";
+import { withRouter, RouteComponentProps } from "react-router";
 
 import "./FAQ.scss";
 import Breadcrumb from "../../components/Breadcrumb";
 import Footer from "../../components/Footer";
 import { cms } from "../../utils/cms";
 import Button from "../../components/Button";
-import { withRouter, RouteComponentProps } from "react-router";
+
+import BackgroundBubbles from "../../assets/images/large-medium-bubble.svg";
 
 const FAQ: FunctionComponent<RouteComponentProps> = ({ history }) => (
   <Layout>
@@ -152,6 +155,10 @@ const FAQ: FunctionComponent<RouteComponentProps> = ({ history }) => (
           </p>
         </div>
       </div>
+      <ReactSVG
+        src={BackgroundBubbles}
+        className="faq--background tablet--large-hide"
+      />
     </div>
 
     <Footer purple={true}>
