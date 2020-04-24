@@ -1,20 +1,22 @@
-import React from "react";
+import React, { FunctionComponent } from "react";
 import { cms } from "../../utils/cms";
 
 import AyupColor from "../../assets/logo/ayup-color.svg";
 import PPL from "../../assets/logo/ppl.jpg";
 import NationalVoicesColor from "../../assets/logo/national-voices-color.jpg";
+import NationalVoices from "../../assets/logo/national-voices.svg";
+import Ayup from "../../assets/logo/ayup-white.svg";
 import ReactSVG from "react-svg";
 
 import "./InPartnership.scss";
 
-const InPartnership = () => (
+const InPartnership: FunctionComponent<{ color: boolean }> = ({ color }) => (
   <div className="in-partnership--container">
-    <h2 className="in-partnership--title">{cms("home.subtitle")}</h2>
+    {color && <h2 className="in-partnership--title">{cms("home.subtitle")}</h2>}
     <div className="in-partnership--logo-container">
       <a href="https://www.nationalvoices.org.uk/" target="__blank">
         <img
-          src={NationalVoicesColor}
+          src={color ? NationalVoicesColor : NationalVoices}
           alt="logo for PPL"
           className="in-partnership--logo in-partnership--logos"
         />
@@ -28,7 +30,7 @@ const InPartnership = () => (
       </a>
       <a href="https://ayup.agency" target="__blank">
         <ReactSVG
-          src={AyupColor}
+          src={color ? AyupColor : Ayup}
           wrapper="span"
           className="in-partnership--logos"
         />

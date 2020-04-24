@@ -15,14 +15,12 @@ import DonateButton from "../../components/DonateButton/DonateButton";
 import Pencil from "../../assets/icons/pencil-solid.svg";
 import Community from "../../assets/icons/community.svg";
 import Security from "../../assets/icons/security.svg";
-import Ayup from "../../assets/logo/ayup-white.svg";
-import NationalVoices from "../../assets/logo/national-voices.svg";
-import PPL from "../../assets/logo/ppl.jpg";
 import SmallBubbles from "../../assets/images/small-bubbles.png";
 import LaptopBubbles from "../../assets/images/laptop-small-bubble.png";
 import Calendar from "../../assets/drawings/calendar.svg";
 import Flower from "../../assets/drawings/flower.svg";
 import Trolley from "../../assets/drawings/trolley.svg";
+import InPartnership from "../../components/InPartnership/InPartnership";
 
 const Home: FunctionComponent<RouteComponentProps> = ({ history }) => (
   <Layout>
@@ -33,29 +31,7 @@ const Home: FunctionComponent<RouteComponentProps> = ({ history }) => (
       <div className="flex-col--8 flex-col--tablet-large--12">
         <h1 className="home--welcome--title">{cms("home.title")}</h1>
         <h2 className="home--welcome--subtitle">{cms("home.subtitle")}</h2>
-        <div className="home--welcome--logo-container">
-          <a href="https://www.nationalvoices.org.uk/" target="__blank">
-            <ReactSVG
-              src={NationalVoices}
-              wrapper="span"
-              className="home--welcome--logos"
-            />
-          </a>
-          <a href="https://ppl.org.uk/" target="__blank">
-            <img
-              src={PPL}
-              alt="logo for PPL"
-              className="home--welcome--logos home--welcome--ppl"
-            />
-          </a>
-          <a href="https://ayup.agency" target="__blank">
-            <ReactSVG
-              src={Ayup}
-              wrapper="span"
-              className="home--welcome--logos"
-            />
-          </a>
-        </div>
+        <InPartnership color={false} />
         <img src={SmallBubbles} className="home--welcome--bubbles" alt="" />
         <p className="home--welcome--about">{cms("home.content")}</p>
       </div>

@@ -33,40 +33,10 @@
       color: $white;
     }
 
-    &--logo-container {
-      display: flex;
-      align-items: center;
-      margin-top: space(10);
-      margin-bottom: space(64);
-      flex-wrap: wrap;
-
-      @include for-tablet-down {
-        svg {
-          width: 90px;
-        }
-      }
-    }
-
-    &--ppl {
-      width: pxtorem(68px);
-
-      @include for-tablet-down {
-        width: pxtorem(50px);
-      }
-    }
-
-    &--logos {
-      margin-right: space(20);
-      display: inline-block;
-
-      @include for-tablet-down {
-        margin-right: space(10);
-      }
-    }
-
     &--about {
       @include body-l;
       color: $white;
+      margin-top: space(64);
     }
 
     &--bubbles {
