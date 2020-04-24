@@ -13,6 +13,9 @@ import Button from "../../components/Button";
 import Layout from "../../components/Layout";
 import UserStore from "../../stores/userStore";
 
+import BackgroundBubbles from "../../assets/images/large-medium-bubble.svg";
+import ReactSVG from "react-svg";
+
 interface IProps extends RouteComponentProps {
   userStore?: UserStore;
 }
@@ -54,6 +57,10 @@ const About: FunctionComponent<IProps> = ({ userStore, history }) => {
             dangerouslySetInnerHTML={{ __html: cms("about.content") }}
           />
         </div>
+        <ReactSVG
+          src={BackgroundBubbles}
+          className="about--background tablet--large-hide"
+        />
       </div>
       <Footer purple={true}>
         <div className="flex-container flex-container--center flex-container--no-padding flex-container--align-center about--footer">

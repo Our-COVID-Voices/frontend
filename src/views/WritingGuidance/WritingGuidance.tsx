@@ -1,14 +1,18 @@
 import React, { FunctionComponent } from "react";
 import Helmet from "react-helmet";
-import Layout from "../../components/Layout";
-import Breadcrumb from "../../components/Breadcrumb";
+import { withRouter, RouteComponentProps } from "react-router";
 
 import "./WritingGuidance.scss";
-import Footer from "../../components/Footer";
+
 import { cms } from "../../utils/cms";
-import Button from "../../components/Button";
-import { withRouter, RouteComponentProps } from "react-router";
+
+import Breadcrumb from "../../components/Breadcrumb";
+import Layout from "../../components/Layout";
+import Footer from "../../components/Footer";
 import DonateButton from "../../components/DonateButton/DonateButton";
+
+import BackgroundBubbles from "../../assets/images/large-medium-bubble.svg";
+import ReactSVG from "react-svg";
 
 const WritingGuidance: FunctionComponent<RouteComponentProps> = ({
   history,
@@ -102,6 +106,10 @@ const WritingGuidance: FunctionComponent<RouteComponentProps> = ({
           <p>Ready?</p>
         </div>
       </div>
+      <ReactSVG
+        src={BackgroundBubbles}
+        className="writing-guidance--background tablet--large-hide"
+      />
     </div>
 
     <Footer purple={true}>
