@@ -4,9 +4,11 @@
 
 .story {
   @include container;
+  position: relative;
+  overflow: hidden;
 
   &--info {
-    margin-top: space(12);
+    margin-top: space(20);
 
     &--date {
       @include subtitle;
@@ -29,6 +31,18 @@
     &--back {
       @include subtitle;
       color: $green;
+    }
+  }
+
+  &--background {
+    position: absolute;
+    z-index: -1;
+    top: -65px;
+    left: 42%;
+    transform: rotate(7deg);
+
+    svg {
+      width: 900px;
     }
   }
 
