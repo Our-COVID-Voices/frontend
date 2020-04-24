@@ -95,6 +95,66 @@
         bottom: -85px;
       }
     }
+
+    &--calendar {
+      color: $medium-purple;
+      position: absolute;
+      right: 20%;
+
+      @include for-phone-only {
+        right: -40px;
+      }
+
+      svg {
+        height: 65px;
+
+        @include for-tablet-down {
+          height: 45px;
+        }
+      }
+    }
+
+    &--flower {
+      color: $medium-purple;
+      position: absolute;
+      right: 15%;
+      top: 35%;
+
+      @include for-desktop-down {
+        right: 10%;
+      }
+
+      @include for-phone-only {
+        right: -40px;
+      }
+
+      svg {
+        height: 65px;
+
+        @include for-tablet-down {
+          height: 55px;
+        }
+      }
+    }
+
+    &--trolley {
+      color: $medium-purple;
+      position: absolute;
+      right: 20%;
+      bottom: 10%;
+
+      @include for-phone-only {
+        right: -10px;
+      }
+
+      svg {
+        height: 65px;
+
+        @include for-tablet-down {
+          height: 45px;
+        }
+      }
+    }
   }
 
   &--experiences {

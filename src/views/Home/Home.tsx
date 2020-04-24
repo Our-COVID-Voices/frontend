@@ -10,6 +10,7 @@ import "./Home.scss";
 import Button from "../../components/Button";
 import Footer from "../../components/Footer";
 import Layout from "../../components/Layout";
+import DonateButton from "../../components/DonateButton/DonateButton";
 
 import Pencil from "../../assets/icons/pencil-solid.svg";
 import Community from "../../assets/icons/community.svg";
@@ -19,7 +20,9 @@ import NationalVoices from "../../assets/logo/national-voices.svg";
 import PPL from "../../assets/logo/ppl.jpg";
 import SmallBubbles from "../../assets/images/small-bubbles.png";
 import LaptopBubbles from "../../assets/images/laptop-small-bubble.png";
-import DonateButton from "../../components/DonateButton/DonateButton";
+import Calendar from "../../assets/drawings/calendar.svg";
+import Flower from "../../assets/drawings/flower.svg";
+import Trolley from "../../assets/drawings/trolley.svg";
 
 const Home: FunctionComponent<RouteComponentProps> = ({ history }) => (
   <Layout>
@@ -56,6 +59,10 @@ const Home: FunctionComponent<RouteComponentProps> = ({ history }) => (
         <img src={SmallBubbles} className="home--welcome--bubbles" alt="" />
         <p className="home--welcome--about">{cms("home.content")}</p>
       </div>
+
+      <ReactSVG src={Calendar} className="home--welcome--calendar" />
+      <ReactSVG src={Flower} className="home--welcome--flower" />
+      <ReactSVG src={Trolley} className="home--welcome--trolley" />
     </div>
     <div className="flex-container flex-container--no-padding flex-container--center home--experiences">
       <div className="flex-col--12 home--experiences">
