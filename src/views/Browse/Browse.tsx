@@ -43,7 +43,7 @@ const Browse: FunctionComponent<IProps> = ({ experienceStore, history }) => {
               { url: "", text: "Experiences" },
             ]}
           />
-          <InPartnership />
+          <InPartnership color={true} />
         </div>
         <div className="flex-col--8 flex-col--tablet-large--12">
           <p
