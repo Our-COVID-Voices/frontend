@@ -32,6 +32,9 @@ const Header: FunctionComponent<IProps> = ({ loggedIn }) => {
   useEffect(() => {
     if (open) {
       document.getElementsByTagName("body")[0].style.overflow = "hidden";
+    } else {
+      document.getElementsByTagName("body")[0].style.overflow = "auto";
+      document.getElementsByTagName("body")[0].style.overflowX = "hidden";
     }
   }, [open]);
 
