@@ -50,7 +50,7 @@ export default class RegisterStore {
       const params = {
         email: this.email,
         password: this.password,
-        country: this.canContact,
+        country: `${this.canContact}`,
       };
 
       const {
