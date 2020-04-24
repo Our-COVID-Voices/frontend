@@ -4,6 +4,8 @@
 
 .writing-guidance {
   @include container;
+  position: relative;
+  overflow: hidden;
 
   &--container {
     margin-top: space(88);
@@ -45,6 +47,18 @@
       @include for-phone-only {
         margin-bottom: space(32);
       }
+    }
+  }
+
+  &--background {
+    position: absolute;
+    z-index: -1;
+    top: -65px;
+    left: 42%;
+    transform: rotate(7deg);
+
+    svg {
+      width: 900px;
     }
   }
 }

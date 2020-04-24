@@ -9,7 +9,6 @@
     margin-top: space(20) !important;
     padding: space(120) !important;
     position: relative;
-    overflow: hidden;
 
     @include for-small-phone {
       padding: space(32) !important;
@@ -17,6 +16,7 @@
 
     @include for-phone-only {
       padding: space(40) !important;
+      padding-bottom: space(120) !important;
     }
 
     @include for-tablet-down {
@@ -33,39 +33,97 @@
       color: $white;
     }
 
-    &--logo-container {
-      display: flex;
-      align-items: center;
-      margin-top: space(10);
-      margin-bottom: space(64);
-      flex-wrap: wrap;
+    &--about {
+      @include body-l;
+      color: $white;
+      margin-top: space(64);
+    }
 
-      @include for-tablet-down {
-        svg {
-          width: 90px;
+    &--bubbles {
+      position: absolute;
+      @include for-tablet-large-up {
+        top: 25%;
+        right: 20%;
+        width: 400px;
+      }
+
+      @include for-desktop-down {
+        right: 15%;
+      }
+
+      @include for-tablet-large-down {
+        width: 300px;
+        bottom: -100px;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+      }
+
+      @include for-phone-only {
+        width: 250px;
+        bottom: -85px;
+      }
+    }
+
+    &--calendar {
+      color: $medium-purple;
+      position: absolute;
+      right: 20%;
+
+      @include for-phone-only {
+        right: -40px;
+      }
+
+      svg {
+        height: 65px;
+
+        @include for-tablet-down {
+          height: 45px;
         }
       }
     }
 
-    &--ppl {
-      width: pxtorem(68px);
+    &--flower {
+      color: $medium-purple;
+      position: absolute;
+      right: 15%;
+      top: 35%;
 
-      @include for-tablet-down {
-        width: pxtorem(50px);
+      @include for-desktop-down {
+        right: 10%;
+      }
+
+      @include for-phone-only {
+        right: -40px;
+      }
+
+      svg {
+        height: 65px;
+
+        @include for-tablet-down {
+          height: 55px;
+        }
       }
     }
 
-    &--logos {
-      margin-right: space(20);
+    &--trolley {
+      color: $medium-purple;
+      position: absolute;
+      right: 20%;
+      bottom: 10%;
 
-      @include for-tablet-down {
-        margin-right: space(10);
+      @include for-phone-only {
+        right: -10px;
       }
-    }
 
-    &--about {
-      @include body-l;
-      color: $white;
+      svg {
+        height: 65px;
+
+        @include for-tablet-down {
+          height: 45px;
+        }
+      }
     }
   }
 
@@ -158,10 +216,30 @@
   &--footer {
     padding-top: space(120) !important;
     padding-bottom: space(120) !important;
+    position: relative;
 
     @include for-phone-only {
       padding-top: space(40) !important;
       padding-bottom: space(56) !important;
+    }
+
+    @include for-tablet-large-down {
+      flex-wrap: wrap-reverse !important;
+    }
+
+    &--image {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 350px;
+
+        @include for-phone-only {
+          width: 250px;
+        }
+      }
     }
 
     &--title {
@@ -199,6 +277,7 @@
     &--contact {
       @include heading-xs;
       color: $purple;
+      margin-top: space(24);
 
       a {
         @include body-l;

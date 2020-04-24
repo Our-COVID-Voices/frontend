@@ -11,6 +11,7 @@ import Helmet from "react-helmet";
 
 import Padlock from "../../assets/icons/security.svg";
 import Pencil from "../../assets/icons/pencil.svg";
+import BackgroundBubbles from "../../assets/images/large-medium-bubble.svg";
 
 import StoryStore from "../../stores/storyStore";
 import Loading from "../../components/Loading";
@@ -128,6 +129,10 @@ const MyExperience: FunctionComponent<IProps> = ({ storyStore, match }) => {
         ) : (
           <Loading input="selected story" />
         )}
+        <ReactSVG
+          src={BackgroundBubbles}
+          className="story--background tablet--large-hide"
+        />
       </div>
       <Footer navy={true}>
         <div className="flex-container flex-container--center flex-container--justify register--footer">

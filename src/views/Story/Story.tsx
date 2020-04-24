@@ -6,6 +6,7 @@ import { observer, inject } from "mobx-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Helmet from "react-helmet";
 import removeMd from "remove-markdown";
+import ReactSVG from "react-svg";
 
 import "./Story.scss";
 
@@ -17,6 +18,8 @@ import Tag from "../../components/Tag";
 import ReactMarkdown from "react-markdown";
 import Loading from "../../components/Loading";
 import StoryStore from "../../stores/storyStore";
+
+import BackgroundBubbles from "../../assets/images/large-medium-bubble.svg";
 
 interface IProps extends RouteComponentProps {
   storyStore?: StoryStore;
@@ -87,6 +90,10 @@ const Story: FunctionComponent<IProps> = ({ storyStore, match }) => {
             <Loading input="selected story" />
           </div>
         )}
+        <ReactSVG
+          src={BackgroundBubbles}
+          className="story--background tablet--large-hide"
+        />
       </div>
 
       <Footer>

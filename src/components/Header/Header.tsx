@@ -2,6 +2,7 @@ import React, { FunctionComponent, useState, useEffect, Fragment } from "react";
 import ReactSVG from "react-svg";
 import { NavLink } from "react-router-dom";
 import cx from "classnames";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import Cookies from "../Cookies";
 import DonateButton from "../DonateButton/DonateButton";
@@ -15,7 +16,10 @@ import UserHeader from "./UserHeader";
 import Dropdown from "./Dropdown/Dropdown";
 import Button from "../Button";
 import AboutMenu from "./AboutMenu";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import Laptop from "../../assets/drawings/laptop.svg";
+import Pencil from "../../assets/drawings/pencil.svg";
+import Flower from "../../assets/drawings/flower.svg";
 
 interface IProps {
   loggedIn: boolean;
@@ -28,6 +32,9 @@ const Header: FunctionComponent<IProps> = ({ loggedIn }) => {
   useEffect(() => {
     if (open) {
       document.getElementsByTagName("body")[0].style.overflow = "hidden";
+    } else {
+      document.getElementsByTagName("body")[0].style.overflow = "auto";
+      document.getElementsByTagName("body")[0].style.overflowX = "hidden";
     }
   }, [open]);
 
@@ -173,6 +180,10 @@ const Header: FunctionComponent<IProps> = ({ loggedIn }) => {
               {!loggedIn && (
                 <AboutMenu toggleBurger={toggleBurger} open={open} />
               )}
+
+              <ReactSVG src={Laptop} className="mobile-nav--laptop" />
+              <ReactSVG src={Pencil} className="mobile-nav--pencil" />
+              <ReactSVG src={Flower} className="mobile-nav--flower" />
             </div>
             {loggedIn && (
               <div className="mobile-nav--logged-in">
