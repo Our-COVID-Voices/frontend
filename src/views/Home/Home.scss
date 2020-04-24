@@ -233,13 +233,17 @@
     }
 
     &--button {
-      color: $navy;
       margin-bottom: space(80);
 
       @include for-phone-only {
         margin-bottom: space(32);
       }
+
+      a {
+        padding: space(16) space(20);
+      }
     }
+
     &--contact {
       @include heading-xs;
       color: $purple;

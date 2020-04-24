@@ -113,7 +113,7 @@ const Header: FunctionComponent<IProps> = ({ loggedIn }) => {
 
               <Dropdown loggedIn={loggedIn} />
 
-              <DonateButton text="Donate" loggedIn={loggedIn} />
+              <DonateButton navy={loggedIn} />
             </div>
           </nav>
         </div>

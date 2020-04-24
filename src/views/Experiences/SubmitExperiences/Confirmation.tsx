@@ -34,9 +34,12 @@ const Confirmation: FunctionComponent<IProps> = ({
             {cms("submission-confirmation.title")}
           </h1>
 
-          <p className="experience-confirmation--about">
-            {cms("submission-confirmation.about")}
-          </p>
+          <p
+            className="experience-confirmation--about"
+            dangerouslySetInnerHTML={{
+              __html: cms("submission-confirmation.about"),
+            }}
+          ></p>
 
           {contributionStore.privacy === "public" && (
             <div className="flex-container flex-container--justify flex-container--no-padding">
