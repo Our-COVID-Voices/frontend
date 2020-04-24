@@ -26,7 +26,7 @@ interface IProps {
 }
 
 const Header: FunctionComponent<IProps> = ({ loggedIn }) => {
-  const [open, toggleBurger] = useState(true);
+  const [open, toggleBurger] = useState(false);
   const [expandedMenu, expandMenu] = useState(false);
 
   useEffect(() => {
