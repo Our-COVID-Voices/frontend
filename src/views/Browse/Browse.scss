@@ -56,7 +56,7 @@
     }
 
     &--title {
-      @include heading-xs;
+      @include body-l;
       font-family: $itc;
       font-weight: 500;
       color: $navy;

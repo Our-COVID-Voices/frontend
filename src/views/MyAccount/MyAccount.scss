@@ -59,7 +59,8 @@
     }
 
     &--link {
-      @include body-s-alt;
+      @include button-text-alt;
+
       color: $navy;
     }
 

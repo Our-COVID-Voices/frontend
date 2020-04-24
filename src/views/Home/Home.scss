@@ -191,7 +191,12 @@
 
       svg {
         width: 60px;
+
+        @include for-phone-only {
+          width: 30px;
+        }
       }
+
       h5 {
         margin-left: space(20);
       }

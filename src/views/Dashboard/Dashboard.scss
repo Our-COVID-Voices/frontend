@@ -33,13 +33,13 @@
 
     &--logout {
       @include heading-s;
-      color: $purple;
+      color: $navy;
       text-decoration: underline;
     }
 
     &--description {
       @include body-s-alt;
-      color: $grey;
+      color: $navy;
       margin-top: space(24);
     }
 

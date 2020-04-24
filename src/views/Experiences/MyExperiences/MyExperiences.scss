@@ -76,7 +76,7 @@
 }
 
 .entry-summary {
-  @include body-s-alt;
+  @include body-s;
   color: $navy;
   border-bottom: 2px solid $light-grey;
   padding: space(16) !important;
