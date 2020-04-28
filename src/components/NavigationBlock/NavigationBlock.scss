@@ -23,7 +23,7 @@
     text-align: center;
 
     &--outer {
-      padding: space(16) !important;
+      padding: space(8) !important;
     }
 
     &--buttons {
@@ -39,7 +39,7 @@
 
     &--description {
       @include heading-s;
-      color: $grey;
+      color: $navy;
       margin-bottom: space(32);
 
       @include for-phone-only {
@@ -53,16 +53,12 @@
   }
 
   &__column {
-    background-color: $light-purple;
+    background-color: $aqua-haze;
     text-align: center;
-    padding: space(32);
+    padding: space(112) space(32);
 
     &:nth-child(2) {
-      background-color: $aqua-haze;
-
-      button {
-        background-color: $green;
-      }
+      background-color: $light-purple;
     }
 
     &--inner {
@@ -72,14 +68,8 @@
 
     &--title {
       @include heading-m;
-      color: $green;
-      margin-bottom: space(32);
-
-      &--purple {
-        @include heading-m;
-        color: $purple;
-        margin-bottom: space(32);
-      }
+      color: $dark-grey;
+      margin-bottom: space(56);
     }
 
     &--disclaimer {

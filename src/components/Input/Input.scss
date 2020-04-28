@@ -7,11 +7,12 @@
   margin-top: space(32);
   height: pxtorem(64px);
   padding: 0 space(24);
-  color: $grey;
+  color: $navy;
 
   &::placeholder {
-    color: #b7bbc0;
-    @include body-m-alt;
+    color: $navy;
+    @include body-m;
+    line-height: revert;
   }
 
   @include for-phone-only {
@@ -26,12 +27,13 @@
 
 .label {
   @include heading-s;
-  color: $grey;
+  color: $navy;
   display: block;
 }
 
 input[type="text"] {
-  @include body-m-alt;
+  @include body-m;
+  line-height: revert;
 }
 
 input[type="password"]:not(:placeholder-shown) {

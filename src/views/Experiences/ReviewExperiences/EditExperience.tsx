@@ -32,7 +32,7 @@ const EditExperience: FunctionComponent<IProps> = ({
   date,
   wordcount,
   increaseStep,
-  changes
+  changes,
 }) => (
   <Fragment>
     <div className="flex-container flex-container--no-padding flex-container--center flex-container--justify submit-experiences">
@@ -80,7 +80,7 @@ const EditExperience: FunctionComponent<IProps> = ({
         <p></p>
         <p
           className={cx("submission--word-count--count", {
-            "submission--word-count--count-max": wordcount > MAX_WORD_COUNT
+            "submission--word-count--count-max": wordcount > MAX_WORD_COUNT,
           })}
         >
           Word count
@@ -95,9 +95,13 @@ const EditExperience: FunctionComponent<IProps> = ({
           <h5 className="experience-entry--footer--title">
             {cms("submission.footer.title")}
           </h5>
-          <p className="experience-entry--footer--description">
-            {cms("submission.footer.step-1-about")}
-          </p>
+          <p
+            className="experience-entry--footer--description"
+            dangerouslySetInnerHTML={{
+              __html: cms("submission.footer.step-1-about"),
+            }}
+          />
+
           <Button text="Next" onClick={() => increaseStep()} />
         </div>
         <div className="flex-col--8 flex-col--tablet-large--12 guidance--footer--content">

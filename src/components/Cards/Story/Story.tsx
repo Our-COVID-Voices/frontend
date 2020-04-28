@@ -24,7 +24,7 @@ const Story: FunctionComponent<IProps> = ({
   tags,
   experienceStore,
   id,
-  history
+  history,
 }) => {
   if (!experienceStore) return null;
 
@@ -35,7 +35,9 @@ const Story: FunctionComponent<IProps> = ({
       className="flex-col--mobile--12 flex-col--tablet--12 flex-col--tablet-large--5 story-card"
       tabIndex={0}
       onClick={() => history.push(`/story/${id}`)}
-      onKeyDown={e => (e.key === "Enter" ? history.push(`/story/${id}`) : null)}
+      onKeyDown={(e) =>
+        e.key === "Enter" ? history.push(`/story/${id}`) : null
+      }
     >
       <ClampLines
         text={removeMd(story)}
@@ -47,7 +49,7 @@ const Story: FunctionComponent<IProps> = ({
       />
       <div>
         <Link to={`/story/${id}`} className="story-card--read-more">
-          Read whole story
+          Read whole experience
         </Link>
       </div>
       {!!tags.length ? (

@@ -19,10 +19,17 @@ const ForgotPassword: FunctionComponent = () => (
           {cms("forgot-password.title")}
         </h1>
         <p className="forgot-password--description">
-          {cms("forgot-password.description")}
+          Need to reset your password? Please email{" "}
+          <a href="mailto:info@nationalvoices.org.uk">
+            info@nationalvoices.org.uk
+          </a>{" "}
+          for assistance.
         </p>
+        {/* <p className="forgot-password--description">
+          {cms("forgot-password.description")}
+        </p> */}
       </div>
-      <form className="flex-col--8 flex-col--mobile--10">
+      {/* <form className="flex-col--8 flex-col--mobile--10 forgot-password--form">
         <Input
           id="email"
           label="Enter email"
@@ -34,12 +41,11 @@ const ForgotPassword: FunctionComponent = () => (
             <Button
               text="Send reset password link"
               onClick={() => console.log("resent password")}
-              purple={true}
               type="submit"
             />
           </div>
         </div>
-      </form>
+      </form> */}
     </div>
 
     <Footer green={true}>

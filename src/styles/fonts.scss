@@ -220,14 +220,13 @@ $itc: itc-avant-garde-gothic-pro, sans-serif;
 
 @mixin pagination {
   font-family: $manrope;
-  font-weight: 500;
+  font-weight: 600;
   font-style: normal;
   font-size: pxtorem(24px);
   line-height: 1.6;
 
   @include for-tablet-down {
-    font-size: pxtorem(40px);
-    line-height: 1;
+    font-weight: 500;
   }
 }
 
@@ -252,6 +251,54 @@ $itc: itc-avant-garde-gothic-pro, sans-serif;
 
   @include for-tablet-down {
     font-size: pxtorem(15px);
+  }
+}
+
+@mixin subtitle {
+  font-family: $itc;
+  font-weight: 500;
+  font-size: pxtorem(24px);
+  line-height: 1.2;
+
+  @include for-tablet-down {
+    font-size: pxtorem(20px);
+  }
+}
+
+@mixin tag-text-s {
+  font-family: $manrope;
+  font-weight: 500;
+
+  font-size: pxtorem(18px);
+  line-height: 1.12;
+
+  @include for-tablet-down {
+    font-size: pxtorem(14px);
+  }
+}
+
+@mixin tag-text-l {
+  font-family: $manrope;
+  font-weight: 500;
+
+  font-size: pxtorem(24px);
+  line-height: 1.08;
+
+  @include for-tablet-down {
+    font-size: pxtorem(16px);
+    line-height: 1.12;
+  }
+}
+
+@mixin tag-text {
+  font-family: $manrope;
+  font-weight: 500;
+
+  font-size: pxtorem(24px);
+  line-height: 1.12;
+
+  @include for-tablet-down {
+    font-size: pxtorem(18px);
   }
 }
 
@@ -286,45 +333,5 @@ $itc: itc-avant-garde-gothic-pro, sans-serif;
 
   @include for-tablet-down {
     font-size: pxtorem(24px);
-  }
-}
-
-@mixin tag-text-s {
-  // font-family: $kayak-sans;
-  font-size: pxtorem(18px);
-  line-height: 1.12;
-
-  @include for-tablet-down {
-    font-size: pxtorem(14px);
-  }
-}
-
-@mixin tag-text-l {
-  // font-family: $kayak-sans;
-  font-size: pxtorem(24px);
-  line-height: 1.08;
-
-  @include for-tablet-down {
-    font-size: pxtorem(16px);
-    line-height: 1.12;
-  }
-}
-
-@mixin tag-text {
-  // font-family: $kayak-sans;
-  font-size: pxtorem(24px);
-  line-height: 1.12;
-
-  @include for-tablet-down {
-    font-size: pxtorem(18px);
-  }
-}
-
-@mixin subtitle {
-  // font-family: $kayak-sans-bold;
-  font-size: pxtorem(24px);
-
-  @include for-tablet-down {
-    font-size: pxtorem(20px);
   }
 }

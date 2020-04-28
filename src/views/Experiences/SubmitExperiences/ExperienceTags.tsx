@@ -16,7 +16,7 @@ interface IProps {
 
 const ExperienceTags: FunctionComponent<IProps> = ({
   experienceStore,
-  contributionStore
+  contributionStore,
 }) => {
   useEffect(() => {
     if (experienceStore && !experienceStore.tags.length) {
@@ -33,9 +33,10 @@ const ExperienceTags: FunctionComponent<IProps> = ({
           <h1 className="experience-tags--title">
             {cms("experience-tags.title")}
           </h1>
-          <p className="experience-tags--about">
-            {cms("experience-tags.about")}
-          </p>
+          <p
+            className="experience-tags--about"
+            dangerouslySetInnerHTML={{ __html: cms("experience-tags.about") }}
+          />
         </div>
 
         <div className="flex-col--12">
@@ -53,7 +54,7 @@ const ExperienceTags: FunctionComponent<IProps> = ({
           />
         </div>
       </div>
-      <Footer purple={true}>
+      <Footer navy={true}>
         <div className="flex-container flex-container--center flex-container--justify experience-entry--footer">
           <div className="flex-col--8 flex-col--tablet-large--10 guidance--footer--content">
             <button

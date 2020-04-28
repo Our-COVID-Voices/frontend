@@ -23,13 +23,12 @@ const GuidanceTwo: FunctionComponent<IProps> = ({ contributionStore }) => {
             {cms("writing-guidance.guidance-two-title")}
           </h1>
           <span className="guidance--step">2/2</span>
-          <p className="guidance--content">
-            {cms("writing-guidance.guidance-two-1")}
-          </p>
-
-          <p className="guidance--content">
-            {cms("writing-guidance.guidance-two-2")}
-          </p>
+          <p
+            className="guidance--content"
+            dangerouslySetInnerHTML={{
+              __html: cms("writing-guidance.guidance-two-1"),
+            }}
+          ></p>
 
           <FontAwesomeIcon icon="circle" className="guidance--icon" />
           <FontAwesomeIcon
@@ -38,7 +37,7 @@ const GuidanceTwo: FunctionComponent<IProps> = ({ contributionStore }) => {
           />
         </div>
       </div>
-      <Footer green={true}>
+      <Footer navy={true}>
         <div className="flex-container flex-container--center flex-container--justify guidance--footer">
           <div className="flex-col--8 flex-col--tablet-large--12 guidance--footer--content">
             <Button

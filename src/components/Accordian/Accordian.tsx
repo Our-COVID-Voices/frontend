@@ -13,7 +13,7 @@ interface IProps {
 const Accordian: React.FunctionComponent<IProps> = ({
   children,
   title,
-  subtitle
+  subtitle,
 }) => {
   const [open, toggleAccordian] = useState(false);
 
@@ -21,10 +21,7 @@ const Accordian: React.FunctionComponent<IProps> = ({
     <div className="accordian--container">
       <button
         className={cx(
-          "flex-container flex-container--no-padding flex-container--align-center flex-container--center accordian--header accordian--button",
-          {
-            "accordian--header--grey": open
-          }
+          "flex-container flex-container--no-padding flex-container--align-center flex-container--center accordian--header accordian--button"
         )}
         onClick={() => toggleAccordian(!open)}
         aria-expanded={open}
@@ -40,7 +37,7 @@ const Accordian: React.FunctionComponent<IProps> = ({
         <FontAwesomeIcon
           icon="chevron-down"
           className={cx("accordian--icon", {
-            "accordian--icon--open": open
+            "accordian--icon--open": open,
           })}
         />
       </button>

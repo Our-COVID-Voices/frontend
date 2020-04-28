@@ -9,6 +9,7 @@ interface IProps {
   purple?: boolean;
   grey?: boolean;
   green?: boolean;
+  navy?: boolean;
 }
 
 const Footer: FunctionComponent<IProps> = ({
@@ -16,15 +17,16 @@ const Footer: FunctionComponent<IProps> = ({
   purple,
   grey,
   green,
-
-  className
+  navy,
+  className,
 }) => (
   <footer
     className={cx("footer", {
       "footer--purple": purple,
       "footer--grey": grey,
       "footer--green": green,
-      [`${className}`]: className
+      "footer--navy": navy,
+      [`${className}`]: className,
     })}
   >
     {children}

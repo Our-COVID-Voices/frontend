@@ -4,24 +4,23 @@
 
 .story {
   @include container;
+  position: relative;
+  overflow: hidden;
 
   &--info {
-    margin-top: space(80);
-
-    @include for-phone-only {
-      margin-top: space(40);
-    }
+    margin-top: space(20);
 
     &--date {
       @include subtitle;
-      color: $medium-grey;
+      color: $navy;
+      margin-top: space(32);
+
+      @include for-tablet-large-up {
+        margin-top: space(80);
+      }
 
       @include for-tablet-large-down {
         margin-top: space(16);
-      }
-
-      @include for-tablet-large-up {
-        text-align: right;
       }
 
       @include for-phone-only {
@@ -32,18 +31,25 @@
     &--back {
       @include subtitle;
       color: $green;
-      text-decoration: none;
+    }
+  }
+
+  &--background {
+    position: absolute;
+    z-index: -1;
+    top: -65px;
+    left: 42%;
+    transform: rotate(7deg);
+
+    svg {
+      width: 900px;
     }
   }
 
   &--content {
     @include body-l;
-    color: $grey;
-    margin-top: space(32);
-
-    @include for-tablet-large-up {
-      margin-top: space(80);
-    }
+    color: $navy;
+    margin-top: space(40);
   }
 
   &--footer {
@@ -53,41 +59,11 @@
       padding-top: space(40) !important;
       padding-bottom: space(56) !important;
     }
-
-    &--title {
-      @include heading-m;
-      color: $green;
-      margin-bottom: space(40);
-    }
   }
 
   &--tags {
     &--list {
       justify-content: flex-start !important;
-    }
-
-    &--category {
-      margin: space(10) space(8) 0 space(8);
-
-      &--title {
-        @include body-s;
-        color: $grey;
-        margin-bottom: space(16);
-
-        @include for-phone-only {
-          margin-bottom: space(8);
-        }
-      }
-    }
-
-    &--separator {
-      height: auto;
-      width: 2px;
-      transform: rotate(10deg);
-      border-radius: 4.5px;
-      background-color: #98d0c6;
-      margin: 0 space(10);
-      display: inline-block;
     }
   }
 }

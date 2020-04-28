@@ -36,7 +36,7 @@ const Login: FunctionComponent<IProps> = ({ userStore, history }) => {
           <p className="login--description">{cms("login.description")}</p>
         </div>
         <form
-          className="flex-col--8 flex-col--mobile--10"
+          className="flex-col--8 flex-col--mobile--10 login--form"
           onSubmit={e => {
             e.preventDefault();
             userStore.logIn();
@@ -67,17 +67,16 @@ const Login: FunctionComponent<IProps> = ({ userStore, history }) => {
             <Button
               text="Submit"
               onClick={() => userStore.logIn()}
-              purple={true}
               disabled={userStore.loginDisabled}
               type="submit"
             />
           </div>
         </form>
       </div>
-      <Footer grey={true}>
+      <Footer green={true}>
         <div className="flex-container flex-container--center login--footer">
           <div className="flex-col--8 flex-col--tablet-large--12">
-          <Link to="/forgot-password" className="link link--medium link--grey">
+          <Link to="/forgot-password" className="link link--medium">
               Forgotten password
             </Link>
 

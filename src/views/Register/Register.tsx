@@ -12,6 +12,8 @@ import Intro from "./Intro";
 import StepOne from "./StepOne";
 import StepTwo from "./StepTwo";
 import StepThree from "./StepThree";
+import StepFour from "./StepFour";
+import StepFive from "./StepFive";
 import Confirmation from "./Confirmation";
 
 import RegisterStore from "../../stores/registerStore";
@@ -60,6 +62,10 @@ class Register extends Component<IProps> {
         return <StepTwo />;
       case 3:
         return <StepThree />;
+      case 4:
+        return <StepFour />;
+      case 5:
+        return <StepFive />;
       default:
         break;
     }
@@ -76,10 +82,16 @@ class Register extends Component<IProps> {
         return !email.test(registerStore.email);
 
       case 2:
-        return !registerStore.password;
+        return !registerStore.username;
 
       case 3:
+        return !registerStore.password;
+
+      case 4:
         return !registerStore.consent;
+
+      case 5:
+        return registerStore.canContact === undefined;
 
       default:
         break;
@@ -123,9 +135,9 @@ class Register extends Component<IProps> {
                 {cms(`register.footer.step-${registerStore.step}-description`)}
               </p>
               <Button
-                text={registerStore.step === 3 ? "Submit" : "Continue"}
+                text={registerStore.step === 5 ? "Submit" : "Continue"}
                 onClick={() =>
-                  registerStore.step === 3
+                  registerStore.step === 5
                     ? registerStore.register()
                     : registerStore.nextStep()
                 }

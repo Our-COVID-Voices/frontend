@@ -74,14 +74,13 @@ const UpdateEmail: FunctionComponent<IProps> = ({ history, userStore }) => {
                 {userStore.changeEmailErrors &&
                   !!userStore.changeEmailErrors.length && (
                     <Fragment>
-                      {userStore.changeEmailErrors.map(error => (
+                      {userStore.changeEmailErrors.map((error) => (
                         <p className="update-email--error">{error}</p>
                       ))}
                     </Fragment>
                   )}
 
                 <Button
-                  purple={true}
                   text="Save"
                   type="submit"
                   onClick={(e: React.FormEvent<HTMLButtonElement>) => {
@@ -95,15 +94,14 @@ const UpdateEmail: FunctionComponent<IProps> = ({ history, userStore }) => {
         </div>
       </div>
 
-      <Footer grey={true}>
+      <Footer navy={true}>
         <div className="flex-container flex-container--center flex-container--justify my-account--footer">
           <div className="flex-col--8 flex-col--tablet-large--10 my-account--footer--content">
             <RouterLink to="/privacy-policy">
               <Link
-                text="Privacy Policy"
+                text="Our Contract With You"
                 href="/privacy-policy"
                 size="medium"
-                grey={true}
               />
             </RouterLink>
             <p className="my-account--footer--about">

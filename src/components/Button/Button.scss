@@ -13,7 +13,7 @@ $shadow: inset 2px 2px 8px rgba(0, 0, 0, 0.5);
   @include button-text;
   background-color: $green;
   color: $white;
-  padding: 0 space(20);
+  padding: 0 space(32);
   border-radius: 36px;
   height: 65px;
 
@@ -49,13 +49,16 @@ $shadow: inset 2px 2px 8px rgba(0, 0, 0, 0.5);
     white-space: normal;
     padding: space(20) space(72);
     height: auto;
+
+    @include for-tablet-down {
+      padding: space(20) space(32);
+    }
   }
 
   &--small {
     @include for-phone-only {
       height: pxtorem(50px);
-      padding: 0 space(12);
-      border-radius: 4px;
+      padding: 0 space(32);
     }
 
     @include for-small-phone {

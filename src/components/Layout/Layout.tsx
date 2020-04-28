@@ -19,11 +19,7 @@ const Layout: FunctionComponent<IProps> = ({
   if (!userStore) return null;
 
   return (
-    <div
-      className={cx({
-        [`${className}`]: className,
-      })}
-    >
+    <div style={{ overflowX: "hidden" }}>
       <Header loggedIn={userStore.loggedIn} />
       {children}
     </div>

@@ -1,4 +1,4 @@
-import React, { FunctionComponent, Fragment } from "react";
+import React, { FunctionComponent } from "react";
 import ReactSVG from "react-svg";
 import { inject, observer } from "mobx-react";
 
@@ -17,11 +17,11 @@ const StepTwo: FunctionComponent<IProps> = ({ registerStore }) => {
 
   return (
     <form
-      onSubmit={e => {
+      onSubmit={(e) => {
         e.preventDefault();
         registerStore.nextStep();
       }}
-      className="flex-container flex-container--no-padding flex-container--center flex-container--justify"
+      className="flex-container flex-container--no-padding flex-container--center flex-container--justify register--form"
     >
       <div className="flex-col--12">
         <h1 className="register--title">{cms("register.step-2-title")}</h1>
@@ -32,12 +32,11 @@ const StepTwo: FunctionComponent<IProps> = ({ registerStore }) => {
 
       <div className="flex-col--10">
         <Input
-          label="Password"
-          id="password"
+          label="Username"
+          id="username"
           onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-            registerStore.handleChange(e.target.value, "password")
+            registerStore.handleChange(e.target.value, "username")
           }
-          type="password"
         />
 
         <div className="flex-container flex-container--justify flex-container--no-padding">

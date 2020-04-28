@@ -1,0 +1,64 @@
+@import "../../styles/fonts.scss";
+@import "../../styles/mixins.scss";
+@import "../../styles/breakpoints.scss";
+
+.writing-guidance {
+  @include container;
+  position: relative;
+  overflow: hidden;
+
+  &--container {
+    margin-top: space(88);
+
+    @include for-phone-only {
+      margin-top: space(40);
+    }
+  }
+
+  &--title {
+    @include heading-s;
+    color: $navy;
+    margin-bottom: space(32);
+  }
+
+  &--content {
+    @include body-s-alt;
+    color: $navy;
+    margin-bottom: space(56);
+
+    p {
+      margin: space(16) 0;
+    }
+
+    ul {
+      margin: space(32) 0;
+    }
+
+    li {
+      list-style-position: inside;
+      margin: space(16) 0;
+      margin-left: space(32);
+      @include for-phone-only {
+        margin-left: space(16);
+      }
+    }
+
+    @include for-phone-only {
+      @include for-phone-only {
+        margin-bottom: space(32);
+      }
+    }
+  }
+
+  &--background {
+    position: absolute;
+    z-index: -1;
+    top: -65px;
+    left: 42%;
+    transform: rotate(7deg);
+
+    svg {
+      width: 900px;
+    }
+  }
+}

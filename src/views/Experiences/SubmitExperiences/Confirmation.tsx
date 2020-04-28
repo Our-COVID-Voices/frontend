@@ -20,7 +20,7 @@ interface IProps extends RouteComponentProps {
 
 const Confirmation: FunctionComponent<IProps> = ({
   history,
-  contributionStore
+  contributionStore,
 }) => {
   if (!contributionStore) return null;
 
@@ -28,15 +28,18 @@ const Confirmation: FunctionComponent<IProps> = ({
     <Layout>
       <div className="flex-container flex-container--no-padding flex-container--center flex-container--justify experience-confirmation">
         <div className="flex-col--10">
-          <ReactSVG src={Submitted} />
+          <ReactSVG src={Submitted} className="guidance--image" />
 
           <h1 className="experience-confirmation--title">
             {cms("submission-confirmation.title")}
           </h1>
 
-          <p className="experience-confirmation--about">
-            {cms("submission-confirmation.about")}
-          </p>
+          <p
+            className="experience-confirmation--about"
+            dangerouslySetInnerHTML={{
+              __html: cms("submission-confirmation.about"),
+            }}
+          ></p>
 
           {contributionStore.privacy === "public" && (
             <div className="flex-container flex-container--justify flex-container--no-padding">
@@ -58,7 +61,7 @@ const Confirmation: FunctionComponent<IProps> = ({
                 twoCol={true}
                 onClick={() =>
                   history.push({
-                    pathname: "/my-experiences"
+                    pathname: "/my-experiences",
                   })
                 }
               />
@@ -68,7 +71,7 @@ const Confirmation: FunctionComponent<IProps> = ({
                 text="View my experiences"
                 onClick={() =>
                   history.push({
-                    pathname: "/my-experiences"
+                    pathname: "/my-experiences",
                   })
                 }
               />
@@ -83,6 +86,7 @@ const Confirmation: FunctionComponent<IProps> = ({
                   history.push({ pathname: "/submit-experience" });
                   contributionStore.contributionSubmitted = false;
                 }}
+                purple={true}
               />
             }
             mobileRightButton={
@@ -104,8 +108,12 @@ const Confirmation: FunctionComponent<IProps> = ({
       <Footer purple={true}>
         <div className="flex-container flex-container--center flex-container--justify experience-entry--footer">
           <div className="flex-col--8 flex-col--tablet-large--10 guidance--footer--content">
-            <Link size="medium" text="View other's stories" href="/browse" />
-            <p className="login--footer--description">
+            <Link
+              size="medium"
+              text="View other's experiences"
+              href="/browse"
+            />
+            <p className="register--footer--description">
               {cms("register.footer.confirmation")}
             </p>
           </div>

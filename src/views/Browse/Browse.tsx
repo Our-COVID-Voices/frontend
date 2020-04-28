@@ -15,6 +15,8 @@ import Search from "./Search";
 import Results from "./Results";
 import Footer from "../../components/Footer";
 import Button from "../../components/Button";
+import InPartnership from "../../components/InPartnership/InPartnership";
+import MediumBubbles from "../../assets/images/bubble-medium-faces.png";
 
 interface IProps extends RouteComponentProps {
   experienceStore: ExperienceStore;
@@ -38,18 +40,26 @@ const Browse: FunctionComponent<IProps> = ({ experienceStore, history }) => {
           <Breadcrumb
             crumbs={[
               { url: "/", text: "Home" },
-              { url: "", text: "Stories" }
+              { url: "", text: "Experiences" },
             ]}
           />
-          <p className="browse--subtitle">{cms("global.tagline")}</p>
+          <InPartnership color={true} />
         </div>
         <div className="flex-col--8 flex-col--tablet-large--12">
-          <p className="browse--about mobile-hide">{cms("global.about")}</p>
+          <p
+            className="browse--about mobile-hide"
+            dangerouslySetInnerHTML={{ __html: cms("browse.about") }}
+          />
           <AboutAccordian
-            text={cms("global.about")}
+            text={cms("browse.about")}
             className="browse--about--mobile mobile-show"
           />
         </div>
+        <img
+          src={MediumBubbles}
+          alt=""
+          className="browse--about--image tablet--large-hide"
+        />
       </div>
 
       <Search />
@@ -68,13 +78,14 @@ const Browse: FunctionComponent<IProps> = ({ experienceStore, history }) => {
           </div>
           <div className="flex-col--mobile--12 flex-col--tablet--12 flex-col--4 browse--footer--button">
             <Button
-              text="Sign up and share"
+              text="Would you like to take part and share your experiences?"
               onClick={() =>
                 history.push({
-                  pathname: "/register"
+                  pathname: "/register",
                 })
               }
               twoCol={true}
+              purple={true}
             />
           </div>
         </div>

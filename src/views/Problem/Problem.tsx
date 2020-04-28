@@ -25,9 +25,11 @@ const Problem: FunctionComponent<RouteComponentProps> = ({ history }) => (
       <div className="flex-container flex-container--no-padding flex-container--center flex-container--justify my-account--container">
         <div className="flex-col--8 flex-col--tablet-large--12">
           <h1 className="my-account--title">{cms("problem.title")}</h1>
-          <p className="update-email--about" style={{ textAlign: "center" }}>
-            {cms("problem.about")}
-          </p>
+          <p
+            className="update-email--about"
+            style={{ textAlign: "center" }}
+            dangerouslySetInnerHTML={{ __html: cms("problem.about") }}
+          ></p>
         </div>
 
         <div className="flex-col--6 flex-col--tablet-large--11 contact">
@@ -38,16 +40,11 @@ const Problem: FunctionComponent<RouteComponentProps> = ({ history }) => (
         </div>
       </div>
     </div>
-    <Footer grey={true}>
+    <Footer navy={true}>
       <div className="flex-container flex-container--center flex-container--justify my-account--footer">
         <div className="flex-col--8 flex-col--tablet-large--10 my-account--footer--content">
           <RouterLink to="/privacy-policy">
-            <Link
-              text="Privacy Policy"
-              href="/privacy-policy"
-              size="medium"
-              grey={true}
-            />
+            <Link text="Privacy Policy" href="/privacy-policy" size="medium" />
           </RouterLink>
           <p className="my-account--footer--about">
             {cms("my-account.footer.about")}

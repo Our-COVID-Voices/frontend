@@ -2,7 +2,7 @@ import React, { FunctionComponent } from "react";
 import {
   Link as RouteLink,
   withRouter,
-  RouteComponentProps
+  RouteComponentProps,
 } from "react-router-dom";
 import { observer, inject } from "mobx-react";
 import Helmet from "react-helmet";
@@ -32,7 +32,10 @@ const Dashboard: FunctionComponent<IProps> = ({ history, userStore }) => {
       </Helmet>
       <div className="flex-container flex-container--no-padding flex-container--center dashboard">
         <div className="flex-col--12">
-          <h1 className="dashboard--about">{cms("dashboard.about")}</h1>
+          <h1
+            className="dashboard--about"
+            dangerouslySetInnerHTML={{ __html: cms("dashboard.about") }}
+          />
         </div>
         <div className="flex-col--12">
           <NavigationBlock
@@ -42,7 +45,7 @@ const Dashboard: FunctionComponent<IProps> = ({ history, userStore }) => {
                 twoCol={true}
                 onClick={() =>
                   history.push({
-                    pathname: "/my-experiences"
+                    pathname: "/my-experiences",
                   })
                 }
               />
@@ -52,7 +55,7 @@ const Dashboard: FunctionComponent<IProps> = ({ history, userStore }) => {
                 text="View my experiences"
                 onClick={() =>
                   history.push({
-                    pathname: "/my-experiences"
+                    pathname: "/my-experiences",
                   })
                 }
               />
@@ -64,6 +67,7 @@ const Dashboard: FunctionComponent<IProps> = ({ history, userStore }) => {
                 text="Submit new experience"
                 twoCol={true}
                 onClick={() => history.push({ pathname: "/submit-experience" })}
+                purple={true}
               />
             }
             mobileRightButton={
@@ -84,7 +88,7 @@ const Dashboard: FunctionComponent<IProps> = ({ history, userStore }) => {
       </div>
 
       {/* Mobile Footer */}
-      <Footer purple={true} className="mobile-show">
+      <Footer navy={true} className="mobile-show">
         <div className="flex-container flex-container--center dashboard--footer">
           <div className="flex-col--8 flex-col--tablet-large--12">
             <button

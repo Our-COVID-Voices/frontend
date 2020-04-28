@@ -43,6 +43,8 @@ import ContributionStore from "./stores/contributionStore";
 import ExperienceStore from "./stores/experienceStore";
 import StoryStore from "./stores/storyStore";
 import ReviewStore from "./stores/reviewStore";
+import FAQ from "./views/FAQ";
+import WritingGuidance from "./views/WritingGuidance";
 
 library.add(fas);
 
@@ -77,6 +79,13 @@ const App: FunctionComponent = () => (
           <Route path="/contribute" component={Contribute} exact={true} />
           <Route path="/login" component={Login} exact={true} />
           <Route path="/register" component={Register} exact={true} />
+          <Route path="/faqs" component={FAQ} exact={true} />
+          <Route
+            path="/writing-guidance"
+            component={WritingGuidance}
+            exact={true}
+          />
+
           <Route
             path="/privacy-policy"
             component={PrivacyPolicy}

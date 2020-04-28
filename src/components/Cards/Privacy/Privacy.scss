@@ -7,15 +7,15 @@
     @include pagination;
     color: $white;
     line-height: 1;
-    background-color: $medium-grey;
+    background-color: $navy;
     padding: space(16) space(24);
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
   }
 
   &--content {
-    @include body-m-alt;
-    color: $grey;
+    @include body-l;
+    color: $navy;
     padding: space(16) space(24);
     background-color: $light-grey;
     border-bottom-left-radius: 3px;
@@ -25,5 +25,6 @@
   &--links {
     @include body-s;
     margin-top: space(16);
+    color: $green;
   }
 }

@@ -4,6 +4,8 @@
 
 .about {
   @include container;
+  position: relative;
+  overflow: hidden;
 
   &--container {
     margin-top: space(88);
@@ -13,16 +15,14 @@
     }
   }
 
-  &--title {
-    @include heading-s;
-    color: $grey;
-    margin-bottom: space(32);
-  }
-
   &--content {
     @include body-s-alt;
-    color: $medium-grey;
+    color: $navy;
     margin-bottom: space(56);
+
+    p {
+      margin: space(16) 0;
+    }
 
     @include for-phone-only {
       @include for-phone-only {
@@ -42,13 +42,13 @@
 
     &--title {
       @include heading-m;
-      color: $purple;
+      color: $navy;
       margin-bottom: space(40);
     }
 
     &--content {
       @include body-l;
-      color: $grey;
+      color: $navy;
     }
 
     &--button {
@@ -57,6 +57,18 @@
       @include for-tablet-down {
         margin-top: space(40);
       }
+    }
+  }
+
+  &--background {
+    position: absolute;
+    z-index: -1;
+    top: -65px;
+    left: 42%;
+    transform: rotate(7deg);
+
+    svg {
+      width: 900px;
     }
   }
 }

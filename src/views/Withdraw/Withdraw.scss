@@ -5,13 +5,13 @@
 .withdraw {
   &--title {
     @include heading-l;
-    color: $grey;
+    color: $navy;
     margin: space(16) 0;
   }
 
   &--subtitle {
     @include heading-s;
-    color: $grey;
+    color: $navy;
     line-height: 1.1;
     margin-bottom: space(24);
 
@@ -22,7 +22,7 @@
 
   &--about {
     @include body-l;
-    color: $grey;
+    color: $navy;
     margin-bottom: space(20);
 
     @include for-tablet-large-up {
@@ -80,7 +80,7 @@
   }
 
   &--cancel {
-    color: $grey;
+    color: $medium-grey;
   }
 
   button {

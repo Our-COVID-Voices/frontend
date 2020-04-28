@@ -1,6 +1,6 @@
 {
   "header": {
-    "cookies": "Lorem ipsum dolor sit amet, adipiscing elit. Vivamus ultricies tincidunt congue. Lorem ipsum dolor sit amet, adipiscing elit. Vivamus ultricies tincidunt congue."
+    "cookies": "This website uses cookies to offer you a better browsing experience. Find out more on how we use cookies [link to cookies policy]."
   },
   "home": {
     "title": "Welcome",
@@ -18,8 +18,8 @@
       "contributions": "Contributions are anonymous"
     },
     "footer": {
-      "title": "National Voices is [short explanation of National Voices]",
-      "content": "If you need help with anything check out the Frequently Asked Questions.  If you have noticed something that does not look right, please contact the website admin.",
+      "title": "",
+      "content": "<p>National Voices is coalition of 150 charities, supporting people with physical and mental health problems and disabilty, and those who are facing inequality or discrimination. This means we can draw on the experiences of million of people.</p><p>If you need help with anything check out the Frequently Asked Questions.  If you have noticed something that does not look right, please contact the website admin.</p>",
       "contact": "Email us at"
     }
   },
@@ -30,16 +30,14 @@
   },
   "not-found": {
     "title": "Page 404",
-    "content": "Lorem ipsum dolor sit amet, adipiscing elit. Vivamus ultricies tincidunt congue."
+    "content": "This page cannot be found"
   },
   "try-again": {
     "title": "Please try again later",
     "content": "Lorem ipsum dolor sit amet, adipiscing elit. Vivamus ultricies tincidunt congue."
   },
   "about": {
-    "who": "If you hear voices, HVN can help- we are committed to helping people who hear voices. We offer information, support and understanding to people who hear voices and those who support them.",
-    "what": "The project is about collecting first person accounts of voice hearing. You can write, tag and submit your own experience, and you can read about other experiences. It's all anonymous.",
-    "why": "Most research about hearing voices is done by people who don't hear voices, about people who do. We want to change this. We want people who hear voices to be able to use their own words to describe their experience, and to categorise it themselves. We want research that reflects the immense diversity in voice hearing. We also want to create research that voices hearers find useful, and can access. These are some of the ideas behind this project.",
+    "content": "<p>The arrival of the Covid-19 virus has made everyday life feel very different. Health and care services are being delivered differently, and many services have stopped altogether. Our ability to take part in our communities and to see friends and family is limited. Everything from food shopping, to home care, to doctors appointments has changed.</p><p>The media are mostly telling the stories of people who do not live their lives with additional challenges and conditions. However, many live with one or more ongoing health conditions, ill-health or disability. Many use health or social care services regularly to keep well. Some are more at risk from Covid-19. Some are having their health and wellbeing put at risk by what they have to do to keep others safe. The voices of these people have not been the focus of much of the national discussion.</p><p>During this period, we think it is more important than ever that the voices of those most at risk and those who are having their lives most disrupted should be heard. Decisions made about how health, care and support are provided to people during this period and in the future are having real, everyday implications for people's lives. These decisions should be based on understanding how all people actually live their lives, and experience their health and illness. Bad decisions will be made without this understanding.</p><p>Our Covid Voices wants to share with the world how those with long-term conditions, disabilities and other health and care needs are living during the pandemic in the UK. Our Covid Voices aims to be a first draft of history, with people across the country sharing their experiences of the UK under lockdown as they happen.</p><p>National Voices will use the insight you will generate to influence national and local decision-makers. This will make it easier for them to develop policies and services that have a positive and tangible impact on people’s lives. The experiences shared on this website will help them get a clearer picture of what is happening now, and help us at National Voices make a better case for what needs to happen once this crisis ends.</p><p>Things will be different than they are now. We want to make sure that they are also better.</p>",
     "footer": {
       "title": "Contribute to the project",
       "content": "Sign up with an email and password to submit your own stories, this link will take you to the sign up page."
@@ -59,46 +57,54 @@
     "footer": "Need help logging in or need to reset  your password."
   },
   "register": {
-    "title": "Hi there",
+    "title": "Hi there,",
     "error": "Unable to register your account. Please check the email address has not already been registered.",
-    "description": "At the Hearing Voices Network were collecting first-person accounts of stories, from people who experience voices, visions and other unusual sensory perceptions.",
+    "description": "Our Covid Voices is about capturing experiences we don’t hear that much about. We are particularly keen to hear from people who have had ongoing health issues or a disability long before Covid-19 happened. If you sign up you’ll be able to share up to 700 words of writing. You can write about whatever Covid-19 experiences matter most to you, for instance: loneliness; looking after someone else or yourself; how you engage with health or care services; how you buy food; and what you do to stay connected to people. We are not looking for the most dramatic, heart breaking or inspiring stuff. We want to know what it’s really like to live with ill health or disability or support someone who does during this period. <p>There is no obligation to give your name. You can submit a single experience, or multiple ones over a period of time.</p> ",
     "step-title": "Create account steps",
-    "step-description": "Email, password, consent to sharing experiences.",
+    "step-description": "Email, username, password, consent to sharing experiences.",
     "step-1-title": "Set up your account",
-    "step-1-description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultricies tincidunt congue.",
-    "step-1-hint": "Your email will be used to log in",
-    "step-2-title": "Choose your password",
-    "step-2-description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultricies tincidunt congue.",
-    "step-2-hint": "Your password will be encrypted",
-    "step-3-title": "Consent",
-    "step-3-description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultricies tincidunt congue.</p> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rutrum sem vel elit vehicula, vitae accumsan turpis scelerisque.</p>",
+    "step-1-description": "Please type your email address below.",
+    "step-1-hint": "Through your email, we will let you know about the publication process and any other important information about your account.",
+    "step-2-title": "Choose your username",
+    "step-2-description": "Please choose a username",
+    "step-2-hint": "Your username can indentify you or not",
+    "step-3-title": "Choose your password",
+    "step-3-description": "Create a password which you can remember.Use a combination of lower case and upper case letters, numbers and symbols.",
+    "step-3-hint": "The password you supply will be AES-256 bit encrypted (the same standard banks use)",
+    "step-4-title": "Consent",
+    "step-4-description": "By creating an account for this site you will be able to add your experiences. Remember, your experiences will be read by people you haven’t met, so don't share anything you wouldn’t want a stranger to know.  We will review each experience to make sure it doesn’t break any of our rules before it is published. You can remove your experiences at any time.  National Voices will use everyone's writing to raise awareness of how Covid-19 has impacted people with very different lives and will also take this insight to decision makers who are in charge of the health and care system.",
+    "step-5-title": "Our contract with you",
     "confirmation": {
       "title": "Account created",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultricies tincidunt congue.",
+      "description": "Thank you for creating your account. You have two options now: you can submit your experience or go back to the home page to read other people’s submissions. If you are not sure what to write about, click on ‘Submit new experience’ to read our guidance.",
       "cta": {
-        "dashboard": "Go to dashboard",
-        "submit": "Submit new experience",
+        "dashboard": "Go to My Experiences",
+        "submit": "Submit New Experience",
         "mobile": "What would you like to do next?"
       }
     },
     "footer": {
       "step-0-title": "First step",
-      "step-0-description": "Create account, you will need to enter your email to do this.",
+      "step-0-description": "To create an account you will need to enter your email address.",
       "step-1-title": "Next step",
-      "step-1-description": "Set your password to keep your account secure.",
+      "step-1-description": "Choose a username for your account",
       "step-2-title": "Next step",
-      "step-2-description": "Consent to sharing your stories and information with the app.",
+      "step-2-description": "Set your password to keep your account secure.",
       "step-3-title": "Next step",
-      "step-3-description": "Click submit to finish creating your account.",
+      "step-3-description": "Consent to sharing your experience and information on the website.",
+      "step-4-title": "Next step",
+      "step-4-description": "Consent to being contacted by National Voices",
+      "step-5-title": "Next step",
+      "step-5-description": "Click submit to finish creating your account.",
       "confirmation": "Browse through the experiences of others."
     }
   },
   "privacy": {
-    "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultricies tincidunt congue.</p> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rutrum sem vel elit vehicula, vitae accumsan turpis scelerisque.</p>"
+    "content": "<p>We at National Voices will use your writing to build up a picture of how people from all walks of life, and with different backgrounds and health conditions experience this current Covid-19 crisis. Other people, such as journalists or academics, might also want to use the published information. But they won’t see your contact details.</p> <p>We at National Voices will take what we learn from your and everyone’s writing to decision makers who design the health and care services we all use. We believe that grounding our arguments in your experiences will help us to be more convincing and will make sure that better decisions are made about the present and future. </p> <p>We will use the names that users give themselves when talking about their experiences. We will never publish contact details.</p> <p>National Voices would like to be able to get back to you, to ask whether you would agree to tell us more about your experience. We think this will help us to talk to decision makers, for example about how services need to work after the acute Covid-19 crisis is over. But we won’t do this unless you agree to this.</p> <p>Please tell us whether you agree to us contacting you.</p> <p>It will only ever be someone working for National Voices who will contact you.</p> <p>We won’t pass your contact details onto anyone else without your permission.</p> <p>We won’t ever contact you to ask for money.</p> <p>We will keep your contact details safe and only use them for the purposes we describe here.</p> <p>We will not contact you after 3 years have passed from the time you published your writing. After 3 years we will destroy your contact details, unless you tell us we can keep them for longer.</p> <p>You can tell us at any time that you do not wish to be contacted anymore. You can do so by emailing XYZ</p>"
   },
   "forgot-password": {
     "title": "Forgotten password",
-    "description": "Need to reset your password? You can do so by entering your email and having a reset link sent to you.",
+    "description": "Need to reset you password? Enter your email address below and we'll send a password reset link to you.",
     "footer": {
       "title": "Help?",
       "description": "You will need to fill in your email so that we can make sure it’s you."
@@ -112,7 +118,7 @@
     }
   },
   "dashboard": {
-    "about": "We’re trying to collect first-person accounts of stories, share your experiences anonymously.",
+    "about": "<p>National Voices has created Our Covid Voices to make it as easy as possible to share with the world what life is like for you right now.</p><p>National Voices will use the insight you will generate to influence national and local decision-makers. This will make it easier for them to develop policies and services that have a positive and tangible impact on people’s lives. The experiences shared on this website will help them get a clearer picture of what is happening now, and help us at National Voices make a better case for what needs to happen once this crisis ends.</p><p>Things will be different than they are now. We want to make sure that they are also better.</p>",
     "experiences": "Go to my experiences",
     "submit": "Write now",
     "description": "Write now, or read about other’s experiences",
@@ -124,20 +130,18 @@
   "privacy-notice": {
     "title": "Privacy and withdrawl",
     "about": "Your account is secure and how much you share is up to you, you can always withdraw at any time.",
-    "policy": "Privacy policy",
+    "policy": "Our contract with you",
     "withdraw": "I would like to withdraw"
   },
   "browse": {
+    "about": "Read here the experiences of people with health conditions, disabilities or illnesses as we live through this Covid-19 period together.  Each experience has been written and submitted by someone to help us all understand what these times of uncertainty and change mean for us all.  Search by tag to find people writing about particular situations, services, conditions, disabilities or experiences. Together these experiences build a picture of what life is like for people during this time of change.",
     "filter": {
-      "title": "You can browse experiences by choosing tags.",
+      "title": "Start typing here to find experiences that you’d like to read. Most experiences have a number of tags which describe what they are about.",
       "about": "Select by category to explore more tags",
       "no-tag": "You can also search for experiences with"
     }
   },
   "story": {
-    "footer": {
-      "title": "Tags"
-    },
     "privacy": "This story is",
     "changes": "There are suggested changes for this story"
   },
@@ -146,59 +150,57 @@
     "about": "There is currently no stories in my experiences.",
     "cta": "Start new story",
     "footer": {
-      "link": "View other’s stories",
+      "link": "View other’s experiences",
       "about": "Browse through the experiences of others."
     }
   },
   "writing-guidance": {
     "guidance-one-title": "Writing guidance",
-    "guidance-one-1": "Lorem ipsum dolor sit amet, adipiscing elit. Vivamus ultricies tincidunt congue.",
-    "guidance-one-2": "Lorem ipsum dolor sit amet, adipiscing elit.",
+    "guidance-one-1": "<p>You can write as little or as much as you like, once or as many times as you want to. Our Covid Voices is not a writing competition, where only the most dramatic or inspirational stories get published. We want to hear about everybody’s experiences.</p><p>You can talk about what has been different for you during the pandemic; what has worried you; and what has brought you comfort, joy and pleasure. Show others what the everyday experience of getting by in this time of crisis is really like. Our Covid Voices will share your experiences in your own words and on your own terms.</p><p>Please avoid sharing anything that you or others might want to keep private.  Please don’t identify organisations or other people by name if you write about them.  What you write will be read by anyone who comes to this site, so don’t share anything that you want to remain private.</p>",
     "guidance-two-title": "Guidelines",
-    "guidance-two-1": "Lorem ipsum dolor sit amet, adipiscing elit. Vivamus ultricies tincidunt congue.",
-    "guidance-two-2": "Lorem ipsum dolor sit amet, adipiscing elit. Vivamus ultricies tincidunt congue."
+    "guidance-two-1": "<ul>Please do not include:<li>Full names</li><li>Phone numbers</li><li>Email addresses</li><li>Addresses</li><li>NHS numbers</li><li>Links to websites</li></ul><p>Please don't include any information that will make it easy to identify exactly where you live</p><p>Please see our <a href='/writing-guidance'>writing guidelines</a> and <a href='/privacy-policy'>our contract with you</a> for more details</p>"
   },
   "submission": {
     "title": "New experience",
     "date": "Today",
     "footer": {
       "title": "Next step",
-      "step-1-about": "You will select if you want this experience to be private or public",
-      "step-2-about": "Tag characteristics, tone and descriptions of your experience.",
+      "step-1-about": "When you click public below your writing will be sent to our moderators and will then be published. This may take a period of days. You’ll be notified when it appears on the site. If you click private your experience will be saved, but will not be sent to our moderators for publication. You can choose to make it public from <a href='/my-experiences'>my experiences</a>",
+      "step-2-about": "Tags are important, because they allow others to search for a particular topic through all submissions. The available tags are grouped in categories which you can browse below.",
       "step-3-about": "If you don’t want to add tags you can skip this step."
     }
   },
   "experience-privacy": {
     "title": "Before you submit",
-    "about": "Lorem ipsum dolor sit amet, adipiscing elit. Vivamus ultricies tincidunt congue.",
-    "hint": "Your experience will be sent to be reviewed"
+    "about": "Before you click ‘submit’, please ensure you have followed the <a href='/writing-guidance' target='_blank'>guidelines</a>. If you change your mind, you will be able to delete your story at any point.",
+    "hint": "Your story will be reviewed by a moderator, to ensure that it complies with the guidelines. We will let you know via email when it is published."
   },
   "experience-tags": {
     "title": "Your experience",
-    "about": "Lorem ipsum dolor sit amet, adipiscing elit. Vivamus ultricies tincidunt congue."
+    "about": "<p>Choose the tags that best describe your situation and experience. Please choose accurate tags. They really help everyone to find experiences they can connect with.</p><p>You can use as many tags as you want. The moderator will also be able to apply relevant tags to your submission.</p>"
   },
   "submission-confirmation": {
     "title": "Submitted",
-    "about": "Lorem ipsum dolor sit amet, adipiscing elit. Vivamus ultricies tincidunt congue.",
+    "about": "We will by in touch to let you know when your experience is shared on the site. We may also contact you if your uploaded experience doesn't fit our <a href='/writing-guidance' target='__blank'>writing guidelines</a>",
     "hint": "Your experience will be sent to be reviewed"
   },
   "my-account": {
     "title": "My account",
     "footer": {
-      "about": "Find out what where your data is stored and how only the Hearing Voice Network will use it."
+      "about": "Your experiences are vital. Find out how National Voices will use and look after them."
     }
   },
   "update-email": {
     "title": "Change email",
-    "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultricies tincidunt congue."
+    "about": "Please enter the new email address you would like to use for your account. You will recieve a verification sent to the email account you enter."
   },
   "change-password": {
     "title": "Change password",
-    "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultricies tincidunt congue."
+    "about": "Use the form below to change your password."
   },
   "problem": {
     "title": "Problem?",
-    "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultricies tincidunt congue."
+    "about": "If you have any questions or problems using this site, please get in touch or check the <a href='/faq' target='_blank'>FAQs</a>"
   },
   "notification": {
     "title": "Notifcation Settings",
@@ -206,7 +208,7 @@
   },
   "withdraw": {
     "title": "Withdraw account",
-    "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultricies tincidunt congue.",
+    "about": "You can remove your account and / or submissions from this website at any time. This will not affect your right. Please note that if you have already submitted your experience, this might have already been read by others. Choose one of the following options:",
     "hint": "You can’t undo withdrawl",
     "confirmation": "Are you sure you would like to withdraw your account?"
   },
@@ -218,7 +220,7 @@
     "hint": "Your experience will remain private until changes are made",
     "confirmation": {
       "title": "Re-submitted",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultricies tincidunt congue.",
+      "description": "Congratulations for re-submitting your experience. We will be in touch to let you know the outcome of the moderation process.",
       "hint": "Your experience will be sent to be reviewed"
     }
   }

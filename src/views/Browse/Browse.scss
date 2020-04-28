@@ -6,12 +6,6 @@
   @include container;
   position: relative;
 
-  @include for-tablet-large-up {
-    &:after {
-      @include faded-background;
-    }
-  }
-
   &--subtitle {
     @include subtitle;
     color: $green;
@@ -20,13 +14,23 @@
   &--about {
     @include about;
 
+    p {
+      margin: space(16) 0;
+    }
+
     &--mobile {
       margin-top: space(32);
+    }
+
+    &--image {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -1;
     }
   }
 
   &--filter {
-    background-color: $light-purple;
     padding: space(16) !important;
     position: relative;
 
@@ -38,28 +42,24 @@
       padding: space(16) !important;
     }
 
-    @include for-phone-only {
-      &:before {
-        position: absolute;
-        content: "";
-        background-image: url("../../assets/lines/Line2-purple-mobile.svg");
-        width: 100%;
-        height: 22px;
-        background-repeat: no-repeat;
-        background-size: contain;
-        bottom: -8px;
-        left: 0;
-      }
-    }
-
     @include for-tablet-large-up {
-      margin-top: space(120) !important;
       padding: space(32) space(6) !important;
     }
 
+    &--container {
+      background-color: $faded-purple;
+      padding: space(40);
+
+      @include for-tablet-down {
+        padding: space(20);
+      }
+    }
+
     &--title {
-      @include heading-s;
-      color: $purple;
+      @include body-l;
+      font-family: $itc;
+      font-weight: 500;
+      color: $navy;
       margin-bottom: space(32);
 
       @include for-phone-only {
@@ -74,11 +74,13 @@
 
     &--options {
       &-toggle {
-        @include heading-xs;
+        @include body-m;
+        font-weight: normal;
         text-decoration: underline;
-        color: $purple;
+        color: $navy;
         margin: space(16) 0;
         cursor: pointer;
+        padding: 0;
       }
     }
 
@@ -98,7 +100,7 @@
 
       &--title {
         @include body-s-alt;
-        color: $grey;
+        color: $navy;
         margin-top: space(20);
         display: inline;
       }
@@ -115,14 +117,14 @@
     }
 
     &--title {
-      @include heading-m;
-      color: $purple;
+      @include heading-s;
+      color: $navy;
       margin-bottom: space(40);
     }
 
     &--content {
       @include body-l;
-      color: $grey;
+      color: $navy;
     }
 
     &--button {
@@ -136,13 +138,14 @@
 }
 
 .react-tags {
-  @include body-m-alt;
+  @include body-m;
   position: relative;
   padding: space(8) 0 0 space(8);
-  border: 1px solid $purple;
+  border: 1px solid $navy;
   border-radius: 1px;
   display: inline-block;
   background-color: $white;
+  margin-right: space(20);
 
   /* IE10 flexbox bug, children overlfow parent. Setting width minus button makes it correct. */
   width: calc(100% - 120px);
@@ -168,7 +171,7 @@
   margin: 0 space(8) space(8) 0;
   padding: space(8);
   border: 1px solid $purple;
-  border-radius: 2px;
+  border-radius: 21px;
   background: $white;
 }
 
@@ -239,6 +242,7 @@
 
 .react-tags__suggestions li {
   border: 1px solid $purple;
+  border-radius: 21px;
   margin: 0 space(8) space(8) 0;
   padding: space(8);
   color: $purple;

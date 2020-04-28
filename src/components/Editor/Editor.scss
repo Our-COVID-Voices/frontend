@@ -23,8 +23,13 @@
 
   &--content {
     div {
-      @include body-m;
-      color: $medium-grey;
+      font-family: $manrope;
+      color: $dark-grey;
+      font-size: pxtorem(28px);
+
+      @include for-tablet-down {
+        font-size: pxtorem(24px);
+      }
     }
 
     .public-DraftEditor-content {

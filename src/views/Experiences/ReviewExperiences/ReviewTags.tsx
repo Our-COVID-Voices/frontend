@@ -16,7 +16,7 @@ interface IProps {
 
 const ReviewTags: FunctionComponent<IProps> = ({
   experienceStore,
-  reviewStore
+  reviewStore,
 }) => {
   useEffect(() => {
     if (experienceStore && !experienceStore.tags.length) {
@@ -33,9 +33,10 @@ const ReviewTags: FunctionComponent<IProps> = ({
           <h1 className="experience-tags--title">
             {cms("experience-tags.title")}
           </h1>
-          <p className="experience-tags--about">
-            {cms("experience-tags.about")}
-          </p>
+          <p
+            className="experience-tags--about"
+            dangerouslySetInnerHTML={{ __html: cms("experience-tags.about") }}
+          ></p>
         </div>
 
         <div className="flex-col--12">

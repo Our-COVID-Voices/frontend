@@ -69,7 +69,7 @@ const NotificationSettings: FunctionComponent<RouteComponentProps> = ({
               text="Privacy Policy"
               href="/privacy-policy"
               size="medium"
-              grey={true}
+              purple={true}
             />
           </RouterLink>
           <p className="my-account--footer--about">

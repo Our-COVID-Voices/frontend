@@ -5,12 +5,13 @@ import { format } from "date-fns";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import get from "lodash/get";
-import lowerCase from 'lodash/lowerCase'
+import lowerCase from "lodash/lowerCase";
 import ReactMarkdown from "react-markdown";
 import Helmet from "react-helmet";
 
 import Padlock from "../../assets/icons/security.svg";
 import Pencil from "../../assets/icons/pencil.svg";
+import BackgroundBubbles from "../../assets/images/large-medium-bubble.svg";
 
 import StoryStore from "../../stores/storyStore";
 import Loading from "../../components/Loading";
@@ -19,7 +20,6 @@ import ReactSVG from "react-svg";
 import { cms } from "../../utils/cms";
 import Button from "../../components/Button";
 import Footer from "../../components/Footer";
-import { ICategorisedTag, ITag } from "../../utils/types";
 import Tag from "../../components/Tag";
 
 interface IProps extends RouteComponentProps {
@@ -43,8 +43,8 @@ const MyExperience: FunctionComponent<IProps> = ({ storyStore, match }) => {
     <Layout>
       <Helmet>
         <title>
-          {`Our COVID Voices | ${
-            storyStore.story ? storyStore.story.excerpt : "Selected Story"
+          {`Connecting Voices | ${
+            storyStore.story ? storyStore.story.excerpt : "Selected Experience"
           }`}
         </title>
       </Helmet>
@@ -60,7 +60,7 @@ const MyExperience: FunctionComponent<IProps> = ({ storyStore, match }) => {
                     experiences
                   </Link>
                 </div>
-                <div className="flex-col--6 flex-col--tablet--12 story--info--date">
+                <div className="flex-col--12 story--info--date">
                   {`Date added ${format(
                     new Date(storyStore.story.created_at),
                     "do MMMM yyyy"
@@ -74,7 +74,9 @@ const MyExperience: FunctionComponent<IProps> = ({ storyStore, match }) => {
                 <div className="experience-privacy--hint">
                   <ReactSVG src={Padlock} />
                   <span>
-                    {`${cms("story.privacy")} ${lowerCase(storyStore.story.status)}`}
+                    {`${cms("story.privacy")} ${lowerCase(
+                      storyStore.story.status
+                    )}`}
                   </span>
                 </div>
               </div>
@@ -114,37 +116,25 @@ const MyExperience: FunctionComponent<IProps> = ({ storyStore, match }) => {
 
             <div className="flex-col--mobile--12 flex-col--11">
               <div className="flex-container flex-container--center flex-container--no-padding flex-container--align-center story--tags--list">
-                {/* <div className="flex-col--12"> */}
                 {storyStore.tags.length ? (
-                  storyStore.tags.map(
-                    (category: ICategorisedTag, i: number) => {
-                      return (
-                        <div className="story--tags--category">
-                          <p className="story--tags--category--title">{`${category.name}:`}</p>
-                          <div style={{ display: "flex", flexWrap: "wrap" }}>
-                            {category.tags.map((tag: ITag) => (
-                              <Tag story={true} text={tag.name}></Tag>
-                            ))}
-                            {i < storyStore.tags.length - 1 && (
-                              <span className="story--tags--separator"></span>
-                            )}
-                          </div>
-                        </div>
-                      );
-                    }
-                  )
+                  storyStore.tags.map((tag) => (
+                    <Tag story={true} text={tag.name}></Tag>
+                  ))
                 ) : (
                   <Tag story={true} text="No tag" />
                 )}
               </div>
-              {/* </div> */}
             </div>
           </Fragment>
         ) : (
           <Loading input="selected story" />
         )}
+        <ReactSVG
+          src={BackgroundBubbles}
+          className="story--background tablet--large-hide"
+        />
       </div>
-      <Footer green={true}>
+      <Footer navy={true}>
         <div className="flex-container flex-container--center flex-container--justify register--footer">
           <div className="flex-col--8 flex-col--tablet-large--12">
             <h3 className="register--footer--title">Edit this story</h3>

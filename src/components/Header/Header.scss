@@ -6,6 +6,25 @@
   position: relative;
   margin-bottom: space(120) !important;
 
+  @include for-desktop-down {
+    padding: 0 space(24) !important;
+  }
+
+  @include for-tablet-down {
+    padding: space(24) space(32) space(32) !important;
+    align-items: center;
+    margin-bottom: 0 !important;
+    justify-content: space-between;
+  }
+
+  &--logged-in {
+    background-color: $purple;
+
+    @include for-tablet-down {
+      background-color: $purple !important;
+    }
+  }
+
   &--link {
     text-decoration: none;
     display: inline-block;
@@ -15,13 +34,16 @@
       text-decoration: underline;
     }
 
+    @include for-desktop-down {
+      margin-right: space(16);
+    }
+
     @include for-tablet-down {
+      margin-right: space(8);
     }
   }
 
   @include for-tablet-down {
-    justify-content: center !important;
-    -ms-flex-pack: justify !important;
     background-color: $light-grey;
   }
 
@@ -32,14 +54,33 @@
 
   &--logo {
     display: inline-block;
-    margin-top: space(16);
+    margin: space(16) 0;
+
+    @include for-tablet-down {
+      margin-top: 0;
+    }
+
+    svg {
+      @include for-desktop-down {
+        width: 200px;
+      }
+
+      @include for-tablet-down {
+        width: 150px;
+        height: 45px;
+      }
+    }
   }
 
   &--links {
     @include button-text;
     color: $navy;
     margin-top: space(48);
-    justify-content: end !important;
+    justify-content: flex-end !important;
+
+    &--logged-in {
+      color: $white;
+    }
 
     @include for-tablet-down {
       margin-top: space(32);
@@ -74,7 +115,7 @@
 .user-header {
   background-color: $light-grey;
   padding: space(16) space(72) space(20) space(72) !important;
-  justify-content: end !important;
+  justify-content: flex-end !important;
 
   &--link {
     @include button-text;
@@ -84,6 +125,124 @@
 
     &--login {
       text-decoration: underline;
+    }
+  }
+}
+
+.mobile-nav {
+  &--button {
+    @include button-text-alt;
+    color: $navy;
+
+    svg {
+      vertical-align: middle;
+      height: 20px;
+    }
+
+    &--logged-in {
+      color: $white;
+    }
+
+    &--close {
+      width: pxtorem(20px) !important;
+    }
+  }
+
+  &--active {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+    overflow: auto;
+  }
+
+  &--inner {
+    background-color: $purple;
+    color: $white;
+    padding: space(40) space(60);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &--link {
+    @include button-text;
+    display: block;
+    margin-bottom: space(20);
+    text-decoration: none;
+
+    &-secondary {
+      font-size: space(16);
+    }
+  }
+
+  &--icon {
+    svg {
+      height: 20px;
+      color: $medium-purple;
+    }
+  }
+
+  &--logged-in {
+    color: $navy;
+    background-color: $white;
+    padding: space(40) space(12);
+
+    &--icon {
+      text-align: center;
+      margin-bottom: space(20);
+      svg {
+        height: 100px;
+      }
+    }
+
+    &--links {
+      text-align: center;
+    }
+  }
+
+  &--expand {
+    @include button-text;
+    color: $white;
+    text-decoration: underline;
+  }
+
+  &--full-height {
+    height: 100vh;
+  }
+
+  &--laptop {
+    color: $medium-purple;
+    position: absolute;
+    top: 20px;
+    right: -50px;
+
+    svg {
+      width: 100px;
+    }
+  }
+
+  &--pencil {
+    color: $medium-purple;
+    position: absolute;
+    top: 100px;
+    right: -30px;
+
+    svg {
+      width: 50px;
+    }
+  }
+
+  &--flower {
+    color: $medium-purple;
+    position: absolute;
+    bottom: 10%;
+    left: -10px;
+
+    svg {
+      width: 50px;
     }
   }
 }

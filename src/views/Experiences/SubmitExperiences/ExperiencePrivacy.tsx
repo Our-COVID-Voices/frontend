@@ -15,7 +15,7 @@ interface IProps {
   contributionStore?: ContributionStore;
 }
 const ExperiencePrivacy: FunctionComponent<IProps> = ({
-  contributionStore
+  contributionStore,
 }) => {
   if (!contributionStore) return null;
 
@@ -29,9 +29,12 @@ const ExperiencePrivacy: FunctionComponent<IProps> = ({
           </h1>
         </div>
         <div className="flex-col--10">
-          <p className="experience-privacy--about">
-            {cms("experience-privacy.about")}
-          </p>
+          <p
+            className="experience-privacy--about"
+            dangerouslySetInnerHTML={{
+              __html: cms("experience-privacy.about"),
+            }}
+          />
         </div>
 
         <div className="flex-col--10">
@@ -57,7 +60,7 @@ const ExperiencePrivacy: FunctionComponent<IProps> = ({
           </div>
         )}
       </div>
-      <Footer green={true}>
+      <Footer navy={true}>
         <div className="flex-container flex-container--center flex-container--justify experience-entry--footer">
           <div className="flex-col--8 flex-col--tablet-large--10 guidance--footer--content">
             <h5 className="experience-entry--footer--title">

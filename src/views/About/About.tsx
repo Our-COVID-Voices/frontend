@@ -13,6 +13,9 @@ import Button from "../../components/Button";
 import Layout from "../../components/Layout";
 import UserStore from "../../stores/userStore";
 
+import BackgroundBubbles from "../../assets/images/large-medium-bubble.svg";
+import ReactSVG from "react-svg";
+
 interface IProps extends RouteComponentProps {
   userStore?: UserStore;
 }
@@ -28,7 +31,7 @@ const About: FunctionComponent<IProps> = ({ userStore, history }) => {
       <div className="flex-container flex-container--no-padding flex-container--center about">
         <div
           className={cx("flex-col--12", {
-            "my-account--back--container": userStore.loggedIn
+            "my-account--back--container": userStore.loggedIn,
           })}
         >
           {userStore.loggedIn ? (
@@ -42,22 +45,22 @@ const About: FunctionComponent<IProps> = ({ userStore, history }) => {
             <Breadcrumb
               crumbs={[
                 { text: "Home", url: "/" },
-                { text: "About the project", url: "" }
+                { text: "Why we're doing this", url: "" },
               ]}
             />
           )}
         </div>
 
         <div className="flex-col--12 about--container">
-          <h1 className="about--title">Who is Hearing Voices Network?</h1>
-          <p className="about--content">{cms("about.who")}</p>
-
-          <h2 className="about--title">What is the project?</h2>
-          <p className="about--content">{cms("about.what")}</p>
-
-          <h3 className="about--title">Why develop the project?</h3>
-          <p className="about--content">{cms("about.why")}</p>
+          <p
+            className="about--content"
+            dangerouslySetInnerHTML={{ __html: cms("about.content") }}
+          />
         </div>
+        <ReactSVG
+          src={BackgroundBubbles}
+          className="about--background tablet--large-hide"
+        />
       </div>
       <Footer purple={true}>
         <div className="flex-container flex-container--center flex-container--no-padding flex-container--align-center about--footer">
@@ -66,9 +69,7 @@ const About: FunctionComponent<IProps> = ({ userStore, history }) => {
               {cms("about.footer.title")}
             </h4>
             <p className="about--footer--content">
-              {userStore.loggedIn
-                ? cms("about.footer-loggedin")
-                : cms("about.footer.content")}
+              {cms("about.footer.content")}
             </p>
           </div>
           <div className="flex-col--mobile--12 flex-col--tablet--12 flex-col--4 about--footer--button">
@@ -82,10 +83,11 @@ const About: FunctionComponent<IProps> = ({ userStore, history }) => {
                 history.push({
                   pathname: userStore.loggedIn
                     ? "/submit-experience"
-                    : "/register"
+                    : "/register",
                 })
               }
               twoCol={true}
+              purple={true}
             />
           </div>
         </div>
