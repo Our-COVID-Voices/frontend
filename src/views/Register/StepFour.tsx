@@ -1,5 +1,6 @@
 import React, { FunctionComponent, Fragment } from "react";
 import { cms } from "../../utils/cms";
+import Link from "../../components/Link";
 import Checkbox from "../../components/Checkbox";
 import { observer, inject } from "mobx-react";
 import RegisterStore from "../../stores/registerStore";
@@ -17,29 +18,17 @@ const StepFour: FunctionComponent<IProps> = ({ registerStore }) => {
         <h1 className="register--title">{cms("register.step-4-title")}</h1>
         <p
           className="register--description"
-          dangerouslySetInnerHTML={{ __html: cms("privacy.content") }}
+          dangerouslySetInnerHTML={{
+            __html: cms("register.step-4-description"),
+          }}
         />
       </div>
-      <div className="flex-col--8 register--consent">
+      <div className="flex-col--10 register--checkbox">
         <Checkbox
-          label="I agree to be contacted by National Voices during the next 3 years, so I can decide whether to take part in further conversations or similar projects."
-          checked={
-            registerStore.canContact === undefined
-              ? false
-              : registerStore.canContact
-          }
-          id="consent-1"
-          onChange={() => registerStore.handleContact(true)}
-        />
-        <Checkbox
-          label="I do not agree to be contacted by National Voices. "
-          checked={
-            registerStore.canContact === undefined
-              ? false
-              : !registerStore.canContact
-          }
-          id="consent-2"
-          onChange={() => registerStore.handleContact(false)}
+          id="consent"
+          label="I accept the agreement"
+          onChange={() => registerStore.toggleConsent()}
+          checked={registerStore.consent}
         />
       </div>
     </Fragment>

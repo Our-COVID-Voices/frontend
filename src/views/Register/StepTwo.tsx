@@ -32,12 +32,11 @@ const StepTwo: FunctionComponent<IProps> = ({ registerStore }) => {
 
       <div className="flex-col--10">
         <Input
-          label="Password"
-          id="password"
+          label="Username"
+          id="username"
           onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-            registerStore.handleChange(e.target.value, "password")
+            registerStore.handleChange(e.target.value, "username")
           }
-          type="password"
         />
 
         <div className="flex-container flex-container--justify flex-container--no-padding">

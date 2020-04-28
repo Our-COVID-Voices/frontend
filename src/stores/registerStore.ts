@@ -11,6 +11,7 @@ export default class RegisterStore {
   @observable userStore: UserStore | null = null;
   @observable registerError: boolean = false;
   @observable canContact: boolean | undefined = undefined;
+  @observable username: string = "";
   constructor(userStore: UserStore) {
     this.userStore = userStore;
   }
@@ -51,6 +52,7 @@ export default class RegisterStore {
         email: this.email,
         password: this.password,
         country: `${this.canContact}`,
+        gender: this.username,
       };
 
       const {

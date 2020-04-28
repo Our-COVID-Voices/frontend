@@ -12,13 +12,14 @@ import Intro from "./Intro";
 import StepOne from "./StepOne";
 import StepTwo from "./StepTwo";
 import StepThree from "./StepThree";
+import StepFour from "./StepFour";
+import StepFive from "./StepFive";
 import Confirmation from "./Confirmation";
 
 import RegisterStore from "../../stores/registerStore";
 import Footer from "../../components/Footer";
 import Button from "../../components/Button";
 import Layout from "../../components/Layout";
-import StepFour from "./StepFour";
 
 interface IProps {
   registerStore: RegisterStore;
@@ -63,6 +64,8 @@ class Register extends Component<IProps> {
         return <StepThree />;
       case 4:
         return <StepFour />;
+      case 5:
+        return <StepFive />;
       default:
         break;
     }
@@ -79,12 +82,15 @@ class Register extends Component<IProps> {
         return !email.test(registerStore.email);
 
       case 2:
-        return !registerStore.password;
+        return !registerStore.username;
 
       case 3:
-        return !registerStore.consent;
+        return !registerStore.password;
 
       case 4:
+        return !registerStore.consent;
+
+      case 5:
         return registerStore.canContact === undefined;
 
       default:
@@ -129,9 +135,9 @@ class Register extends Component<IProps> {
                 {cms(`register.footer.step-${registerStore.step}-description`)}
               </p>
               <Button
-                text={registerStore.step === 4 ? "Submit" : "Continue"}
+                text={registerStore.step === 5 ? "Submit" : "Continue"}
                 onClick={() =>
-                  registerStore.step === 4
+                  registerStore.step === 5
                     ? registerStore.register()
                     : registerStore.nextStep()
                 }
