@@ -20,7 +20,6 @@ import RegisterStore from "../../stores/registerStore";
 import Footer from "../../components/Footer";
 import Button from "../../components/Button";
 import Layout from "../../components/Layout";
-import StepFour from "./StepFour";
 
 interface IProps {
   registerStore: RegisterStore;

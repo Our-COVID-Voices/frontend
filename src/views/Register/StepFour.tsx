@@ -1,5 +1,6 @@
 import React, { FunctionComponent, Fragment } from "react";
 import { cms } from "../../utils/cms";
+import Link from "../../components/Link";
 import Checkbox from "../../components/Checkbox";
 import { observer, inject } from "mobx-react";
 import RegisterStore from "../../stores/registerStore";
