@@ -1,9 +1,9 @@
 AWSTemplateFormatVersion: '2010-09-09'
-Description: Create the infrastructure needed to run the Connecting Voices Frontend
+Description: Create the infrastructure needed to run the Our COVID Voices Frontend
 
 Parameters:
   Uuid:
-    Default: c92ca114-c132-45b6-ac17-526a025cd3a4
+    Default: 9e93d8b4-665d-42ae-ba47-3bf614e1f3d5
     Description: The unique ID for this stack.
     MaxLength: '36'
     MinLength: '36'

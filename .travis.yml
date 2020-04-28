@@ -7,13 +7,14 @@ branches:
     - master
     - develop
 
-# Use Python as the base image/language.
+# The CI environment config.
+os: linux
+dist: xenial
 language: python
 python:
   - "2.7"
 
-# Sudo and Docker both required for the build.
-sudo: required
+# Docker required for the build.
 services:
   - docker
 
