@@ -15,6 +15,7 @@ export default class ContributionStore {
   @action
   skipGuidance = () => {
     this.showGuidance = false;
+    window.scrollTo(0, 0);
   };
 
   @observable
@@ -36,12 +37,7 @@ export default class ContributionStore {
 
   @computed
   get wordCount() {
-    if (
-      !this.contribution
-        .getEditorState()
-        .getCurrentContent()
-        .hasText()
-    )
+    if (!this.contribution.getEditorState().getCurrentContent().hasText())
       return 0;
 
     const contributeInMarkdown = this.contribution.toString("markdown");
@@ -51,7 +47,7 @@ export default class ContributionStore {
 
   @action
   handleTagSelect = (tag: ITag) => {
-    if (this.selectedTags.some(tags => tags.id === tag.id)) {
+    if (this.selectedTags.some((tags) => tags.id === tag.id)) {
       const indexOfTag = this.selectedTags.indexOf(tag);
       this.removeTag(indexOfTag);
     } else {
@@ -75,7 +71,7 @@ export default class ContributionStore {
   };
 
   isTagSelected = (tag: ITag) => {
-    return this.selectedTags.some(tags => tags.id === tag.id);
+    return this.selectedTags.some((tags) => tags.id === tag.id);
   };
 
   @action
@@ -90,7 +86,7 @@ export default class ContributionStore {
 
     if (this.selectedTags) {
       tags = this.selectedTags.map((tag: ITag) => ({
-        id: tag.id
+        id: tag.id,
       }));
     } else {
       tags = [];
@@ -100,7 +96,7 @@ export default class ContributionStore {
       await httpService.api.post("/api/contributions", {
         content: this.contribution.toString("markdown"),
         status: this.privacy === "public" ? "in_review" : "private",
-        tags
+        tags,
       });
 
       this.contributionSubmitted = true;
