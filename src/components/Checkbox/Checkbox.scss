@@ -41,7 +41,6 @@
   }
 
   input[type="checkbox"]:checked + label {
-    // display: inline-block;
     vertical-align: middle;
 
     svg {
@@ -75,10 +74,4 @@
   input[type="checkbox"]:focus + label > #box {
     outline: 1px solid $medium-green;
   }
-
-  // input[type="checkbox"] + label #box:before,
-  // input[type="checkbox"] + label:hover > #box:before,
-  // input[type="checkbox"]:checked + label #box:before {
-  //   display: block;
-  // }
 }
