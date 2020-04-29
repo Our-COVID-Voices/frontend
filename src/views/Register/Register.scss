@@ -39,6 +39,20 @@
       margin: space(16) 0;
     }
 
+    ul {
+      margin: space(32) 0;
+    }
+
+    li {
+      list-style-position: outside;
+      margin: space(16) 0;
+      margin-left: space(48);
+
+      @include for-phone-only {
+        margin-left: space(16);
+      }
+    }
+
     &--tight {
       @include body-l;
       color: $navy;
