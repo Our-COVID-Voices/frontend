@@ -128,7 +128,7 @@
     }
   },
   "privacy-notice": {
-    "title": "Privacy and withdrawl",
+    "title": "Privacy and withdrawal",
     "about": "Your account is secure and how much you share is up to you, you can always withdraw at any time.",
     "policy": "Our contract with you",
     "withdraw": "I would like to withdraw"
@@ -209,7 +209,7 @@
   "withdraw": {
     "title": "Withdraw account",
     "about": "You can remove your account and / or submissions from this website at any time. This will not affect your right. Please note that if you have already submitted your experience, this might have already been read by others. Choose one of the following options:",
-    "hint": "You can’t undo withdrawl",
+    "hint": "You can’t undo withdrawal",
     "confirmation": "Are you sure you would like to withdraw your account?"
   },
 
