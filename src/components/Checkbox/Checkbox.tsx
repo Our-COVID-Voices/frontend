@@ -19,11 +19,11 @@ const Checkbox: FunctionComponent<IProps> = ({
   onChange,
   aria,
   label,
-  className
+  className,
 }) => (
   <div
     className={cx("checkbox", {
-      [`${className}`]: className
+      [`${className}`]: className,
     })}
   >
     <input
@@ -34,13 +34,11 @@ const Checkbox: FunctionComponent<IProps> = ({
       onChange={onChange}
       aria-label={aria}
     />
-    <label htmlFor={id}>
-      <span>
-        <span>
-          <FontAwesomeIcon icon="check" />
-        </span>
+    <label htmlFor={id} className="checkbox--container">
+      <span id="box">
+        <FontAwesomeIcon icon="check" />
       </span>
-      {label}
+      <div className="checkbox--label">{label}</div>
     </label>
   </div>
 );
