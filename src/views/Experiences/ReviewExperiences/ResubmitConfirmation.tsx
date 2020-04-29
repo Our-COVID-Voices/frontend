@@ -104,7 +104,7 @@ const ResubmitConfirmation: FunctionComponent<IProps> = ({
         <div className="flex-container flex-container--center flex-container--justify experience-entry--footer">
           <div className="flex-col--8 flex-col--tablet-large--10 guidance--footer--content">
             <RouterLink to="/browse">
-              <Link size="medium" text="View other's stories" href="/browse" />
+              <Link size="medium" text="View others' stories" href="/browse" />
             </RouterLink>
             <p className="login--footer--description">
               {cms("register.footer.confirmation")}
