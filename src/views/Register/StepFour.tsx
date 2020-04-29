@@ -23,7 +23,7 @@ const StepFour: FunctionComponent<IProps> = ({ registerStore }) => {
           }}
         />
       </div>
-      <div className="flex-col--10 register--checkbox">
+      <div className="flex-col--4 flex-col--mobile--10 register--checkbox">
         <Checkbox
           id="consent"
           label="I accept the agreement"
