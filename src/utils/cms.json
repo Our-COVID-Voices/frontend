@@ -19,7 +19,7 @@
     },
     "footer": {
       "title": "",
-      "content": "<p>National Voices is coalition of 150 charities, supporting people with physical and mental health problems and disabilty, and those who are facing inequality or discrimination. This means we can draw on the experiences of million of people.</p><p>If you need help with anything check out the Frequently Asked Questions.  If you have noticed something that does not look right, please contact the website admin.</p>",
+      "content": "<p>National Voices is coalition of 150 charities, supporting people with physical and mental health problems and disabilty, and those who are facing inequality or discrimination. This means we can draw on the experiences of million of people.</p><p>If you need help with anything check out the <a href='/faqs' target='_blank'>Frequently Asked Questions</a>.  If you have noticed something that does not look right, please contact the website admin.</p>",
       "contact": "Email us at"
     }
   },

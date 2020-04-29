@@ -19,7 +19,7 @@ const WritingGuidance: FunctionComponent<RouteComponentProps> = ({
 }) => (
   <Layout>
     <Helmet>
-      <title>Our COVID Voices | FAQs</title>
+      <title>Our COVID Voices | Writing Guidance</title>
     </Helmet>
     <div className="flex-container flex-container--no-padding flex-container--justify flex-container--center writing-guidance">
       <Breadcrumb

@@ -35,9 +35,9 @@
     }
 
     li {
-      list-style-position: inside;
+      list-style-position: outside;
       margin: space(16) 0;
-      margin-left: space(32);
+      margin-left: space(48);
       @include for-phone-only {
         margin-left: space(16);
       }
