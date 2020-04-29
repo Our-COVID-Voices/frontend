@@ -83,10 +83,10 @@ const FAQ: FunctionComponent<RouteComponentProps> = ({ history }) => (
             National Voices are the umbrella organisation for charities in
             health in care. Our ca 150 charity members work with people living
             with one or more long term condition, and also support people with
-            specific needs, such as the homeless or people who use British SIgn
+            specific needs, such as the homeless or people who use British Sign
             Language to communicate. Our members work with and for people living
-            with physical and mental health issues and disability means we are
-            in touch with millions of people’s experiences.
+            with physical and mental health issues and disability. This means we
+            are in touch with millions of people’s experiences.
           </p>
         </div>
 
@@ -109,16 +109,23 @@ const FAQ: FunctionComponent<RouteComponentProps> = ({ history }) => (
             in place before we proceeded. We were helped by people who
             contributed in kind (see previous question). We also are talking to
             various funders about this work. We will update this answer as and
-            when funders decide to support us. You can donate here if you want
-            to contribute. Please also get in touch if you have any ideas for
-            what funders might be interested.
+            when funders decide to support us. You can{" "}
+            <a
+              href="https://donorbox.org/our-covid-voices"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              donate here
+            </a>{" "}
+            if you want to contribute. Please also get in touch if you have any
+            ideas for what funders might be interested.
           </p>
         </div>
         <h1 className="faq--title">How long will this project go on for?</h1>
         <div className="faq--content">
           <p>
             This project is conceived to last at least 6 months. This will
-            enable us trace experiences over) time and also to understand what
+            enable us trace experiences over time and also to understand what
             needs to be done as and when the lock down is (partially) lifted. We
             believe it will be particularly important to understand people’s
             experiences of life in self isolation as we make decisions about
