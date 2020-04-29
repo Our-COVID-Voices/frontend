@@ -24,7 +24,7 @@
 
   &--title {
     @include heading-m;
-    color: $grey;
+    color: $navy;
     margin-bottom: space(12);
   }
 
@@ -38,7 +38,7 @@
 
   &--about {
     @include body-l;
-    color: $medium-grey;
+    color: $navy;
     margin: space(12) 0;
 
     @include for-tablet-large-up {
@@ -48,7 +48,7 @@
 
   &--subtitle {
     @include heading-xs;
-    color: $grey;
+    color: $navy;
     text-align: left;
     margin-top: space(32);
     // font-family: $kayak-sans-bold;
@@ -57,7 +57,7 @@
   &--changes {
     @include body-l;
     // font-family: $kayak-sans-bold;
-    color: $medium-grey;
+    color: $navy;
     text-align: left;
     margin: space(12) 0;
 
