@@ -20,7 +20,7 @@ const StepFive: FunctionComponent<IProps> = ({ registerStore }) => {
           dangerouslySetInnerHTML={{ __html: cms("privacy.content") }}
         />
       </div>
-      <div className="flex-col--8 register--consent">
+      <div className="flex-col--8 flex-col--mobile--12 register--consent">
         <Checkbox
           label="I agree to be contacted by National Voices during the next 3 years, so I can decide whether to take part in further conversations or similar projects."
           checked={
