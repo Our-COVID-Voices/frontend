@@ -88,8 +88,10 @@ const WritingGuidance: FunctionComponent<RouteComponentProps> = ({
           </p>
           <p>
             Remember: after you have submitted your writing, you will not be
-            able to edit it. If there is a problem email
-            [email]...@....com[/email]
+            able to edit it. If there is a problem email{" "}
+            <a href="mailto:info@nationalvoices.org.uk">
+              info@nationalvoices.org.uk
+            </a>
           </p>
           <p>
             You can request for your contributions to be removed from public
