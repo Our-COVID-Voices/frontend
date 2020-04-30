@@ -39,7 +39,7 @@ const WritingGuidance: FunctionComponent<RouteComponentProps> = ({
             difficult, what gave you concern or joy, how you go about your life
             under these extreme conditions, and how you experience your health
             and wellbeing. Maybe also tell us about health and care services you
-            now use. Is it working? Are you supported?
+            now use. Are they working? Are you supported?
           </p>
           <ul>
             Here’s the things to remember when writing about your life:
@@ -52,6 +52,18 @@ const WritingGuidance: FunctionComponent<RouteComponentProps> = ({
               Don’t reveal personal details; either your own or other people’s.
               Avoid naming specific people, organisations or services. Use terms
               like ‘my local hospital’ or ‘a nurse’ rather than specific names.
+            </li>
+            <li>
+              Please remember that this website can't offer any direct support
+              or guidance with challenges you may be facing. Please visit{" "}
+              <a
+                href="https://www.nationalvoices.org.uk/membership/our-members"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                The National Voices website
+              </a>
+              to see a list of our member organisations who may be able to help.
             </li>
             <li>
               If talking about people you know, please do not include sensitive
@@ -81,16 +93,25 @@ const WritingGuidance: FunctionComponent<RouteComponentProps> = ({
             </li>
           </ul>
           <p>
-            Once you are happy with your writing, press upload. Please be
-            patient when waiting for notification of it being accepted. We need
-            to make sure you followed these rules before we can publish your
-            writing. We might need to do this with the help of volunteers.
+            You can type your experience straight into the submission box or you
+            might want to write your experience in another program like word and
+            then copy and paste it. Nothing is saved until you follow all of the
+            submissions steps. If you leave the page or press back before that
+            your writing will not be saved. Once you are happy with your
+            writing, press next step. You will be able to save your work as
+            private so no one can see it or public. You will then be asked to
+            add tags on the next page. Once your writing is set to public and
+            has tags it will be submitted to our moderators. Please be patient
+            when waiting for notification of it being accepted. We need to make
+            sure you followed these rules before we can publish your writing.
           </p>
+
           <p>
-            Remember: after you have submitted your writing, you will not be
-            able to edit it. If there is a problem email{" "}
+            Remember: after you have submitted your writing, you can edit it but
+            you will have to wait for it to be moderated again before it appears
+            on the site. If there is a problem email{" "}
             <a href="mailto:info@nationalvoices.org.uk">
-              info@nationalvoices.org.uk
+              info@nationalvoices.org.uk.
             </a>
           </p>
           <p>

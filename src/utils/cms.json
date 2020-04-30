@@ -1,6 +1,6 @@
 {
   "header": {
-    "cookies": "This website uses cookies to offer you a better browsing experience. Find out more on how we use cookies [link to cookies policy]."
+    "cookies": "This website uses cookies to offer you a better browsing experience. Like most websites, we receive and store certain details whenever you use this website. Cookies mean that a website will remember you and any preferences you have entered. It also helps us to understand how you use our website, and where we can make improvements."
   },
   "home": {
     "title": "Welcome",
@@ -8,7 +8,7 @@
     "content": "Collecting first-person accounts of living through the 2020 Covid19 pandemic in the UK. This is a place where you can explore and share your experiences anonymously.",
     "experiences": {
       "title": "Discover other people’s experiences of the pandemic",
-      "content": "The Covid-19 virus has disrupted the way we live our lives. Read other people’s experiences of this time of change"
+      "content": "The Covid-19 virus has disrupted the way we live our lives. Read other people’s experiences of this time of change."
     },
     "share": {
       "title": "Share your experience",
@@ -37,10 +37,10 @@
     "content": "Lorem ipsum dolor sit amet, adipiscing elit. Vivamus ultricies tincidunt congue."
   },
   "about": {
-    "content": "<p>The arrival of the Covid-19 virus has made everyday life feel very different. Health and care services are being delivered differently, and many services have stopped altogether. Our ability to take part in our communities and to see friends and family is limited. Everything from food shopping, to home care, to doctors appointments has changed.</p><p>The media are mostly telling the stories of people who do not live their lives with additional challenges and conditions. However, many live with one or more ongoing health conditions, ill-health or disability. Many use health or social care services regularly to keep well. Some are more at risk from Covid-19. Some are having their health and wellbeing put at risk by what they have to do to keep others safe. The voices of these people have not been the focus of much of the national discussion.</p><p>During this period, we think it is more important than ever that the voices of those most at risk and those who are having their lives most disrupted should be heard. Decisions made about how health, care and support are provided to people during this period and in the future are having real, everyday implications for people's lives. These decisions should be based on understanding how all people actually live their lives, and experience their health and illness. Bad decisions will be made without this understanding.</p><p>Our Covid Voices wants to share with the world how those with long-term conditions, disabilities and other health and care needs are living during the pandemic in the UK. Our Covid Voices aims to be a first draft of history, with people across the country sharing their experiences of the UK under lockdown as they happen.</p><p>National Voices will use the insight you will generate to influence national and local decision-makers. This will make it easier for them to develop policies and services that have a positive and tangible impact on people’s lives. The experiences shared on this website will help them get a clearer picture of what is happening now, and help us at National Voices make a better case for what needs to happen once this crisis ends.</p><p>Things will be different than they are now. We want to make sure that they are also better.</p>",
+    "content": "<p>The arrival of the Covid-19 virus has made everyday life feel very different. Health and care services are being delivered differently, and many services have stopped altogether. Our ability to take part in our communities and to see friends and family is limited. Everything from food shopping, to home care, to doctors appointments has changed.</p><p>The media are mostly telling the stories of people who do not live their lives with additional challenges and conditions. However, many live with one or more ongoing health conditions, ill-health or disability. Many use health or social care services regularly to keep well. Some are more at risk from Covid-19. Some are having their health and wellbeing put at risk by what they have to do to keep others safe. The voices of these people have not been the focus of much of the national discussion.</p><p>During this period, we think it is more important than ever that the voices of those most at risk and those who are having their lives most disrupted should be heard. Decisions made about how health, care and support are provided to people during this period and in the future are having real, everyday implications for people's lives. These decisions should be based on understanding how all people actually live their lives, and experience their health and illness. Bad decisions will be made without this understanding.</p><p>Our Covid Voices wants to share with the world how those with long-term conditions, disabilities and other health and care needs are living during the pandemic in the UK. Our Covid Voices aims to be a first draft of history, with people across the country sharing their experiences of the UK under lockdown as they happen.</p><p>National Voices will use the insight you will generate to influence national and local decision-makers. The experiences shared on this website will help them get a clearer picture of what is happening now, and help us at National Voices make a better case for what needs to happen once this crisis ends.</p>",
     "footer": {
       "title": "Contribute to the project",
-      "content": "Sign up with an email and password to submit your own stories, this link will take you to the sign up page."
+      "content": "Sign up with an email and password to submit your own experiences."
     },
     "footer-loggedin": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultricies tincidunt congue."
   },
@@ -73,7 +73,7 @@
     "step-3-hint": "The password you supply will be AES-256 bit encrypted (the same standard banks use)",
     "step-4-title": "Consent",
     "step-4-description": "By creating an account for this site you will be able to add your experiences. Remember, your experiences will be read by people you haven’t met, so don't share anything you wouldn’t want a stranger to know.  We will review each experience to make sure it doesn’t break any of our rules before it is published. You can remove your experiences at any time.  National Voices will use everyone's writing to raise awareness of how Covid-19 has impacted people with very different lives and will also take this insight to decision makers who are in charge of the health and care system.",
-    "step-5-title": "Our contract with you",
+    "step-5-title": "Our agreement with you",
     "confirmation": {
       "title": "Account created",
       "description": "Thank you for creating your account. You have two options now: you can submit your experience or go back to the home page to read other people’s submissions. If you are not sure what to write about, click on ‘Submit new experience’ to read our guidance.",
@@ -130,11 +130,11 @@
   "privacy-notice": {
     "title": "Privacy and withdrawal",
     "about": "Your account is secure and how much you share is up to you, you can always withdraw at any time.",
-    "policy": "Our contract with you",
+    "policy": "Our agreement with you",
     "withdraw": "I would like to withdraw"
   },
   "browse": {
-    "about": "Read here the experiences of people with health conditions, disabilities or illnesses as we live through this Covid-19 period together.  Each experience has been written and submitted by someone to help us all understand what these times of uncertainty and change mean for us all.  Search by tag to find people writing about particular situations, services, conditions, disabilities or experiences. Together these experiences build a picture of what life is like for people during this time of change.",
+    "about": "Read here the experiences of people with health conditions, disabilities or illnesses as we live through this Covid-19 period together.  Each experience has been written and submitted by someone to help us all understand what these times of uncertainty and change mean for us all. Together these experiences build a picture of what life is like for people during this time of change.",
     "filter": {
       "title": "Start typing here to find experiences that you’d like to read. Most experiences have a number of tags which describe what they are about.",
       "about": "Select by category to explore more tags",
@@ -158,14 +158,15 @@
     "guidance-one-title": "Writing guidance",
     "guidance-one-1": "<p>You can write as little or as much as you like, once or as many times as you want to. Our Covid Voices is not a writing competition, where only the most dramatic or inspirational stories get published. We want to hear about everybody’s experiences.</p><p>You can talk about what has been different for you during the pandemic; what has worried you; and what has brought you comfort, joy and pleasure. Show others what the everyday experience of getting by in this time of crisis is really like. Our Covid Voices will share your experiences in your own words and on your own terms.</p><p>Please avoid sharing anything that you or others might want to keep private.  Please don’t identify organisations or other people by name if you write about them.  What you write will be read by anyone who comes to this site, so don’t share anything that you want to remain private.</p>",
     "guidance-two-title": "Guidelines",
-    "guidance-two-1": "<ul>Please do not include:<li>Full names</li><li>Phone numbers</li><li>Email addresses</li><li>Addresses</li><li>NHS numbers</li><li>Links to websites</li></ul><p>Please don't include any information that will make it easy to identify exactly where you live</p><p>Please see our <a href='/writing-guidance'>writing guidelines</a> and <a href='/privacy-policy'>our contract with you</a> for more details</p>"
+    "guidance-two-1": "<ul>Please do not include:<li>Full names</li><li>Phone numbers</li><li>Email addresses</li><li>Addresses</li><li>NHS numbers</li><li>Links to websites</li></ul><p>Please don't include any information that will make it easy to identify exactly where you live.</p><p>Please see our <a href='/writing-guidance'>writing guidelines</a> and <a href='/privacy-policy'>our agreement with you</a> for more details</p>"
   },
   "submission": {
     "title": "New experience",
     "date": "Today",
+    "alert": "<b>Do not press back in your browser or your writing will be lost</b>. You might want to write it elsewhere and copy and paste it below.  No writing is saved on this site until you complete all of the steps to upload it.  No drafts are automatically saved.  You can set your writing to <b>private</b> to work on it later on the next page.",
     "footer": {
       "title": "Next step",
-      "step-1-about": "When you click public below your writing will be sent to our moderators and will then be published. This may take a period of days. You’ll be notified when it appears on the site. If you click private your experience will be saved, but will not be sent to our moderators for publication. You can choose to make it public from <a href='/my-experiences'>my experiences</a>",
+      "step-1-about": "When you click public below your writing will be sent to our moderators and will then be published. This may take a period of days. You’ll be notified when it appears on the site. If you click private your experience will be saved, but will not be sent to our moderators for publication. You can choose to make it public from <a href='/my-experiences'>my experiences</a> <p>Your writing will not be saved until you complete all of the steps.</p>",
       "step-2-about": "Tags are important, because they allow others to search for a particular topic through all submissions. The available tags are grouped in categories which you can browse below.",
       "step-3-about": "If you don’t want to add tags you can skip this step."
     }
@@ -200,7 +201,7 @@
   },
   "problem": {
     "title": "Problem?",
-    "about": "If you have any questions or problems using this site, please get in touch or check the <a href='/faq' target='_blank'>FAQs</a>"
+    "about": "If you have any questions or problems using this site, please get in touch or check the <a href='/faqs' target='_blank'>FAQs</a>"
   },
   "notification": {
     "title": "Notifcation Settings",
