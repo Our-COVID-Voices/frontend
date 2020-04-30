@@ -137,17 +137,15 @@ const WritingGuidance: FunctionComponent<RouteComponentProps> = ({
 
     <Footer purple={true}>
       <div className="flex-container flex-container--center home--footer">
-        <div className="flex-col--8 flex-col--tablet-large--12">
+        <div className="flex-col--mobile--12 flex-col--tablet--12 flex-col--8">
           <h5 className="home--footer--title">{cms("home.footer.title")}</h5>
           <p
             className="home--footer--content"
             dangerouslySetInnerHTML={{ __html: cms("home.footer.content") }}
           ></p>
-        </div>
-        <div className="flex-col--12 home--footer--button">
-          <DonateButton />
-        </div>
-        <div className="flex-col--8 flex-col--tablet-large--12">
+          <div className="flex-col--12 home--footer--button">
+            <DonateButton />
+          </div>
           <h6 className="home--footer--contact">
             {cms("home.footer.contact")}{" "}
             <a href={`mailto:${cms("global.email")}`}>{cms("global.email")}</a>
