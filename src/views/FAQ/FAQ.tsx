@@ -16,13 +16,13 @@ import BackgroundBubbles from "../../assets/images/large-medium-bubble.svg";
 const FAQ: FunctionComponent<RouteComponentProps> = ({ history }) => (
   <Layout>
     <Helmet>
-      <title>Our COVID Voices | FAQs</title>
+      <title>Our COVID Voices | Frequently Asked Questions</title>
     </Helmet>
     <div className="flex-container flex-container--no-padding flex-container--justify flex-container--center faq">
       <Breadcrumb
         crumbs={[
           { text: "Home", url: "/" },
-          { text: "FAQ's", url: "" },
+          { text: "Frequently Asked Questions", url: "" },
         ]}
       />
       <div className="flex-col--12 faq--container">
