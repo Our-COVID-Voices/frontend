@@ -45,6 +45,7 @@ import StoryStore from "./stores/storyStore";
 import ReviewStore from "./stores/reviewStore";
 import FAQ from "./views/FAQ";
 import WritingGuidance from "./views/WritingGuidance";
+import Contact from "./views/Contact";
 
 library.add(fas);
 
@@ -74,6 +75,8 @@ const App: FunctionComponent = () => (
         <Switch>
           <Route path="/" component={Home} exact={true} />
           <Route path="/browse" component={Browse} exact={true} />
+          <Route path="/contact" component={Contact} exact={true} />
+
           <Route path="/story/:storyId" component={Story} exact={true} />
           <Route path="/about" component={About} exact={true} />
           <Route path="/contribute" component={Contribute} exact={true} />
