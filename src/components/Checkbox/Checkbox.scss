@@ -2,6 +2,24 @@
 @import "../../styles/fonts.scss";
 
 .checkbox {
+  display: flex;
+  justify-content: space-between;
+
+  &--label {
+    display: inline;
+    flex: 1;
+  }
+
+  &--container {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+
+    @include for-phone-only {
+      align-items: center;
+    }
+  }
+
   input[type="checkbox"] {
     position: absolute;
     left: -99999px;
@@ -23,7 +41,6 @@
   }
 
   input[type="checkbox"]:checked + label {
-    display: inline-block;
     vertical-align: middle;
 
     svg {
@@ -36,7 +53,7 @@
     }
   }
 
-  input[type="checkbox"] + label > span {
+  input[type="checkbox"] + label > #box {
     display: inline-block;
     width: 35px;
     height: 35px;
@@ -47,19 +64,14 @@
     position: relative;
     outline: 1px solid $medium-green;
     border-radius: 6px;
+    margin-top: 7px;
 
     @include for-phone-only {
       margin-right: space(20);
     }
   }
 
-  input[type="checkbox"]:focus + label > span {
+  input[type="checkbox"]:focus + label > #box {
     outline: 1px solid $medium-green;
-  }
-
-  input[type="checkbox"] + label span:before,
-  input[type="checkbox"] + label:hover > span:before,
-  input[type="checkbox"]:checked + label span:before {
-    display: block;
   }
 }

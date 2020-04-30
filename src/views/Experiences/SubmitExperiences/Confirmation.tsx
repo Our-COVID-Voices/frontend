@@ -110,7 +110,7 @@ const Confirmation: FunctionComponent<IProps> = ({
           <div className="flex-col--8 flex-col--tablet-large--10 guidance--footer--content">
             <Link
               size="medium"
-              text="View other's experiences"
+              text="View others' experiences"
               href="/browse"
             />
             <p className="register--footer--description">

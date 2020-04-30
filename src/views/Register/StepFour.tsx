@@ -1,6 +1,5 @@
 import React, { FunctionComponent, Fragment } from "react";
 import { cms } from "../../utils/cms";
-import Link from "../../components/Link";
 import Checkbox from "../../components/Checkbox";
 import { observer, inject } from "mobx-react";
 import RegisterStore from "../../stores/registerStore";
@@ -23,7 +22,7 @@ const StepFour: FunctionComponent<IProps> = ({ registerStore }) => {
           }}
         />
       </div>
-      <div className="flex-col--10 register--checkbox">
+      <div className="flex-col--4 flex-col--mobile--10 register--checkbox">
         <Checkbox
           id="consent"
           label="I accept the agreement"

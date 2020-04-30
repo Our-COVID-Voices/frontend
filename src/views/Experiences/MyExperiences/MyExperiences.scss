@@ -47,6 +47,17 @@
       }
     }
   }
+
+  &--alert {
+    @include body-m;
+    color: $navy;
+
+    p {
+      margin: space(16) 0;
+    }
+
+    margin-bottom: space(16);
+  }
 }
 
 .no-experience {

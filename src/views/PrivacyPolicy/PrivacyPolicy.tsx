@@ -11,7 +11,6 @@ import UserStore from "../../stores/userStore";
 import "./PrivacyPolicy.scss";
 import Layout from "../../components/Layout";
 import Breadcrumb from "../../components/Breadcrumb";
-import Checkbox from "../../components/Checkbox";
 
 interface IProps extends RouteComponentProps {
   userStore?: UserStore;
@@ -23,7 +22,7 @@ const PrivacyPolicy: FunctionComponent<IProps> = ({ userStore, history }) => {
   return (
     <Layout>
       <Helmet>
-        <title>Our COVID Voices | Privacy Policy</title>
+        <title>Our COVID Voices | Our Agreement With You</title>
       </Helmet>
       <div className="flex-container flex-container--no-padding flex-container--justify flex-container--center privacy-policy">
         <div className="flex-col--12">
@@ -43,7 +42,7 @@ const PrivacyPolicy: FunctionComponent<IProps> = ({ userStore, history }) => {
               <Breadcrumb
                 crumbs={[
                   { text: "Home", url: "/" },
-                  { text: "Privacy policy", url: "" },
+                  { text: "Our Agreement with You", url: "" },
                 ]}
               />
             )}
@@ -57,7 +56,7 @@ const PrivacyPolicy: FunctionComponent<IProps> = ({ userStore, history }) => {
           })}
         >
           {userStore.loggedIn && (
-            <h1 className="privacy-policy--title">Privacy Policy</h1>
+            <h1 className="privacy-policy--title">Our Agreement with You</h1>
           )}
           <p
             className="privacy-policy--content"

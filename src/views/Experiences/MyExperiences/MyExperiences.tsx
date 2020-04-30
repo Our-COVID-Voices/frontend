@@ -4,6 +4,7 @@ import {
   withRouter,
   Link as RouteLink,
   RouteComponentProps,
+  Link,
 } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Helmet from "react-helmet";
@@ -39,6 +40,17 @@ const MyExperiences: FunctionComponent<IProps> = ({ history, userStore }) => {
         <title>Our COVID Voices | My Experiences</title>
       </Helmet>
       <div className="flex-container flex-container--no-padding flex-container--center my-experiences">
+        <div className="flex-col--12 my-experiences--alert">
+          <p>
+            <Link to="/privacy-policy">Our Agreement with You </Link> sets out
+            how your experiences will be used.
+          </p>
+          <p>
+            Our <Link to="/writing-guidance">writing guidelines </Link> give
+            more information about what you can write about and what we can and
+            can't publish.
+          </p>
+        </div>
         <div className="flex-col--12">
           <div className="flex-container flex-container--no-padding flex-container--center flex-container--align-center my-experiences--nav">
             <button

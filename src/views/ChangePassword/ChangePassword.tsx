@@ -99,7 +99,7 @@ const ChangePassword: FunctionComponent<IProps> = ({ history, userStore }) => {
           <div className="flex-col--8 flex-col--tablet-large--10 my-account--footer--content">
             <RouterLink to="/privacy-policy">
               <Link
-                text="Privacy Policy"
+                text="Our Agreement with You"
                 href="/privacy-policy"
                 size="medium"
               />

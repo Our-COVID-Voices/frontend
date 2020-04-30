@@ -1,12 +1,14 @@
 import React, { FunctionComponent } from "react";
 import { cms } from "../../utils/cms";
+import ReactSVG from "react-svg";
 
 import AyupColor from "../../assets/logo/ayup-color.svg";
 import PPL from "../../assets/logo/ppl.jpg";
 import NationalVoicesColor from "../../assets/logo/national-voices-color.jpg";
 import NationalVoices from "../../assets/logo/national-voices.svg";
 import Ayup from "../../assets/logo/ayup-white.svg";
-import ReactSVG from "react-svg";
+import SocialSpider from "../../assets/logo/socialspider-white.svg";
+import SocialSpiderColor from "../../assets/logo/socialspider-colour.svg";
 
 import "./InPartnership.scss";
 
@@ -31,6 +33,13 @@ const InPartnership: FunctionComponent<{ color: boolean }> = ({ color }) => (
       <a href="https://ayup.agency" target="__blank">
         <ReactSVG
           src={color ? AyupColor : Ayup}
+          wrapper="span"
+          className="in-partnership--logos"
+        />
+      </a>
+      <a href="http://socialspider.com" target="__blank">
+        <ReactSVG
+          src={color ? SocialSpiderColor : SocialSpider}
           wrapper="span"
           className="in-partnership--logos"
         />

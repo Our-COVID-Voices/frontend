@@ -37,6 +37,12 @@ const ExperienceEntry: FunctionComponent<IProps> = ({
           <h1 className="submission--title">{cms("submission.title")}</h1>
           <p className="submission--date">{cms("submission.date")}</p>
         </div>
+        <div className="flex-col--12 submission--header">
+          <p
+            className="submission--alert"
+            dangerouslySetInnerHTML={{ __html: cms("submission.alert") }}
+          />
+        </div>
 
         <div className="flex-col--12 submission--editor">
           <Editor

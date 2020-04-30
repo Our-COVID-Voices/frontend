@@ -3,6 +3,7 @@ import Layout from "../../components/Layout";
 import Helmet from "react-helmet";
 import ReactSVG from "react-svg";
 import { withRouter, RouteComponentProps } from "react-router";
+import { Link } from "react-router-dom";
 
 import "./FAQ.scss";
 import Breadcrumb from "../../components/Breadcrumb";
@@ -15,13 +16,13 @@ import BackgroundBubbles from "../../assets/images/large-medium-bubble.svg";
 const FAQ: FunctionComponent<RouteComponentProps> = ({ history }) => (
   <Layout>
     <Helmet>
-      <title>Our COVID Voices | FAQs</title>
+      <title>Our COVID Voices | Frequently Asked Questions</title>
     </Helmet>
     <div className="flex-container flex-container--no-padding flex-container--justify flex-container--center faq">
       <Breadcrumb
         crumbs={[
           { text: "Home", url: "/" },
-          { text: "FAQ's", url: "" },
+          { text: "Frequently Asked Questions", url: "" },
         ]}
       />
       <div className="flex-col--12 faq--container">
@@ -67,13 +68,15 @@ const FAQ: FunctionComponent<RouteComponentProps> = ({ history }) => (
             Each time you record an experience and upload it, there will be a
             delay before it is published on the site. This is because we will
             check each submission to make sure that it does not include any of
-            the things we ask you not to include (see Writing Guidelines). We
-            will also categorise your experience based on its content. We are
-            categorising entries for two reasons. Firstly, once submissions are
-            published, it is easy for readers to find topics they are interested
-            in. Secondly, National Voices will identify trends and common
-            issues, in order to influence decision makers and help them
-            understand the impact of policies on real people.
+            the things we ask you not to include (see{" "}
+            <Link to="/writing-guidance">Writing Guidelines</Link> ). We will
+            also categorise your experience based on its content. You can also
+            add tags to help others find your writing. We are categorising
+            entries for two reasons. Firstly, once submissions are published, it
+            is easy for readers to find topics they are interested in. Secondly,
+            National Voices will identify trends and common issues, in order to
+            influence decision makers and help them understand the impact of
+            policies on real people.
           </p>
         </div>
 
@@ -81,12 +84,12 @@ const FAQ: FunctionComponent<RouteComponentProps> = ({ history }) => (
         <div className="faq--content">
           <p>
             National Voices are the umbrella organisation for charities in
-            health in care. Our ca 150 charity members work with people living
-            with one or more long term condition, and also support people with
-            specific needs, such as the homeless or people who use British SIgn
-            Language to communicate. Our members work with and for people living
-            with physical and mental health issues and disability means we are
-            in touch with millions of people’s experiences.
+            health in care. Our 150 charity members work with people living with
+            one or more long term condition, and also support people with
+            specific needs, such as people who are homeless or people who use
+            British Sign Language to communicate. Our members work with and for
+            people living with physical and mental health issues and disability.
+            This means we are in touch with millions of people’s experiences.
           </p>
         </div>
 
@@ -97,8 +100,8 @@ const FAQ: FunctionComponent<RouteComponentProps> = ({ history }) => (
             ambitious project, so we are working with others: AYUP are the
             technology company who built this platform, and Mark Brown from
             Social Spider let us benefit from his experience from previous work
-            he and others have been involved with, in particular the hearing
-            voices network. The social enterprise PPL lent us a project manager,
+            he and others have been involved with, in particular the Hearing
+            Voices Network. The social enterprise PPL lent us a project manager,
             Laura, for free. We are grateful for all the support we received.
           </p>
         </div>
@@ -109,20 +112,28 @@ const FAQ: FunctionComponent<RouteComponentProps> = ({ history }) => (
             in place before we proceeded. We were helped by people who
             contributed in kind (see previous question). We also are talking to
             various funders about this work. We will update this answer as and
-            when funders decide to support us. You can donate here if you want
-            to contribute. Please also get in touch if you have any ideas for
-            what funders might be interested.
+            when funders decide to support us. You can{" "}
+            <a
+              href="https://donorbox.org/our-covid-voices"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              donate here
+            </a>{" "}
+            if you want to contribute. Please also get in touch if you have any
+            ideas for what funders might be interested.
           </p>
         </div>
         <h1 className="faq--title">How long will this project go on for?</h1>
         <div className="faq--content">
           <p>
             This project is conceived to last at least 6 months. This will
-            enable us trace experiences over) time and also to understand what
-            needs to be done as and when the lock down is (partially) lifted. We
-            believe it will be particularly important to understand people’s
-            experiences of life in self isolation as we make decisions about
-            people who might need to isolate for longer.
+            enable us trace experiences over time and also to understand what
+            needs to be done as and when Covid-19 related lockdown measures are
+            (partially) lifted. We believe it will be particularly important to
+            understand people’s experiences of life in self-isolation as as a
+            country we make decisions about people who might need to isolate for
+            longer.
           </p>
         </div>
 
@@ -171,7 +182,7 @@ const FAQ: FunctionComponent<RouteComponentProps> = ({ history }) => (
         </div>
         <div className="flex-col--mobile--12 flex-col--tablet--12 flex-col--4 browse--footer--button">
           <Button
-            text="Would you like to take part and share your experiences?"
+            text="Take part and share your experiences"
             onClick={() =>
               history.push({
                 pathname: "/register",

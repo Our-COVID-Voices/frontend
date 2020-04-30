@@ -65,7 +65,7 @@ const Confirmation: FunctionComponent<RouteComponentProps> = ({ history }) => (
     <Footer navy={true}>
       <div className="flex-container flex-container--center flex-container--no-padding flex-container--align-center register--footer">
         <div className="flex-col--12 flex-col--tablet-large--12">
-          <Link size="medium" text="View other's stories" href="/" />
+          <Link size="medium" text="View others' stories" href="/" />
           <p className="login--footer--description">
             {cms("register.footer.confirmation")}
           </p>

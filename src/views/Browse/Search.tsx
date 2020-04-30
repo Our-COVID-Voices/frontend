@@ -65,7 +65,9 @@ class Search extends Component<IProps> {
               suggestions={availableTags}
               handleDelete={(index: number) => removeTag(index)}
               handleAddition={(tag: any) => handleAddition(tag)}
-              placeholder={selectedTags.length ? "" : "e.g. angel, whispering"}
+              placeholder={
+                selectedTags.length ? "" : "e.g. Isolation, Parkinsons"
+              }
             />
             <Button
               onClick={() => filterResults()}
@@ -85,8 +87,8 @@ class Search extends Component<IProps> {
               className="browse--filter--options-toggle"
             >
               {filterOptionsVisible
-                ? "Hide filter options"
-                : "Show all filter options"}
+                ? "Hide search options"
+                : "Show all search options"}
             </button>
           </div>
 
