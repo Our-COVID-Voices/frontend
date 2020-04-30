@@ -111,6 +111,14 @@
     margin-top: space(8);
   }
 
+  &--alert {
+    @include body-m;
+    color: $purple;
+    font-weight: normal;
+    margin: space(24) 0;
+    text-align: left;
+  }
+
   &--editor {
     margin-top: space(24);
   }
@@ -151,6 +159,10 @@
     @include for-phone-only {
       padding-top: space(40) !important;
       padding-bottom: space(56) !important;
+    }
+
+    p {
+      margin: space(16) 0;
     }
 
     &--title {
