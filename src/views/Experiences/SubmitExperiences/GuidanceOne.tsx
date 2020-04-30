@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { cms } from "../../../utils/cms";
 import GuidanceIcon from "../../../assets/icons/writing-guidance.svg";
-import PrivacyButton from "../../../components/PrivacyButton";
 import Footer from "../../../components/Footer";
 import Button from "../../../components/Button";
 import ContributionStore from "../../../stores/contributionStore";
