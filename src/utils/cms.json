@@ -7,19 +7,19 @@
     "subtitle": "In partnership with",
     "content": "Collecting first-person accounts of living through the 2020 Covid19 pandemic in the UK. This is a place where you can explore and share your experiences anonymously.",
     "experiences": {
-      "title": "Discover other people’s experiences of the pandemic",
+      "title": "Read how life has really been during the UK's pandemic response",
       "content": "The Covid-19 virus has disrupted the way we live our lives. Read other people’s experiences of this time of change."
     },
     "share": {
       "title": "Share your experience",
       "content": "Signing up is secure and how much you share is up to you, you can always withdraw at any time.",
       "experiences": "Post your experiences",
-      "community": "Be part of a community",
+      "community": "Help create a clearer picture of pandemic life",
       "contributions": "Contributions are anonymous"
     },
     "footer": {
       "title": "",
-      "content": "<p>National Voices is coalition of 150 charities, supporting people with physical and mental health problems and disabilty, and those who are facing inequality or discrimination. This means we can draw on the experiences of million of people.</p><p>If you need help with anything check out the <a href='/faqs' target='_blank'>Frequently Asked Questions</a>.  If you have noticed something that does not look right, please contact the website admin.</p>",
+      "content": "<p>National Voices is coalition of 150 charities, supporting people with physical and mental health problems and disabilty, and those who are facing inequality or discrimination. This means we can draw on the experiences of million of people.</p><p>If you need help with anything check out the <a href='/faqs' target='_blank'>Frequently Asked Questions</a>.  If you have noticed something that does not look right, please contact the <a href='/contact' target='_blank'>website admin</a>.</p>",
       "contact": "Email us at"
     }
   },
