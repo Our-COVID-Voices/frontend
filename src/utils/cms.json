@@ -53,7 +53,7 @@
   },
   "login": {
     "title": "Log in",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultricies tincidunt congue.",
+    "description": "Enter your email and password to upload new experiences and view and access experiences you've already shared.",
     "footer": "Need help logging in or need to reset  your password."
   },
   "register": {
