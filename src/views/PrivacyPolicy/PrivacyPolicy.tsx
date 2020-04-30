@@ -11,7 +11,6 @@ import UserStore from "../../stores/userStore";
 import "./PrivacyPolicy.scss";
 import Layout from "../../components/Layout";
 import Breadcrumb from "../../components/Breadcrumb";
-import Checkbox from "../../components/Checkbox";
 
 interface IProps extends RouteComponentProps {
   userStore?: UserStore;

@@ -1,6 +1,5 @@
 import React, { FunctionComponent } from "react";
 import { observer, inject } from "mobx-react";
-import cx from "classnames";
 
 import UserStore from "../../stores/userStore";
 import Header from "../Header";
@@ -11,11 +10,7 @@ interface IProps {
   className?: string;
 }
 
-const Layout: FunctionComponent<IProps> = ({
-  children,
-  userStore,
-  className,
-}) => {
+const Layout: FunctionComponent<IProps> = ({ children, userStore }) => {
   if (!userStore) return null;
 
   return (

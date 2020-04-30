@@ -3,8 +3,7 @@ import Helmet from "react-helmet";
 
 import "./ForgotPassword.scss";
 import { cms } from "../../utils/cms";
-import Input from "../../components/Input";
-import Button from "../../components/Button";
+
 import Footer from "../../components/Footer";
 import Layout from "../../components/Layout";
 
