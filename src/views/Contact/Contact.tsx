@@ -61,7 +61,7 @@ const Contact: FunctionComponent<RouteComponentProps> = ({ history }) => (
         </div>
         <div className="flex-col--mobile--12 flex-col--tablet--12 flex-col--4 browse--footer--button">
           <Button
-            text="Would you like to take part and share your experiences?"
+            text="Take part and share your experiences"
             onClick={() =>
               history.push({
                 pathname: "/register",
