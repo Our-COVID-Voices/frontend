@@ -23,6 +23,10 @@
       margin-top: 0 !important;
     }
 
+    @include for-tablet-down {
+      margin-top: 0 !important;
+    }
+
     &--title {
       @include heading-l;
       color: $white;

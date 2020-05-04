@@ -63,7 +63,7 @@ const WritingGuidance: FunctionComponent<RouteComponentProps> = ({
                 rel="noopener noreferrer"
               >
                 The National Voices website
-              </a>
+              </a>{" "}
               to see a list of our member organisations who may be able to help.
             </li>
             <li>
@@ -162,7 +162,6 @@ const WritingGuidance: FunctionComponent<RouteComponentProps> = ({
     </div>
 
     <Footer purple={true}>
-
       <div className="flex-container flex-container--center home--footer writing-guidance--footer">
         <div className="flex-col--mobile--12 flex-col--tablet--12 flex-col--8">
           <h5 className="home--footer--title">{cms("home.footer.title")}</h5>
