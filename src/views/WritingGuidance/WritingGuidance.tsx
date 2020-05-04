@@ -63,7 +63,7 @@ const WritingGuidance: FunctionComponent<RouteComponentProps> = ({
                 rel="noopener noreferrer"
               >
                 The National Voices website
-              </a>
+              </a>{" "}
               to see a list of our member organisations who may be able to help.
             </li>
             <li>
