@@ -127,6 +127,29 @@ const WritingGuidance: FunctionComponent<RouteComponentProps> = ({
             (including the Equality Act 2010) will either be edited or refused
             publication.
           </p>
+
+          <h2 className="writing-guidance--subtitle">How the process works</h2>
+          <p>
+            <b>Public</b> means that an experience has been seen by our
+            moderators and can now be read by anyone who visits the site.{" "}
+            <b>Private</b> means that your experience cannot be read by anyone
+            who visits the site. <b>In review</b> means that our moderators are
+            checking to see that your writing has followed our guidelines. To
+            review means that our moderators have suggested some changes to your
+            writing to make it possible for us to publish it. This will usually
+            be when you have included details that might make you identifiable
+            to others or make others identifiable.
+          </p>
+
+          <p>
+            Anytime you edit an experience, even once it has been seen by our
+            moderators and marked <b>public</b> it will be set <b>in review</b>{" "}
+            as our moderators have to check it again. If you make an experience{" "}
+            <b>private</b>
+            then <b>public</b> again it will also be set to <b>in review</b>{" "}
+            until our moderators have checked it. Please be patient with our
+            moderators.
+          </p>
           <p>
             <Link to="/submit-experience">Ready?</Link>
           </p>

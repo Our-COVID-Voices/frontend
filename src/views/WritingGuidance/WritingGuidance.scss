@@ -22,6 +22,12 @@
     margin-bottom: space(32);
   }
 
+  &--subtitle {
+    @include heading-xs-alt;
+    color: $navy;
+    margin-bottom: space(24);
+  }
+
   &--content {
     @include body-s-alt;
     color: $navy;
