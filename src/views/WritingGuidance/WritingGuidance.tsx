@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from "react";
 import Helmet from "react-helmet";
 import { withRouter, RouteComponentProps } from "react-router";
+import { Link } from "react-router-dom";
 
 import "./WritingGuidance.scss";
 
@@ -126,7 +127,9 @@ const WritingGuidance: FunctionComponent<RouteComponentProps> = ({
             (including the Equality Act 2010) will either be edited or refused
             publication.
           </p>
-          <p>Ready?</p>
+          <p>
+            <Link to="/submit-experience">Ready?</Link>
+          </p>
         </div>
       </div>
       <ReactSVG
@@ -136,7 +139,7 @@ const WritingGuidance: FunctionComponent<RouteComponentProps> = ({
     </div>
 
     <Footer purple={true}>
-      <div className="flex-container flex-container--center home--footer">
+      <div className="flex-container flex-container--center home--footer writing-guidance--footer">
         <div className="flex-col--mobile--12 flex-col--tablet--12 flex-col--8">
           <h5 className="home--footer--title">{cms("home.footer.title")}</h5>
           <p
