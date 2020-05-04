@@ -14,12 +14,21 @@
   &--title {
     @include body-s;
     color: $navy;
+    display: inline;
+
+    @include for-phone-only {
+      display: block;
+    }
+
+    &--white {
+      color: $white;
+    }
   }
 
   &--logo-container {
     display: flex;
     align-items: center;
-    margin-top: space(10);
+    margin-top: space(20);
     flex-wrap: wrap;
 
     svg {
@@ -41,5 +50,10 @@
     @include for-tablet-down {
       margin-right: space(10);
     }
+  }
+
+  &--nv {
+    height: space(48);
+    margin-right: space(10);
   }
 }
