@@ -30,7 +30,7 @@ const Home: FunctionComponent<RouteComponentProps> = ({ history }) => (
     <div className="flex-container flex-container--no-padding flex-container--center home--welcome">
       <div className="flex-col--8 flex-col--tablet-large--12">
         <h1 className="home--welcome--title">{cms("home.title")}</h1>
-        <h2 className="home--welcome--subtitle">{cms("home.subtitle")}</h2>
+
         <InPartnership color={false} />
         <img src={SmallBubbles} className="home--welcome--bubbles" alt="" />
         <p className="home--welcome--about">{cms("home.content")}</p>

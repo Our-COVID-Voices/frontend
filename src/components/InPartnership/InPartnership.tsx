@@ -1,6 +1,7 @@
-import React, { FunctionComponent } from "react";
+import React, { FunctionComponent, Fragment } from "react";
 import { cms } from "../../utils/cms";
 import ReactSVG from "react-svg";
+import cx from "classnames";
 
 import AyupColor from "../../assets/logo/ayup-color.svg";
 import PPL from "../../assets/logo/ppl.jpg";
@@ -14,15 +15,24 @@ import "./InPartnership.scss";
 
 const InPartnership: FunctionComponent<{ color: boolean }> = ({ color }) => (
   <div className="in-partnership--container">
-    {color && <h2 className="in-partnership--title">{cms("home.subtitle")}</h2>}
-    <div className="in-partnership--logo-container">
+    <Fragment>
       <a href="https://www.nationalvoices.org.uk/" target="__blank">
         <img
           src={color ? NationalVoicesColor : NationalVoices}
           alt="logo for PPL"
-          className="in-partnership--logo in-partnership--logos"
+          className="in-partnership--nv"
         />
       </a>
+      <h2
+        className={cx("in-partnership--title", {
+          "in-partnership--title--white": !color,
+        })}
+      >
+        {cms("home.subtitle")}
+      </h2>
+    </Fragment>
+
+    <div className="in-partnership--logo-container">
       <a href="https://ppl.org.uk/" target="__blank">
         <img
           src={PPL}

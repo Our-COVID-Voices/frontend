@@ -4,7 +4,7 @@
   },
   "home": {
     "title": "Welcome",
-    "subtitle": "In partnership with",
+    "subtitle": "in partnership with",
     "content": "Collecting first-person accounts of living through the 2020 Covid19 pandemic in the UK. This is a place where you can explore and share your experiences anonymously.",
     "experiences": {
       "title": "Read how life has really been during the UK's pandemic response",
@@ -34,7 +34,7 @@
   },
   "try-again": {
     "title": "Please try again later",
-    "content": "Lorem ipsum dolor sit amet, adipiscing elit. Vivamus ultricies tincidunt congue."
+    "content": "This page is not available please try again later"
   },
   "about": {
     "content": "<p>The arrival of the Covid-19 virus has made everyday life feel very different. Health and care services are being delivered differently, and many services have stopped altogether. Our ability to take part in our communities and to see friends and family is limited. Everything from food shopping, to home care, to doctors appointments has changed.</p><p>The media are mostly telling the stories of people who do not live their lives with additional challenges and conditions. However, many live with one or more ongoing health conditions, ill-health or disability. Many use health or social care services regularly to keep well. Some are more at risk from Covid-19. Some are having their health and wellbeing put at risk by what they have to do to keep others safe. The voices of these people have not been the focus of much of the national discussion.</p><p>During this period, we think it is more important than ever that the voices of those most at risk and those who are having their lives most disrupted should be heard. Decisions made about how health, care and support are provided to people during this period and in the future are having real, everyday implications for people's lives. These decisions should be based on understanding how all people actually live their lives, and experience their health and illness. Bad decisions will be made without this understanding.</p><p>Our Covid Voices wants to share with the world how those with long-term conditions, disabilities and other health and care needs are living during the pandemic in the UK. Our Covid Voices aims to be a first draft of history, with people across the country sharing their experiences of the UK under lockdown as they happen.</p><p>National Voices will use the insight you will generate to influence national and local decision-makers. The experiences shared on this website will help them get a clearer picture of what is happening now, and help us at National Voices make a better case for what needs to happen once this crisis ends.</p>",
@@ -215,9 +215,9 @@
   },
 
   "review": {
-    "title": "Review problems",
+    "title": "We can't currently publish your experience",
     "subtitle": "Requested changes",
-    "about": "Lorem ipsum dolor sit amet, adipiscing elit. Vivamus ultricies tincidunt congue.",
+    "about": "Something in the writing you uploaded doesn't meet the guidance set out in our Writing Guidelines. Please read the suggestion below from one of our moderators to make changes so that we can share your experience on the site. ",
     "hint": "Your experience will remain private until changes are made",
     "confirmation": {
       "title": "Re-submitted",
