@@ -68,6 +68,19 @@ const Home: FunctionComponent<RouteComponentProps> = ({ history }) => (
       <div className="flex-col--12">
         <h4 className="home--share--title">{cms("home.share.title")}</h4>
       </div>
+      <div className="flex-col--12">
+        <div className="home__video">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/videoseries?list=PLYrvVaObiHg2uDUFc2R7v5qkqy9A7Zp5k"
+            frameBorder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen={true}
+            title="Our Covid Voices Interviews"
+          ></iframe>
+        </div>
+      </div>
       <div className="flex-col--mobile--12 flex-col--tablet--12 flex-col--6">
         <div className="flex-col--tablet--10 flex-col--mobile--12 flex-col--mobile-small--12 home--share--description--container">
           <div className="home--share--description">
