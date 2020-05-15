@@ -32,7 +32,10 @@ const Home: FunctionComponent<RouteComponentProps> = ({ history }) => (
         <h1 className="home--welcome--title">{cms("home.title")}</h1>
         <InPartnership color={false} />
         <img src={SmallBubbles} className="home--welcome--bubbles" alt="" />
-        <p className="home--welcome--about">{cms("home.content")}</p>
+        <p
+          className="home--welcome--about"
+          dangerouslySetInnerHTML={{ __html: cms("home.content") }}
+        />
       </div>
 
       <ReactSVG src={Calendar} className="home--welcome--calendar" />
@@ -64,6 +67,19 @@ const Home: FunctionComponent<RouteComponentProps> = ({ history }) => (
     <div className="flex-container flex-container--center flex-container--align-center home--share">
       <div className="flex-col--12">
         <h4 className="home--share--title">{cms("home.share.title")}</h4>
+      </div>
+      <div className="flex-col--12">
+        <div className="home__video">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/videoseries?list=PLYrvVaObiHg2uDUFc2R7v5qkqy9A7Zp5k"
+            frameBorder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen={true}
+            title="Our Covid Voices Interviews"
+          ></iframe>
+        </div>
       </div>
       <div className="flex-col--mobile--12 flex-col--tablet--12 flex-col--6">
         <div className="flex-col--tablet--10 flex-col--mobile--12 flex-col--mobile-small--12 home--share--description--container">
