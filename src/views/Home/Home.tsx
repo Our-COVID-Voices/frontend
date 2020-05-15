@@ -32,7 +32,10 @@ const Home: FunctionComponent<RouteComponentProps> = ({ history }) => (
         <h1 className="home--welcome--title">{cms("home.title")}</h1>
         <InPartnership color={false} />
         <img src={SmallBubbles} className="home--welcome--bubbles" alt="" />
-        <p className="home--welcome--about">{cms("home.content")}</p>
+        <p
+          className="home--welcome--about"
+          dangerouslySetInnerHTML={{ __html: cms("home.content") }}
+        />
       </div>
 
       <ReactSVG src={Calendar} className="home--welcome--calendar" />

@@ -41,6 +41,10 @@
       @include body-l;
       color: $white;
       margin-top: space(64);
+
+      p {
+        margin: space(16) 0;
+      }
     }
 
     &--bubbles {
