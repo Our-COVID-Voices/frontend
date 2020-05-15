@@ -41,6 +41,10 @@
       @include body-l;
       color: $white;
       margin-top: space(64);
+
+      p {
+        margin: space(16) 0;
+      }
     }
 
     &--bubbles {
@@ -293,6 +297,20 @@
         color: $purple;
         display: block;
       }
+    }
+  }
+
+  &__video {
+    display: flex;
+    justify-content: center;
+    margin-bottom: space(64);
+
+    @include for-tablet-down {
+      margin-bottom: space(32);
+    }
+
+    iframe {
+      border-radius: 23px;
     }
   }
 }
