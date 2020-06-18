@@ -1,7 +1,8 @@
-import React, { FunctionComponent } from "react";
+import React, { FunctionComponent, useEffect } from "react";
 import { Router, Switch, Route } from "react-router-dom";
 import { Provider, observer } from "mobx-react";
 import { createBrowserHistory } from "history";
+import ReactGA from 'react-ga';
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
@@ -60,7 +61,18 @@ const history = createBrowserHistory();
 
 httpService.setupInterceptors(history);
 
-const App: FunctionComponent = () => (
+ReactGA.initialize('UA-169949190-1');
+
+history.listen((location) => {
+  ReactGA.pageview(location.pathname + location.search);
+});
+
+const App: FunctionComponent = () => {
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search)
+  }, [])
+
+return (
   <Provider
     cookieStore={cookieStore}
     registerStore={registerStore}
@@ -153,6 +165,6 @@ const App: FunctionComponent = () => (
       </ScrollToTop>
     </Router>
   </Provider>
-);
+)}
 
 export default observer(App);
