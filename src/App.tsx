@@ -61,7 +61,9 @@ const history = createBrowserHistory();
 
 httpService.setupInterceptors(history);
 
-ReactGA.initialize('UA-169949190-1');
+ReactGA.initialize('UA-169949190-1', {
+  testMode: process.env.NODE_ENV === 'development'
+});
 
 history.listen((location) => {
   ReactGA.pageview(location.pathname + location.search);
