@@ -31,6 +31,7 @@
     "react-app-polyfill": "^1.0.5",
     "react-clamp-lines": "^3.0.2",
     "react-dom": "^16.10.2",
+    "react-ga": "^3.0.0",
     "react-helmet": "^5.2.1",
     "react-markdown": "^4.2.2",
     "react-modal": "^3.11.1",
