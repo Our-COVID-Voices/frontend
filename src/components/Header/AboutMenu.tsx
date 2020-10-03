@@ -16,14 +16,14 @@ const AboutMenu: FunctionComponent<IProps> = ({ toggleBurger, open }) => (
       to="/about"
       onClick={() => toggleBurger(!open)}
     >
-      Why we're doing this
+      Why we have done this
     </NavLink>
     <NavLink
       className="mobile-nav--link mobile-nav--link-secondary"
-      to="/writing-guidance"
+      to="/what-we-need-now"
       onClick={() => toggleBurger(!open)}
     >
-      What can I write about and how do I do this?
+      What have we found
     </NavLink>
     <NavLink
       className="mobile-nav--link mobile-nav--link-secondary"

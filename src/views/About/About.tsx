@@ -8,8 +8,7 @@ import Helmet from "react-helmet";
 import "./About.scss";
 import Breadcrumb from "../../components/Breadcrumb";
 import { cms } from "../../utils/cms";
-import Footer from "../../components/Footer";
-import Button from "../../components/Button";
+
 import Layout from "../../components/Layout";
 import UserStore from "../../stores/userStore";
 
@@ -45,7 +44,7 @@ const About: FunctionComponent<IProps> = ({ userStore, history }) => {
             <Breadcrumb
               crumbs={[
                 { text: "Home", url: "/" },
-                { text: "Why we're doing this", url: "" },
+                { text: "Why we have done this", url: "" },
               ]}
             />
           )}
@@ -62,7 +61,7 @@ const About: FunctionComponent<IProps> = ({ userStore, history }) => {
           className="about--background tablet--large-hide"
         />
       </div>
-      <Footer purple={true}>
+      {/* <Footer purple={true}>
         <div className="flex-container flex-container--center flex-container--no-padding flex-container--align-center about--footer">
           <div className="flex-col--mobile--12 flex-col--tablet--12 flex-col--8">
             <h4 className="about--footer--title">
@@ -91,7 +90,7 @@ const About: FunctionComponent<IProps> = ({ userStore, history }) => {
             />
           </div>
         </div>
-      </Footer>
+      </Footer> */}
     </Layout>
   );
 };

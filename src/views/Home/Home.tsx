@@ -12,9 +12,6 @@ import Footer from "../../components/Footer";
 import Layout from "../../components/Layout";
 import DonateButton from "../../components/DonateButton/DonateButton";
 
-import Pencil from "../../assets/icons/pencil-solid.svg";
-import Community from "../../assets/icons/community.svg";
-import Security from "../../assets/icons/security.svg";
 import SmallBubbles from "../../assets/images/small-bubbles.png";
 import LaptopBubbles from "../../assets/images/laptop-small-bubble.png";
 import Calendar from "../../assets/drawings/calendar.svg";
@@ -64,58 +61,7 @@ const Home: FunctionComponent<RouteComponentProps> = ({ history }) => (
         </div>
       </div>
     </div>
-    <div className="flex-container flex-container--center flex-container--align-center home--share">
-      <div className="flex-col--12">
-        <h4 className="home--share--title">{cms("home.share.title")}</h4>
-      </div>
-      <div className="flex-col--12">
-        <div className="home__video">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/videoseries?list=PLYrvVaObiHg2uDUFc2R7v5qkqy9A7Zp5k"
-            frameBorder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen={true}
-            title="Our Covid Voices Interviews"
-          ></iframe>
-        </div>
-      </div>
-      <div className="flex-col--mobile--12 flex-col--tablet--12 flex-col--6">
-        <div className="flex-col--tablet--10 flex-col--mobile--12 flex-col--mobile-small--12 home--share--description--container">
-          <div className="home--share--description">
-            <ReactSVG src={Pencil} wrapper="span" />
-            <h5 style={{ display: "inline" }}>
-              {cms("home.share.experiences")}
-            </h5>
-          </div>
 
-          <div className="home--share--description">
-            <ReactSVG src={Community} wrapper="span" />
-            <h5 style={{ display: "inline" }}>{cms("home.share.community")}</h5>
-          </div>
-
-          <div className="home--share--description">
-            <ReactSVG src={Security} wrapper="span" />
-            <h5 style={{ display: "inline" }}>
-              {cms("home.share.contributions")}
-            </h5>
-          </div>
-        </div>
-      </div>
-      <div className="flex-col--mobile--12 flex-col--tablet--12 flex-col--5 home--share--button-container">
-        <Button
-          text="Sign up and share"
-          onClick={() =>
-            history.push({
-              pathname: "/register",
-            })
-          }
-          navy={true}
-        />
-        <p className="home--share--content">{cms("home.share.content")}</p>
-      </div>
-    </div>
     <Footer purple={true}>
       <div className="flex-container flex-container--center home--footer">
         <div className="flex-col--mobile--12 flex-col--tablet--12 flex-col--8">
