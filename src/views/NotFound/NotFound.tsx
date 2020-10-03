@@ -61,7 +61,7 @@ const NotFound: FunctionComponent<RouteComponentProps> = ({ history }) => (
         </div>
       </div>
     </div>
-    <div className="flex-container flex-container--center flex-container--align-center home--share">
+    {/* <div className="flex-container flex-container--center flex-container--align-center home--share">
       <div className="flex-col--12">
         <h4 className="home--share--title">{cms("home.share.title")}</h4>
       </div>
@@ -116,7 +116,7 @@ const NotFound: FunctionComponent<RouteComponentProps> = ({ history }) => (
           </p>
         </div>
       </div>
-    </Footer>
+    </Footer> */}
   </Layout>
 );
 
