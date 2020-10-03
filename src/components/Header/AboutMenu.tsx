@@ -1,8 +1,5 @@
 import React, { Fragment, FunctionComponent } from "react";
 import { NavLink } from "react-router-dom";
-import ReactSVG from "react-svg";
-
-import Account from "../../assets/icons/account-light.svg";
 
 interface IProps {
   toggleBurger: (toggle: boolean) => void;
@@ -31,15 +28,6 @@ const AboutMenu: FunctionComponent<IProps> = ({ toggleBurger, open }) => (
       onClick={() => toggleBurger(!open)}
     >
       FAQs
-    </NavLink>
-
-    <NavLink
-      className="mobile-nav--link"
-      to="/login"
-      onClick={() => toggleBurger(!open)}
-    >
-      Login
-      <ReactSVG src={Account} wrapper="span" className="mobile-nav--icon" />
     </NavLink>
   </Fragment>
 );

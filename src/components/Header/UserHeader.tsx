@@ -1,9 +1,6 @@
 import React, { FunctionComponent } from "react";
-import ReactSVG from "react-svg";
 import { NavLink } from "react-router-dom";
 import { observer, inject } from "mobx-react";
-
-import Account from "../../assets/icons/account-light.svg";
 
 import "./Header.scss";
 import UserStore from "../../stores/userStore";
@@ -46,14 +43,6 @@ const UserHeader: FunctionComponent<IProps> = ({ userStore }) => {
           Settings
         </NavLink>
       )}
-      <NavLink
-        to="/login"
-        className="user-header--link user-header--link--login"
-        activeClassName="header--link--active"
-      >
-        {userStore.loggedIn ? "Log Out" : "Log In"}
-        <ReactSVG src={Account} wrapper="span" className="header--icon" />
-      </NavLink>
     </div>
   );
 };
