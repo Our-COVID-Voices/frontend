@@ -61,7 +61,20 @@ const Home: FunctionComponent<RouteComponentProps> = ({ history }) => (
         </div>
       </div>
     </div>
-
+    <div className="flex-container flex-container--center flex-container--align-center home--share">
+      <div className="flex-col--12">
+        <h4 className="home--share--title">
+          {" "}
+          <a
+            href="https://mailchi.mp/cbb4e70e6e65/e56e9ah8zm"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Click here to download the report
+          </a>
+        </h4>
+      </div>
+    </div>
     <Footer purple={true}>
       <div className="flex-container flex-container--center home--footer">
         <div className="flex-col--mobile--12 flex-col--tablet--12 flex-col--8">

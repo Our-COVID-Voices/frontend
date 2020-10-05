@@ -27,7 +27,14 @@ const Login: FunctionComponent<IProps> = ({ userStore, history }) => {
       <div className="flex-container flex-container--no-padding flex-container--center flex-container--justify login">
         <div className="flex-col--12 login--inner">
           <h1 className="login--title">
-            Contributions are closed for this website.
+            Submissions are now closed -{" "}
+            <a
+              href="https://mailchi.mp/cbb4e70e6e65/e56e9ah8zm"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Click here to download the report.
+            </a>
           </h1>
           {/* <h1 className="login--title">{cms("login.title")}</h1> */}
           {/* <p className="login--description">{cms("login.description")}</p> */}

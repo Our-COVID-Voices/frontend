@@ -33,7 +33,10 @@ const WritingGuidance: FunctionComponent<RouteComponentProps> = ({
         <div className="writing-guidance--content">
           <p>
             The findings from our project are presented in a report:{" "}
-            <a href="/#" target="__blank">
+            <a
+              href="https://mailchi.mp/cbb4e70e6e65/e56e9ah8zm"
+              target="__blank"
+            >
               What We Need Now.
             </a>
           </p>
