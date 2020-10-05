@@ -3,16 +3,10 @@ import { observer, inject } from "mobx-react";
 import { withRouter, RouteComponentProps } from "react-router";
 import Helmet from "react-helmet";
 
-import { cms } from "../../utils/cms";
-
-import Input from "../../components/Input";
-import Button from "../../components/Button";
-import Footer from "../../components/Footer";
 import Layout from "../../components/Layout";
 
 import "./Login.scss";
 import UserStore from "../../stores/userStore";
-import { Link } from "react-router-dom";
 
 interface IProps extends RouteComponentProps {
   userStore: UserStore;
@@ -32,10 +26,20 @@ const Login: FunctionComponent<IProps> = ({ userStore, history }) => {
       </Helmet>
       <div className="flex-container flex-container--no-padding flex-container--center flex-container--justify login">
         <div className="flex-col--12 login--inner">
-          <h1 className="login--title">{cms("login.title")}</h1>
-          <p className="login--description">{cms("login.description")}</p>
+          <h1 className="login--title">
+            Submissions are now closed -{" "}
+            <a
+              href="https://mailchi.mp/cbb4e70e6e65/e56e9ah8zm"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Click here to download the report.
+            </a>
+          </h1>
+          {/* <h1 className="login--title">{cms("login.title")}</h1> */}
+          {/* <p className="login--description">{cms("login.description")}</p> */}
         </div>
-        <form
+        {/* <form
           className="flex-col--8 flex-col--mobile--10 login--form"
           onSubmit={e => {
             e.preventDefault();
@@ -71,9 +75,9 @@ const Login: FunctionComponent<IProps> = ({ userStore, history }) => {
               type="submit"
             />
           </div>
-        </form>
+        </form> */}
       </div>
-      <Footer green={true}>
+      {/* <Footer green={true}>
         <div className="flex-container flex-container--center login--footer">
           <div className="flex-col--8 flex-col--tablet-large--12">
           <Link to="/forgot-password" className="link link--medium">
@@ -83,7 +87,7 @@ const Login: FunctionComponent<IProps> = ({ userStore, history }) => {
             <p className="login--footer--description">{cms("login.footer")}</p>
           </div>
         </div>
-      </Footer>
+      </Footer> */}
     </Layout>
   );
 };

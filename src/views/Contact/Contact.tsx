@@ -3,13 +3,10 @@ import Helmet from "react-helmet";
 import ReactSVG from "react-svg";
 import { withRouter, RouteComponentProps } from "react-router";
 
-import { cms } from "../../utils/cms";
 import BackgroundBubbles from "../../assets/images/large-medium-bubble.svg";
 
 import Layout from "../../components/Layout";
 import Breadcrumb from "../../components/Breadcrumb";
-import Button from "../../components/Button";
-import Footer from "../../components/Footer";
 
 const Contact: FunctionComponent<RouteComponentProps> = ({ history }) => (
   <Layout>
@@ -51,7 +48,7 @@ const Contact: FunctionComponent<RouteComponentProps> = ({ history }) => (
         className="faq--background tablet--large-hide"
       />
     </div>
-    <Footer purple={true}>
+    {/* <Footer purple={true}>
       <div className="flex-container flex-container--center flex-container--no-padding flex-container--align-center browse--footer">
         <div className="flex-col--mobile--12 flex-col--tablet--12 flex-col--8">
           <h5 className="browse--footer--title">{cms("about.footer.title")}</h5>
@@ -72,7 +69,7 @@ const Contact: FunctionComponent<RouteComponentProps> = ({ history }) => (
           />
         </div>
       </div>
-    </Footer>
+    </Footer> */}
   </Layout>
 );
 

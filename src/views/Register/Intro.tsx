@@ -1,9 +1,18 @@
 import React, { FunctionComponent, Fragment } from "react";
-import { cms } from "../../utils/cms";
 
 const Intro: FunctionComponent = () => (
   <Fragment>
-    <div className="flex-col--12">
+    <h1 className="register--title">
+      Submissions are now closed -{" "}
+      <a
+        href="https://mailchi.mp/cbb4e70e6e65/e56e9ah8zm"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Click here to download the report.
+      </a>
+    </h1>
+    {/* <div className="flex-col--12">
       <h1 className="register--title">{cms("register.title")}</h1>
       <p
         className="register--description"
@@ -16,7 +25,7 @@ const Intro: FunctionComponent = () => (
       <p className="register--step-description">
         {cms("register.step-description")}
       </p>
-    </div>
+    </div> */}
   </Fragment>
 );
 

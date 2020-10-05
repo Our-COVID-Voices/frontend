@@ -1,8 +1,5 @@
 import React, { Fragment, FunctionComponent } from "react";
 import { NavLink } from "react-router-dom";
-import ReactSVG from "react-svg";
-
-import Account from "../../assets/icons/account-light.svg";
 
 interface IProps {
   toggleBurger: (toggle: boolean) => void;
@@ -16,14 +13,14 @@ const AboutMenu: FunctionComponent<IProps> = ({ toggleBurger, open }) => (
       to="/about"
       onClick={() => toggleBurger(!open)}
     >
-      Why we're doing this
+      Why we have done this
     </NavLink>
     <NavLink
       className="mobile-nav--link mobile-nav--link-secondary"
-      to="/writing-guidance"
+      to="/what-we-need-now"
       onClick={() => toggleBurger(!open)}
     >
-      What can I write about and how do I do this?
+      What have we found
     </NavLink>
     <NavLink
       className="mobile-nav--link mobile-nav--link-secondary"
@@ -31,15 +28,6 @@ const AboutMenu: FunctionComponent<IProps> = ({ toggleBurger, open }) => (
       onClick={() => toggleBurger(!open)}
     >
       FAQs
-    </NavLink>
-
-    <NavLink
-      className="mobile-nav--link"
-      to="/login"
-      onClick={() => toggleBurger(!open)}
-    >
-      Login
-      <ReactSVG src={Account} wrapper="span" className="mobile-nav--icon" />
     </NavLink>
   </Fragment>
 );

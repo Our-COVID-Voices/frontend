@@ -32,7 +32,7 @@ import Security from "../assets/icons/security.svg";
 import Submitted from "../assets/icons/submitted.svg";
 import TryAgainLarge from "../assets/icons/try-later-large.svg";
 import TryAgain from "../assets/icons/try-later.svg";
-import WritingGuidance from "../assets/icons/writing-guidance.svg";
+import WritingGuidance from "../assets/icons/what-we-need-now.svg";
 import DashboardLight from "../assets/icons/dashboard-light.svg";
 import Loading from "./Loading";
 import Cookies from "./Cookies";
@@ -137,7 +137,7 @@ const PatternLibrary = () => (
         crumbs={[
           { text: "Home", url: "/" },
           { text: "Experiences", url: "/" },
-          { text: "Selected Experience", url: "" }
+          { text: "Selected Experience", url: "" },
         ]}
       />
     </div>
@@ -201,7 +201,7 @@ const PatternLibrary = () => (
       <Select
         options={[
           { value: "1", text: "Example 1" },
-          { value: "2", text: "Example 2" }
+          { value: "2", text: "Example 2" },
         ]}
         placeholder="See all"
         id="example"
@@ -225,10 +225,10 @@ const PatternLibrary = () => (
           tags={[
             {
               id: "1",
-              name: "talking"
+              name: "talking",
             },
             { id: "2", name: "critical" },
-            { id: "3", name: "male" }
+            { id: "3", name: "male" },
           ]}
           id={"1"}
         />
@@ -237,11 +237,11 @@ const PatternLibrary = () => (
           tags={[
             {
               id: "1",
-              name: "talking"
+              name: "talking",
             },
 
             { id: "2", name: "critical" },
-            { id: "3", name: "male" }
+            { id: "3", name: "male" },
           ]}
           id={"2"}
         />
@@ -250,10 +250,10 @@ const PatternLibrary = () => (
           tags={[
             {
               id: "1",
-              name: "talking"
+              name: "talking",
             },
             { id: "2", name: "critical" },
-            { id: "3", name: "male" }
+            { id: "3", name: "male" },
           ]}
           id={"3"}
         />

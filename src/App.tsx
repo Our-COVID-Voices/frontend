@@ -2,7 +2,7 @@ import React, { FunctionComponent, useEffect } from "react";
 import { Router, Switch, Route } from "react-router-dom";
 import { Provider, observer } from "mobx-react";
 import { createBrowserHistory } from "history";
-import ReactGA from 'react-ga';
+import ReactGA from "react-ga";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
@@ -15,7 +15,6 @@ import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import Home from "./views/Home";
 import NotFound from "./views/NotFound";
 import About from "./views/About";
-import Contribute from "./views/Contribute";
 import Login from "./views/Login";
 import Register from "./views/Register";
 import PrivacyPolicy from "./views/PrivacyPolicy";
@@ -61,8 +60,8 @@ const history = createBrowserHistory();
 
 httpService.setupInterceptors(history);
 
-ReactGA.initialize('UA-169949190-1', {
-  testMode: process.env.NODE_ENV === 'development'
+ReactGA.initialize("UA-169949190-1", {
+  testMode: process.env.NODE_ENV === "development",
 });
 
 history.listen((location) => {
@@ -71,102 +70,107 @@ history.listen((location) => {
 
 const App: FunctionComponent = () => {
   useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search)
-  }, [])
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
 
-return (
-  <Provider
-    cookieStore={cookieStore}
-    registerStore={registerStore}
-    userStore={userStore}
-    experienceStore={experienceStore}
-    contributionStore={contributionStore}
-    storyStore={storyStore}
-    reviewStore={reviewStore}
-  >
-    <Router history={history}>
-      <ScrollToTop>
-        <Switch>
-          <Route path="/" component={Home} exact={true} />
-          <Route path="/browse" component={Browse} exact={true} />
-          <Route path="/contact" component={Contact} exact={true} />
+  return (
+    <Provider
+      cookieStore={cookieStore}
+      registerStore={registerStore}
+      userStore={userStore}
+      experienceStore={experienceStore}
+      contributionStore={contributionStore}
+      storyStore={storyStore}
+      reviewStore={reviewStore}
+    >
+      <Router history={history}>
+        <ScrollToTop>
+          <Switch>
+            <Route path="/" component={Home} exact={true} />
+            <Route path="/browse" component={Browse} exact={true} />
+            <Route path="/contact" component={Contact} exact={true} />
 
-          <Route path="/story/:storyId" component={Story} exact={true} />
-          <Route path="/about" component={About} exact={true} />
-          <Route path="/contribute" component={Contribute} exact={true} />
-          <Route path="/login" component={Login} exact={true} />
-          <Route path="/register" component={Register} exact={true} />
-          <Route path="/faqs" component={FAQ} exact={true} />
-          <Route
-            path="/writing-guidance"
-            component={WritingGuidance}
-            exact={true}
-          />
+            <Route path="/story/:storyId" component={Story} exact={true} />
+            <Route path="/about" component={About} exact={true} />
+            {/* <Route path="/contribute" component={Contribute} exact={true} /> */}
+            <Route path="/login" component={Login} exact={true} />
+            <Route path="/register" component={Register} exact={true} />
+            <Route path="/faqs" component={FAQ} exact={true} />
+            <Route
+              path="/what-we-need-now"
+              component={WritingGuidance}
+              exact={true}
+            />
 
-          <Route
-            path="/privacy-policy"
-            component={PrivacyPolicy}
-            exact={true}
-          />
-          <Route
-            path="/forgot-password"
-            component={ForgotPassword}
-            exact={true}
-          />
-          <Route
-            path="/reset-password"
-            component={ResetPassword}
-            exact={true}
-          />
-          <Route path="/try-again" component={TryAgain} exact={true} />
-          {/* User Routes */}
-          <PrivateRoute path="/dashboard" component={Dashboard} exact={true} />
-          <PrivateRoute path="/account" component={MyAccount} exact={true} />
-          <PrivateRoute
-            path="/account/change-email"
-            component={UpdateEmail}
-            exact={true}
-          />
-          <PrivateRoute
-            path="/account/change-password"
-            component={ChangePassword}
-            exact={true}
-          />
-          <PrivateRoute
-            path="/account/problem"
-            component={Problem}
-            exact={true}
-          />
-          <PrivateRoute
-            path="/account/withdraw"
-            component={Withdraw}
-            exact={true}
-          />
-          <PrivateRoute
-            path="/my-experiences"
-            component={MyExperiences}
-            exact={true}
-          />
-          <PrivateRoute
-            path="/my-experiences/story/:storyId"
-            component={MyExperience}
-            exact={true}
-          />
-          <PrivateRoute
-            path="/my-experiences/review/:storyId"
-            component={ReviewExperiences}
-            exact={true}
-          />
-          <PrivateRoute
-            path="/submit-experience"
-            component={SubmitExperiences}
-            exact={true}
-          />
-          <Route component={NotFound} />
-        </Switch>
-      </ScrollToTop>
-    </Router>
-  </Provider>
-)}
+            <Route
+              path="/privacy-policy"
+              component={PrivacyPolicy}
+              exact={true}
+            />
+            <Route
+              path="/forgot-password"
+              component={ForgotPassword}
+              exact={true}
+            />
+            <Route
+              path="/reset-password"
+              component={ResetPassword}
+              exact={true}
+            />
+            <Route path="/try-again" component={TryAgain} exact={true} />
+            {/* User Routes */}
+            <PrivateRoute
+              path="/dashboard"
+              component={Dashboard}
+              exact={true}
+            />
+            <PrivateRoute path="/account" component={MyAccount} exact={true} />
+            <PrivateRoute
+              path="/account/change-email"
+              component={UpdateEmail}
+              exact={true}
+            />
+            <PrivateRoute
+              path="/account/change-password"
+              component={ChangePassword}
+              exact={true}
+            />
+            <PrivateRoute
+              path="/account/problem"
+              component={Problem}
+              exact={true}
+            />
+            <PrivateRoute
+              path="/account/withdraw"
+              component={Withdraw}
+              exact={true}
+            />
+            <PrivateRoute
+              path="/my-experiences"
+              component={MyExperiences}
+              exact={true}
+            />
+            <PrivateRoute
+              path="/my-experiences/story/:storyId"
+              component={MyExperience}
+              exact={true}
+            />
+            <PrivateRoute
+              path="/my-experiences/review/:storyId"
+              component={ReviewExperiences}
+              exact={true}
+            />
+            <PrivateRoute
+              path="/submit-experience"
+              component={SubmitExperiences}
+              exact={true}
+            />
+            <Route component={NotFound} />
+          </Switch>
+        </ScrollToTop>
+      </Router>
+    </Provider>
+  );
+};
 
 export default observer(App);

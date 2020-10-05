@@ -46,7 +46,7 @@ const MyExperiences: FunctionComponent<IProps> = ({ history, userStore }) => {
             how your experiences will be used.
           </p>
           <p>
-            Our <Link to="/writing-guidance">writing guidelines </Link> give
+            Our <Link to="/what-we-need-now">writing guidelines </Link> give
             more information about what you can write about and what we can and
             can't publish.
           </p>
